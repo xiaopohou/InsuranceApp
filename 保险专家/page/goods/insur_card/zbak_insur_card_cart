@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>保险专家</title>
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/base.css" />
+		<style>
+			.mui-btn-block {border: none;background: #dd524d;}
+			.mui-bar-tab .mui-tab-item.mui-active {color: #929292;}
+			.mui-tab-item:first-child {border-right: 1px solid grey;}
+			.mui-content {margin-bottom: 50px;}
+			.state-cont {padding-right: 10px;}
+			.order-list li {margin-top: 15px;}
+			.totalprice{color: #f50;font-weight: bolder; font-size: 16px;margin-right: 15px;}
+		</style>
+	</head>
+
+		<body>
+		<header class="mui-bar mui-bar-nav" id="mui-bar-title" style="padding-right: 15px;">
+			<a class="mui-action-back mui-icon mui-icon-back"></a>
+			<h1 class="mui-title">卡单购物车</h1>
+		</header>
+		<div class="mui-content">
+	
+			<!--商品列表-->
+			<div class="order-list">
+				<li class="list">
+					<div class="seller">
+						<div class="o-t-title-shop">
+							<div class="tcont">
+								<div class="ico">
+									<img src="../../../images/goods/insur_card/logo-pingan.png" />
+								</div>
+								<div class="contact">
+									<a>
+										<p class="o-title">中国平安保险公司</p>
+										<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
+									</a>
+								</div>
+								<div id="state" class="state">
+									<div class="state-cont">
+										<p class="state-fonts">编辑</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img1.jpg" />
+								</p>
+							</div>
+							<div class="item-num" style="display: none;">
+								<div class="mui-numbox" data-numbox-step="1" data-numbox-min="1" data-numbox-max="10">
+									<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+									<input class="mui-input-numbox" value="0" readonly="readonly" type="number">
+									<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+								</div>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国平安】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-delete" style="display: none;">
+								<p class="item-delete-font">删除</p>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p">5<span></p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img14.jpg" />
+								</p>
+							</div>
+							<div class="item-num" style="display: none;">
+								<div class="mui-numbox" data-numbox-step="1" data-numbox-min="1" data-numbox-max="10">
+									<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+									<input class="mui-input-numbox" value="0" readonly="readonly" type="number">
+									<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+								</div>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国平安】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-delete" style="display: none;">
+								<p class="item-delete-font">删除</p>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p">5<span></p>
+							</div>
+						</div>
+					</div>
+				</li>
+	
+				<li class="list">
+					<div class="seller">
+						<div class="o-t-title-shop">
+							<div class="tcont">
+								<div class="ico">
+									<img src="../../../images/goods/insur_card/logo-xinhua.png" />
+								</div>
+								<div class="contact">
+									<a>
+										<p class="o-title">中国新华保险公司</p>
+										<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
+									</a>
+								</div>
+								<div id="state" class="state">
+									<div class="state-cont">
+										<p class="state-fonts">编辑</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img15.jpg" />
+								</p>
+							</div>
+							<div class="item-num" style="display: none;">
+								<div class="mui-numbox" data-numbox-step="1" data-numbox-min="1" data-numbox-max="10">
+									<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+									<input class="mui-input-numbox" value="0" readonly="readonly" type="number">
+									<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+								</div>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国新华】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-delete" style="display: none;">
+								<p class="item-delete-font">删除</p>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p">5<span></p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img13.jpg" />
+								</p>
+							</div>
+							<div class="item-num" style="display: none;">
+								<div class="mui-numbox" data-numbox-step="1" data-numbox-min="1" data-numbox-max="10">
+									<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+									<input class="mui-input-numbox" value="0" readonly="readonly" type="number">
+									<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+								</div>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国新华】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-delete" style="display: none;">
+								<p class="item-delete-font">删除</p>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p">5<span></p>
+							</div>
+						</div>
+					</div>
+					<div class="item" data-id="5">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img3.jpg" />
+								</p>
+							</div>
+							<div class="item-num" style="display: none;">
+								<div class="mui-numbox" data-numbox-step="1" data-numbox-min="1" data-numbox-max="10">
+									<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+									<input class="mui-input-numbox" data-id="5" value="0" readonly="readonly" type="number">
+									<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+								</div>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国新华】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-delete" style="display: none;" data-id="5" >
+								<p class="item-delete-font" >删除</p>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p" data-id="5">5<span></p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</div>
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<span>共<span id="totalNum">20</span>件，合计：</span>
+							<span class="totalprice">￥<span id="totalprice-p">278.86</span></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div style="width:100%; height:20px;"></div>
+			<div class="doot">
+				<div class="doot-left">
+					<button class="huang">清空购物车</button>
+				</div>
+				<div class="doot-right">
+					<button class="hong" id="buying">结算付款</button>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript">
+		mui.init();
+		// 0 为默认状态，隐藏按钮未显示
+		btOpen = 0;
+		
+		mui.plusReady(function() {
+			//结算付款按钮
+			var buyingButton = document.getElementById("buying");
+			buyingButton.addEventListener('tap', function(event) {
+				mui.openWindow('insur_card_buying.html','insur_card_buying');
+			});
+			
+			mui(".list").on('tap','.state',function(){
+				if(btOpen == 0){
+//					console.log(btOpen);
+					var numArray = getPriceNumArray();
+					setBtNum(numArray);
+				}else{
+//					console.log(btOpen);
+					var numArray = getBtNumArray();
+					setPriceNum(numArray);
+					setTotalNumPrice();
+				}
+				$('.state-fonts').each(function(){
+//					console.log($(this).text());
+					if($(this).text() == "编辑") {
+						showNumBt();
+						btOpen = 1;
+						$(this).text("完成");
+					}else{
+						hideNumBt();
+						btOpen = 0;
+						$(this).text("编辑");
+					}
+				});
+			});
+			mui(".item").on('tap','.item-delete',function(){
+				console.log("你进行了删除操作");
+				var id = this.getAttribute('data-id');
+				console.log(id);
+				deleteCard(id);
+			});
+			//计算总件数和总价
+			setTotalNumPrice();
+		});
+		
+		
+		function deleteCard(id){
+			$('div[data-id=' + id + ']').hide();
+			$('.mui-input-numbox[data-id=' + id + ']').val(0);
+			$('.nums[data-id=' + id + ']').text(0);
+			numArray = getBtNumArray();
+			setPriceNum(numArray);
+			setTotalNumPrice();
+		}
+		
+		
+		//点击编辑时，显示出编辑控件，隐藏价格控件
+		function showNumBt() {
+			$('.item-num').each(function() {
+				$(this).show();
+			});
+			$('.item-delete').each(function() {
+				$(this).show();
+			});
+			$('.item-pay').each(function() {
+				$(this).hide();
+			});
+			$('.item-info').each(function() {
+				$(this).hide();
+			});
+		}
+		
+		//点击完成时，隐藏编辑控件，显示价格控件
+		function hideNumBt() {
+			$('.item-info').each(function() {
+				$(this).show();
+			});
+			$('.item-pay').each(function() {
+				$(this).show();
+			});
+			$('.item-delete').each(function() {
+				$(this).hide();
+			});
+			$('.item-num').each(function() {
+				$(this).hide();
+			});
+		}
+		
+		//获取价格单上的物品件数数组
+		function getPriceNumArray(){
+			var numArray = [];
+			$('.nums').each(function(){
+				var str = $(this).text();
+				str = str.replace(/[^0-9]*/g,"");
+				num = parseInt(str);
+				numArray.push(num);
+			});
+//			console.log(numArray);
+			return numArray;
+		}
+		//获取价格单上的物品价格数组
+		function getPricePriceArray(){
+			var priceArray = [];
+			$('.price').each(function(){
+				var str = $(this).text();
+				str = str.replace(/[^0-9.]*/g,"");
+				price = parseFloat(str);
+				priceArray.push(price);
+			});
+//			console.log(priceArray);
+			return priceArray;
+		}
+		
+		//设置按钮上物品件数
+		function setBtNum(numArray){
+			var numArr = numArray;
+			$('.mui-input-numbox').each(function(){
+//				$(this).text(numArr.shift());
+//				console.log(numArr.shift());
+				$(this).val(numArr.shift());
+			});
+		}
+		
+		//获取按钮上的物品件数
+		function getBtNumArray(){
+			var numArray = [];
+			$('.mui-input-numbox').each(function(){
+				var str = $(this).val();
+				str = str.replace(/[^0-9]*/g,"");
+//				console.log(str);
+				num = parseInt(str);
+				numArray.push(num);
+			});
+//			console.log(numArray);
+			return numArray;
+		}
+		//设置价格上物品件数
+		function setPriceNum(numArray){
+			var numArr = numArray;
+			$('.nums').each(function(){
+//				$(this).text(numArr.shift());
+//				console.log(numArr.shift());
+				$(this).text("x"+numArr.shift());
+			});
+		}
+		
+	    //计算总件数和总价，并进行设置
+	    function setTotalNumPrice(){
+	    	var numArray = getPriceNumArray();
+	    	var priceArray = getPricePriceArray();
+	    	var totalNum = 0;
+	    	var totalPrice = 0.00;
+	    	for (i = 0; i < numArray.length; i++) {
+	    		totalNum += numArray[i];
+	    		totalPrice += numArray[i] * priceArray[i];
+	    	}
+	    	$("span#totalNum").text(totalNum);
+	    	$("span#totalprice-p").text(totalPrice);
+	    }
+		
+	</script>
+</html>

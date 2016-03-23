@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/base.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-slider {
+				-webkit-transition: -webkit-transform 100ms ease;
+				transition: transform 100ms ease;
+			}
+			
+			.title {
+				height: 2.2rem;
+				margin-top: 0.23333333rem;
+			}
+			
+			.title .hot_t {
+				background: url(../../images/homePage/title_img2.png) no-repeat;
+				background-size: 100%;
+				margin: 0px;
+				overflow: hidden;
+			}
+			
+			.title .hot {
+				width: 4.29333333rem;
+				height: 1.95333333rem;
+				font-size: 0.78666667rem;
+				text-align: center;
+				color: #ffffff;
+				float: left;
+			}
+			
+			.title a i {
+				width: 0.84rem;
+				height: 0.84rem;
+				float: right;
+				margin-top: 0.34666667rem;
+				margin-left: 0.29333333rem;
+				margin-right: 0.53333333rem;
+				background: url(../../images/homePage/button.png) no-repeat;
+				background-size: 100%;
+			}
+			
+			.title a span {
+				height: 1.33333333rem;
+				line-height: 1.33333333rem;
+				float: right;
+				font-size: 0.89333333rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../../images/homePage/slider4.jpg">
+									<p class="mui-slider-title">冲破重疾阴癌</p>
+								</a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../../images/homePage/slider1.jpg">
+									<p class="mui-slider-title">平安健康大礼包</p>
+								</a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../../images/homePage/slider2.jpg">
+									<p class="mui-slider-title">老年防癌保障</p>
+								</a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../../images/homePage/slider3.jpg">
+									<p class="mui-slider-title">长期意外保障</p>
+								</a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="../../images/homePage/slider4.jpg">
+									<p class="mui-slider-title">冲破重疾阴癌</p>
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../../images/homePage/slider1.jpg">
+									<p class="mui-slider-title">平安健康大礼包</p>
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator mui-text-right">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+
+					<div class="app_f">
+						<a id="insur_card">
+							<div class="appa">
+								<img src="../../images/homePage/main_insur_card.png" alt="">
+								<p>保险卡单</p>
+							</div>
+						</a>
+						<a id="company">
+							<div class="appb">
+								<img src="../../images/homePage/main_group.png" alt="">
+								<p>企业保险</p>
+							</div>
+						</a>
+						<a id="car">
+							<div class="appc">
+								<img src="../../images/homePage/main_car.png" alt="">
+								<p>车辆保险</p>
+							</div>
+						</a>
+						<a id="life">
+							<div class="appd">
+								<img src="../../images/homePage/main_life.png" alt="">
+								<p>人寿保险</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="app_f">
+						<a id="online_card">
+							<div class="appa">
+								<img src="../../images/homePage/main_my_money.png" alt="">
+								<p>我的积分</p>
+							</div>
+						</a>
+						<a id="myOrder">
+							<div class="appb">
+								<img src="../../images/homePage/main_my_order.png" alt="">
+								<p>我的业务</p>
+							</div>
+						</a>
+						<a id="userInfo">
+							<div class="appc">
+								<img src="../../images/homePage/main_person.png" alt="">
+								<p>个人简历</p>
+							</div>
+						</a>
+						<a href="#">
+							<div class="appd">
+								<img src="../../images/homePage/main_invite.png" alt="">
+								<p>客户邀约</p>
+							</div>
+						</a>
+
+						<div class="app2"></div>
+						<div class="app3"></div>
+						<div class="app4"></div>
+					</div>
+
+					<div class="title">
+						<div class="hot hot_t font_w">产品热销</div>
+						<a href="#">
+							<i></i>
+							<span>更多产品</span>
+						</a>
+					</div>
+
+					<div class="condiv_tow">
+						<a href="#">
+							<img src="../../images/homePage/condiv_img2.jpg" alt="">
+							<dt>鸿运随行返还型意外保障</dt>
+							<dd><span></span>意外全面保障</dd>
+							<dd><span></span>交通意外双倍赔付</dd>
+							<dd><span></span>保费返还112%</dd>
+							<dd><span></span>意外伤害住院津贴150/天</dd>
+						</a>
+					</div>
+
+					<ul class="mui-table-view mui-grid-view">
+						<li class="mui-table-view-cell mui-media mui-col-xs-6">
+							<a href="#">
+								<img class="mui-media-object" src="../../images/homePage/a1.png">
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-6">
+							<a href="#">
+								<img class="mui-media-object" src="../../images/homePage/a2.png">
+							</a>
+						</li>
+					</ul>
+
+					<ul class="mui-table-view mui-grid-view">
+						<li class="mui-table-view-cell mui-media mui-col-xs-6">
+							<a href="#">
+								<img class="mui-media-object" src="../../images/homePage/a3.png">
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-6">
+							<a href="#">
+								<img class="mui-media-object" src="../../images/homePage/a4.png">
+							</a>
+						</li>
+					</ul>
+
+					<ul class="mui-table-view mui-grid-view">
+						<li class="mui-table-view-cell mui-media mui-col-xs-6">
+							<a href="#">
+								<img class="mui-media-object" src="../../images/homePage/b1.png">
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-6">
+							<a href="#">
+								<img class="mui-media-object" src="../../images/homePage/b2.png">
+							</a>
+						</li>
+					</ul>
+
+					<ul class="mui-table-view mui-grid-view">
+						<li class="mui-table-view-cell mui-media mui-col-xs-6">
+							<a href="#">
+								<img class="mui-media-object" src="../../images/homePage/b3.png">
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-6">
+							<a href="#">
+								<img class="mui-media-object" src="../../images/homePage/b4.png">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script type="text/javascript">
+		window.addEventListener('show', function() {
+			alert("main");
+		}, false);
+		(function($, doc) {
+			mui.init({
+				swipeBack: false,
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					//					var table = document.body.querySelector('.mui-table-view');
+					//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					//					for (var i = cells.length, len = i + 3; i < len; i++) {
+					//						var li = document.createElement('li');
+					//						li.className = 'mui-table-view-cell';
+					//						li.innerHTML = '<a class="mui-navigate-right">系统通知 ' + (i + 1) + '</a>';
+					//						//下拉刷新，新纪录插到最前面；
+					//						table.insertBefore(li, table.firstChild);
+					//					}
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1000);
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					//					var table = document.body.querySelector('.mui-table-view');
+					//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					//					for (var i = cells.length, len = i + 20; i < len; i++) {
+					//						var li = document.createElement('li');
+					//						li.className = 'mui-table-view-cell';
+					//						li.innerHTML = '<a class="mui-navigate-right">系统通知 ' + (i + 1) + '</a>';
+					//						table.appendChild(li);
+					//					}
+				}, 1000);
+			}
+			//mui广告位配置，interval为广告切换时间间隔
+			swipeBack: true; //启用右滑关闭功能
+			var slider = mui("#slider");
+			slider.slider({
+				interval: 5000
+			});
+			$.plusReady(function() {
+				//保险卡单跳转方法
+				var toInsurCardPage = function() {
+					//保险卡单
+					var insurCardPage = $.preload({
+						"id": 'insur_card_index',
+						"url": '../goods/insur_card/insur_card_index.html'
+					});
+					$.fire(insurCardPage, 'show', null);
+					setTimeout(function() {
+						$.openWindow({
+							id: 'insur_card_show',
+							show: {
+								aniShow: aniShow
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, 100);
+				};
+				//企业保险跳转方法
+				var toCompanyPage = function() {
+					var companyPage = $.preload({
+						"id": 'companyIndex',
+						"url": '../goods/company/companyIndex.html'
+					});
+					$.fire(companyPage, 'show', null);
+					setTimeout(function() {
+						$.openWindow({
+							id: 'companyIndex',
+							show: {
+								aniShow: aniShow
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, 100);
+				};
+				//车辆保险跳转方法
+				var toCarPage = function() {
+					var carPage = $.preload({
+						"id": 'carIndex',
+						"url": '../goods/car/car_index.html'
+					});
+					$.fire(carPage, 'show', null);
+					setTimeout(function() {
+						mui.openWindow({
+							id: 'carIndex',
+							show: {
+								aniShow: aniShow
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, 100);
+				};
+				//我的订单跳转
+				var toMyOrderPage = function() {
+					var myOrderPage = $.preload({
+						"id": 'myOrderIndex',
+						"url": '../myOrder/myOrderIndex.html'
+					});
+					$.fire(myOrderPage, 'show', null);
+					setTimeout(function() {
+						mui.openWindow({
+							id: 'myOrderIndex',
+							show: {
+								aniShow: aniShow
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, 100);
+				};
+				//个人简历跳转方法
+				var toUserInfoPage = function() {
+					var userInfoPage = $.preload({
+						"id": 'userInfo',
+						"url": 'userInfo.html'
+					});
+					$.fire(userInfoPage, 'show', null);
+					setTimeout(function() {
+						mui.openWindow({
+							id: 'userInfo',
+							show: {
+								aniShow: aniShow
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, 100);
+				};
+				//获取id
+				//保险卡单按钮
+				var insurCardButton = document.getElementById("insur_card");
+				//企业保险按钮
+				var companyButton = document.getElementById("company");
+				//车辆保险按钮
+				var carButton = document.getElementById("car");
+				//我的订单
+				var myOrderButton = document.getElementById("myOrder");
+				//个人简历按钮
+				var userInfoButton = document.getElementById("userInfo");
+				//保险卡单
+				insurCardButton.addEventListener('tap', function(event) {
+					//					toInsurCardPage();
+					$.openWindow({
+						id: 'insur_card_index',
+						url: '../goods/insur_card/insur_card_index.html'
+					});
+				});
+				//企业保险
+				companyButton.addEventListener('tap', function(event) {
+//					toCompanyPage();
+					$.openWindow({
+						id: 'companyIndex',
+						url: '../goods/company/companyIndex.html'
+					});
+				});
+				//汽车保险
+				carButton.addEventListener('tap', function() {
+//					toCarPage();
+					$.openWindow({
+						id: 'carIndex',
+						url: '../goods/car/car_index.html'
+					});
+				});
+				//我的业务
+				myOrderButton.addEventListener('tap', function() {
+//					toMyOrderPage();
+					$.openWindow({
+						id: 'myOrderIndex',
+						url: '../myOrder/myOrderIndex.html'
+					});
+				});
+				//个人简历
+				userInfoButton.addEventListener('tap', function() {
+//					toUserInfoPage();
+					$.openWindow({
+						id: 'userInfo',
+						url: 'userInfo.html'
+					});
+				});
+				document.getElementById("life").addEventListener('tap',function(){
+					$.openWindow('../goods/life/lifeIndex.html','lifeIndex');
+				});
+			});
+		}(mui, document));
+	</script>
+
+</html>

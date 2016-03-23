@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>企业财产险</title>
+		<link href="../../../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../../../css/common.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../../css/base.css"/>
+		<style type="text/css">
+			/*首部title配置*/
+			.h3 {font-size: 17px;color: #FFFFFF;}
+			.h4 {font-size: 15px;color: #FFFFFF;}
+			/*投保金额*/
+			.cell-label {width: 43%; font-size: 16px;}
+			.mui-table-view-cell {position: relative;width: 100%;}
+			.price b {color: #d22; font-size: 16px;}
+			.price {float: right;margin-right: 10px;}
+			.mui-table-view {margin-top: 0px;}
+			#tab {overflow: hidden;zoom: 1;background: #f7f7f7;}
+			#tab li {float: left;color: #000;height: 45px;cursor: pointer;line-height: 45px;padding: 0 20px;}
+			#tab li.current {color: #fff;background: #3bb68c;}
+			
+			#addBt{float: right;margin: 5px;margin-right: 15px; background:#3bb68c; color: #fff;}
+			
+			#content {border-top-width: 0;}
+			#content ul {display: none;}
+			.mui-input-row label {width: auto;}
+			.mui-input-row input {width: auto;}
+			.mui-input-row {padding-left: 140px;}
+			/*datelabel*/
+			.datelabel {margin-left: 125px;}
+			.datebt {float: right;margin-right: 10px;}
+			/*label-title*/
+			#plan-title {width: 100%;text-align: center;}
+			.padding-small {padding-left: 120px;}
+			#bottom {margin-top: 30px;}
+			
+			.mui-col-xs-10 {width: 30%;}
+			.mui-col-xs-4 {width: 58%;}
+			.mui-col-xs-1 {width: 12%;}
+			.mui-table-view-cell {padding-left: 20px;padding-right: 0px;}
+			
+			.doot{ width:100%; height:50px; position:fixed; bottom:0px; background:#F7F7F7; max-width:640px; min-width:320px; margin:0px auto; margin-left:auto; margin-right:auto;}
+			.doot-left{ float:left; width:48%; margin:10px auto; text-align:center;}
+			.doot-right{ float:right; width:48%; margin:10px auto; text-align:center;}
+			.hong{width: 84%;margin-left: 8%;margin-right: 8%;margin-top: 5px; height: 40px; font-size: 16px;}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-bar mui-bar-nav" id="mui-bar-title">
+			<a class="mui-action-back mui-icon mui-icon-back"></a>
+			<h1 class="mui-title">企业财产险</h1>
+		</div>
+		<div class="mui-content">
+			<div class="headimg_banner">
+				<img src="../../../../images/goods/company/groupAccident/accident.jpg" class="head_img">
+				<div class="headimg_title">
+					<p class="h3">订制企业责任险方案</p>
+					<p class="h4">
+						全球化保单，为您的财产提供一站式全面保障
+					</p>
+				</div>
+			</div>
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span>单位名称</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span>在此设置</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span>拟定生效日期</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span>2016年4月8日 11:10:20</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+	
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed" style="margin-top: 5px;">
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="">行业类别</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="">交通运输</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="">固定生产总额</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="">10万元</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="">主险险种</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="">25万元</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="">附加险</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="">10万元</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="">机器设备总额</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="">15万元</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+	
+			<ul class="mui-table-view" style="margin-top: 5px;">
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="">合计应付</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="">4万元</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+	
+			<div style="width:100%; height:60px;"></div>
+			<div class="doot">
+				<button class="hong" id="submitPlan">提交计划书</button>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		</div>
+	
+		<script type="text/javascript" src="../../../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../../js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			jQuery(function() {
+				window.onload = function() {
+					var $li = $('#tab li');
+					var $ul = $('#content ul');
+					$li.mouseover(function() {
+						var $this = $(this);
+						var $t = $this.index();
+						$li.removeClass();
+						$this.addClass('current');
+						$ul.css('display', 'none');
+						$ul.eq($t).css('display', 'block');
+					})
+				}
+			});
+			mui.plusReady(function() {
+				document.getElementById("submitPlan").addEventListener('tap', function() {
+					mui.openWindow({
+						id: 'myOrder_companyAssets',
+						url: '../../../myOrder/myOrder_companyAssets.html'
+					});
+				});
+			});
+		</script>
+	</body>
+
+</html>
