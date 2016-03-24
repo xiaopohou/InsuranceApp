@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="../../../css/mui.min.css" />
 		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
 		<link rel="stylesheet" type="text/css" href="../../../css/insur_card_info.css" />
+		<script src="../../../js/config.js" type="text/javascript" charset="utf-8"></script>
 		<title>卡单详情</title>
 		<style type="text/css">
 			.hong{padding-top: 8px;}
@@ -145,7 +146,7 @@
 //				});
 				var self = plus.webview.currentWebview();
 				product_id = self.product_id;
-				console.log(product_id);
+				console.log("当前页面产品id: " + product_id);
 
 				getInsurCard();
 			});
@@ -155,7 +156,7 @@
 			function getInsurCard() {
 //				url: "http://www.annpeter.cn:8080/app/kadan/index?id=productID"
 				mui.ajax({
-					url: "../../../json/goods/insur_card/insur_card_info.json",
+					url: "../../../json/goods/insur_card/card_info.json",
 					type: "get",
 					async: true,
 					data: {
@@ -163,27 +164,19 @@
 					dataType: "json",
 					timeout: 1000,
 					success: function(data) {
-						console.log("22");
-						/*
-						 * 这里我们使用artTemplate.js模板来进行列表的拼接；
-						 * 更多内容可以看github上面的介绍
-						 * https://github.com/aui/artTemplate
-						 */
-						/*
-						 * 辅助事件，通常用于处理一些数据；
-						 * 具体用法，看上面渲染部分；
-						 */
-						//							template.helper("shopDetail", function(data){
-						//								return "这里是辅助事件拼接的：" + data;
-						//							});
-						/*
-						 * 渲染页面
-						 * 拼接列表的情况会比较多
-						 * 总之，这个template()方法的第二个参数，是一个object；
-						 */
+						console.log("ajax请求成功");
 						var cardInfoList = document.getElementById("cardInfoList");
+
+						
+						//循环遍历result数组，给数组中 img_big 添加 url 头属性
+						for(var i = 0; i < data.result.length; i++){
+							data.result[i].img_big = imgUrl + data.result[i].img_big;
+//							console.log(data.result[i].img_big);
+						}
+						
 						var content = template("cardInfoTmpl", data);
 						cardInfoList.innerHTML = content;
+						
 						// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
 						addNumListener();
 //						settlementPrice(1);
@@ -279,8 +272,6 @@
 					mui.openWindow('insur_card_cart.html','insur_card_cart');
 				});
 			}
-			
-			
 		</script>
 	</body>
 

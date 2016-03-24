@@ -596,7 +596,9 @@
 					"js/template.js",
 					"json/main/shop.json",
 					"page/goods/insur_card/shop.json",
-					"json/goods/insur_card/insur_card_show.json"
+					"json/goods/insur_card/insur_card_show.json",
+					"json/goods/insur_card/card_show.json",
+					"js/config.js"
 				],
 				"refer": [
 					"page/goods/insur_card/insur_card_info.html",
@@ -657,7 +659,9 @@
 					"images/goods/insur_card/app_img24.jpg",
 					"images/goods/insur_card/app_img15.jpg",
 					"json/goods/insur_card/insur_card_show.json",
-					"json/goods/insur_card/insur_card_info.json"
+					"json/goods/insur_card/insur_card_info.json",
+					"json/goods/insur_card/card_info.json",
+					"js/config.js"
 				],
 				"refer": [
 					"page/goods/insur_card/insur_card_buying.html",
@@ -692,7 +696,8 @@
 			"page/ucenter/insurance.html": {
 				"resources": [
 					"css/mui.min.css",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"js/config.js"
 				],
 				"refer": [],
 				"priority": 0

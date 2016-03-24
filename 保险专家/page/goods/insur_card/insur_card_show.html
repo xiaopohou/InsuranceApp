@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="../../../css/mui.min.css">
 		<link rel="stylesheet" type="text/css" href="../../../css/base.css" />
 		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+		<script src="../../../js/config.js" type="text/javascript" charset="utf-8"></script>
 		<style>
 			.mui-table h4,
 			.mui-table h5,
@@ -151,7 +152,7 @@
 				//url: "../../../json/goods/insur_card/insur_card_info.json",
 //				url: "http://www.annpeter.cn:8080/app/kadan/list",
 				mui.ajax({
-						url: "../../../json/goods/insur_card/insur_card_show.json",
+						url: "../../../json/goods/insur_card/card_show.json",
 						type: "get",
 						async: true,
 						data: {},
@@ -159,6 +160,13 @@
 						timeout: 1000,
 						success: function(data) {
 							var insur_card_list = document.getElementById("insur_card_list");
+							
+							//循环遍历result数组，给数组中 img_big 添加 url 头属性
+							for(var i = 0; i < data.result.length; i++){
+								data.result[i].img_small = imgUrl + data.result[i].img_small;
+//								console.log(data.result[i].img_small);
+							}
+							
 							var content = template("insur_cardTmpl", data);
 							insur_card_list.innerHTML = content;
 							// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
@@ -167,18 +175,16 @@
 					});	
 			}
 			
-			
-			
 			//遍历卡单节点
 			function toinsur_card_info(){
 				var list = document.getElementsByClassName("mui-card-show");
-				console.log(list.length);
+				console.log("当前卡单列表长度：" + list.length);
 				
 				var product_id = "";
 				for(var i = 0; i<list.length; i++ ){
 					list[i].addEventListener('tap',function(){
 						product_id = this.getAttribute("data-id");
-						console.log(product_id);
+						console.log("当前点击产品id: " + product_id);
 						
 						mui.openWindow({
 							url: "insur_card_info.html",
