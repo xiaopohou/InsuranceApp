@@ -171,6 +171,11 @@
 							insur_card_list.innerHTML = content;
 							// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
 							toinsur_card_info();
+						},
+						error:function(xhr,type,errorThrown){
+							//异常处理
+							plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
+							console.log(type);
 						}
 					});	
 			}
