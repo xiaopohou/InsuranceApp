@@ -116,6 +116,32 @@
 		document.getElementById("address_add").addEventListener('tap',function(){
 			mui.openWindow('insur_card_address_add.html','insur_card_address_add');
 		});
+		var active="address-active";
+		var flag;
+		mui(".mui-content").on('tap','.order-address',function(){
+			var attr=this.classList;
+			if(!attr.contains(active)){
+				changeDef();
+				attr.add(active);
+				flag=this;
+			}
+		});
+		function changeDef(){
+			var addre=document.getElementsByClassName("order-address");
+			for(var i=0;i<addre.length;i++){
+				var cls=addre[i].classList;
+				if(cls.contains(active))
+					cls.remove(active);
+			}
+		}
+		var btn_set=document.getElementById("right_add");
+		btn_set.addEventListener('tap',function(){
+			if(flag){
+			var par=flag.parentNode;
+			var addre=document.getElementsByClassName("order-address")[0];
+			par.insertBefore(flag,addre);
+			}
+		});
 	</script>
 
 </html>
