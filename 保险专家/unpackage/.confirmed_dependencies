@@ -81,7 +81,8 @@
 			"js/app.js",
 			"js/mui.min.js",
 			"css/common.css",
-			"js/config.js"
+			"js/config.js",
+			"js/jquery-2.1.3.min.js"
 		],
 		"refer": [
 			"page/passport/forget_password.html",
@@ -103,7 +104,8 @@
 			"css/mui.css",
 			"js/mui.min.js",
 			"css/common.css",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"js/jquery-2.1.3.min.js"
 		],
 		"refer": [
 			"page/passport/login.html"
@@ -203,7 +205,8 @@
 			"page/goods/insur_card/shop.json",
 			"json/goods/insur_card/insur_card_show.json",
 			"json/goods/insur_card/card_show.json",
-			"js/config.js"
+			"js/config.js",
+			"js/app.js"
 		],
 		"refer": [
 			"page/goods/insur_card/insur_card_info.html",
@@ -287,7 +290,8 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"js/app.js",
-			"js/config.js"
+			"js/config.js",
+			"js/jquery-2.1.3.min.js"
 		],
 		"refer": [
 			"page/passport/login.html"
@@ -517,7 +521,8 @@
 			"css/common.css",
 			"fonts/mui.ttf",
 			"css/mui.min.css",
-			"images/goods/groupAccident/accident.jpg"
+			"images/goods/groupAccident/accident.jpg",
+			"js/jquery-2.1.3.min.js"
 		],
 		"refer": [
 			"page/myOrder/myOrder_groupAccident.html",
@@ -550,7 +555,8 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"images/goods/company/groupAccident/accident.jpg"
-		]
+		],
+		"refer": []
 	},
 	"page/myOrder/documentUpload.html": {
 		"resources": [
@@ -563,12 +569,14 @@
 			"images/myOrder/fileUpload.png",
 			"images/goods/banner3.jpg",
 			"images/goods/groupAccident/accident.jpg"
-		]
+		],
+		"refer": []
 	},
 	"page/myOrder/myOrder_info.html": {
 		"resources": [
 			"images/goods/groupAccident/accident.jpg"
-		]
+		],
+		"refer": []
 	},
 	"page/goods/company/employer/employer_index.html": {
 		"resources": [
@@ -582,7 +590,8 @@
 	"page/myOrder/myOrder_pay.html": {
 		"resources": [
 			"images/myOrder/fileUpload.png"
-		]
+		],
+		"refer": []
 	},
 	"page/goods/company/companyAssets/companyAssets_index.html": {
 		"refer": [
@@ -657,7 +666,8 @@
 			"images/goods/life/jibingbaoxian.png",
 			"js/mui.min.js",
 			"css/mui.min.css"
-		]
+		],
+		"refer": []
 	},
 	"page/goods/insur_card/areaSelect.html": {
 		"resources": [
@@ -668,7 +678,8 @@
 			"css/common.css",
 			"fonts/mui.ttf",
 			"css/mui.min.css"
-		]
+		],
+		"refer": []
 	},
 	"page/goods/insur_card/insur_card_address_add.html": {
 		"resources": [

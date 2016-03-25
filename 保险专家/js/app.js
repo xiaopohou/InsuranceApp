@@ -1,6 +1,47 @@
 (function($, owner) {
-//	//服务器地址
+	//服务器地址初始化
+	owner.serverUrlInit = function(){
+		var settings = owner.getSettings();
+		var webServiceUrl = "http://115.28.72.167/";
+		var imgUrl = "http://www.annpeter.cn:8080";
+
+		//定义 urlInfo数组存放 url信息
+		var urlInfoArray = [];
+		
+		//object  url键值对
+		var urlInfoObj = {
+			webServiceUrl : webServiceUrl
+		}
+//		console.log(urlInfoObj.webServiceUrl);
+		
+		//将urlObj Push 到数组中
+		urlInfoArray.push(urlInfoObj);
+//		console.log(urlInfoArray[0].webServiceUrl);
+		
+		//保存到本地设置中
+		settings.webServiceUrl = webServiceUrl;
+		settings.imgUrl = imgUrl;
+		settings.urlInfoArray = urlInfoArray;
+//		console.log(settings.urlInfoArray[0].webServiceUrl);
+		owner.setSettings(settings);
+		console.log("服务器初始化成功");
+	}
+	
+	//动态更改服务器地址
+	owner.setServerUrl = function(info){
+		//获取当前设置
+		var settings = owner.getSettings();
+		
+		//保存到本地设置中
+		settings.webServiceUrl = info.webServiceUrl;
+		owner.setSettings(settings);
+	}
+	
+////服务器地址
 //	webServiceUrl="http://115.28.72.167/";
+//	ptServerUrl = "http://www.annpeter.cn:8080";
+	
+//	console.log("app.js");
 //---------------------------------------------------------新用户注册-----------------------------------------------------
 //---------------------------------------------------------       -----------------------------------------------------
 
@@ -73,6 +114,9 @@
 		}
 		else
 		{
+			var settings = owner.getSettings();
+			webServiceUrl = settings.webServiceUrl;
+			console.log(webServiceUrl);
 //			return owner.createState("11",callback);
 			mui.ajax(webServiceUrl+'jt/index.php/User/mobileRegister',
 			{				
@@ -160,6 +204,10 @@
 		{
 //			http://115.28.72.167/jt/index.php/User/register
 //			return owner.createState(loginInfo.account,callback);
+			var settings = owner.getSettings();
+			webServiceUrl = settings.webServiceUrl;
+			console.log(webServiceUrl);
+
 			mui.ajax(webServiceUrl+'jt/index.php/User/mobileLogin',{
 				data:{
 					mobile: loginInfo.account,
@@ -226,6 +274,10 @@
 		else
 		{
 //			return callback();
+			var settings = owner.getSettings();
+			webServiceUrl = settings.webServiceUrl;
+			console.log(webServiceUrl);
+
 			mui.ajax(webServiceUrl+'jt/index.php/User/mobileVsms',
 			{
 				data:{
@@ -307,6 +359,10 @@
 		}
 		else
 		{
+			var settings = owner.getSettings();
+			webServiceUrl = settings.webServiceUrl;
+			console.log(webServiceUrl);
+			
 //			return owner.createState("11",callback);
 			mui.ajax(webServiceUrl+'jt/index.php/User/mobileForgetPass',
 			{				
@@ -374,6 +430,10 @@
 			else
 			{
 				return callback();
+//				var settings = owner.getSettings();
+//				webServiceUrl = settings.webServiceUrl;
+//				console.log(webServiceUrl);
+				
 //				mui.ajax(webServiceUrl+'simple/token_login',
 //				{
 //					data:{
@@ -413,7 +473,8 @@
 		}
 	};
 	
-		
+
+	
 //--------------------------------------------------设置登录信息-----------------------------------------------------
 //--------------------------------------------------       -----------------------------------------------------
 	owner.createState = function(info) {
