@@ -51,6 +51,7 @@ function getAreaBuy(val,val1){
 }
 
 function getallArea(val,val1,val2){
+	var test;
 	var province=eval(proStr);
 	var city=eval(province[val].ITEMS);
 	var area=eval(city[val1].ITEMS);
