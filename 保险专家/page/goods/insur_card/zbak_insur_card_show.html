@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>保险专家</title>
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+		<style>
+			.mui-table h4,
+			.mui-table h5,
+			.mui-table .mui-h5,
+			.mui-table .mui-h6,
+			.mui-table p {margin-top: 0;}
+			.mui-table h4 {line-height: 21px;font-weight: 500;}
+			.mui-table .oa-icon {position: absolute;right: 0;bottom: 0;}
+			.mui-table .oa-icon-star-filled {color: #f14e41;}
+			.mui-col-xs-10 {width: 70%;}
+			.mui-col-xs-2 {width: 30%;}
+			/*底部选项卡*/
+			.mui-tab-item:first-child {border-right: 1px solid grey;}
+			#card_body {margin-top: 10px;margin-bottom: 60px;}
+			.left {padding: 5px;}
+			
+			/*标题部右侧字体*/
+			#auto_active {color: white;}
+			
+			/*搜索框*/
+			.nav-all{width:100%; height:40px; background:#f0f0f0; border-bottom:#f0f0f0 1px solid; margin:0px auto; padding-top:10px; padding-bottom:10px;}
+			.nav-all form{ width:90%; margin:0px auto; border:#ddd 1px solid; border-radius:50px; background:#fff; height:35px;}
+			.sou-all{ float:left; margin-left:8px; margin-top:7px;}
+			.kuan-all input{ float:left; height:20px; width:55%; border:0px; margin-top:8px; outline:0; color:#999;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" id="mui-bar-title" style="padding-right: 15px;">
+			<a class="mui-action-back mui-icon mui-icon-back"></a>
+			<h1 class="mui-title">卡单产品选择</h1>
+			<button class="mui-pull-right mui-btn-link" id="auto_active">自主激活</button>
+		</header>
+		
+			<!--渲染部分-->
+<!--//		
+//			这种模板具体怎么实现，我也搞不懂，我就简单谈下我自己的理解吧；
+//			首先，template()方法，第一个参数是script标签的id，第二个是一个object对象；
+//			然后，在这个type="text/html"的script标签中，传进来的object相当于一个局部的全局变量对象；
+//			具体取值，有点类似window对象相对于整个窗口，那就是直接写这个对象的属性名。
+//			例如下面的each循环中，result就是我传进来的那个object对象的属性名，as相当于声明，后面value是单个对象，i是下标，有时候会用到i的；
+//			辅助事件就更简单了，我们一般用于处理一些数据或者调用某些工具方法；
+//			template.helper()方法，第一个参数是事件名，第二个是一个回调，也就是处理数据的函数；
+//			具体使用的话，就是用|隔开，左边是传进来的数据，右边是事件名；
+//			能力有限，理解的就这么多，语言组织能力也菜的一比，见谅；
+//		-->
+
+		<div class="mui-content">
+			<div class="content" id="card_body">
+				<section class="all on">
+					<form action="" class="mui-card-table">
+						<a href="#" class="mui-card-show" id="insur_card_show_1">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img24.jpg" alt="">
+								<div class="right">
+									<h3>尊享安康</h3>
+									<p>覆盖广泛&nbsp;|&nbsp;续保便捷&nbsp;|&nbsp;性价比高</p>
+									<div class="money">
+										<span><i>￥107</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="mui-card-show" id="insur_card_show_2">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img15.jpg" alt="">
+								<div class="right">
+									<h3>平安境内旅行健康险B款</h3>
+									<p>旅行遍华夏&nbsp;|&nbsp;健康你我他</p>
+									<div class="money">
+										<span><i>￥63</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="mui-card-show" id="insur_card_show_3">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img1.jpg" alt="">
+								<div class="right">
+									<h3>馨逸人生</h3>
+									<p>更实惠&nbsp;|&nbsp;更安全&nbsp;|&nbsp;更灵活&nbsp;|&nbsp;更保值</p>
+									<div class="money">
+										<span><i>￥224</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="mui-card-show" id="insur_card_show_4">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img16.jpg" alt="">
+								<div class="right">
+									<h3>康逸人生</h3>
+									<p>住院安逸&nbsp;|&nbsp;健康无忧</p>
+									<div class="money">
+										<span><i>￥121</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="mui-card-show" id="insur_card_show_5">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img12.jpg" alt="">
+								<div class="right">
+									<h3>金灿人生</h3>
+									<p>专项防癌&nbsp;|&nbsp;健康相伴</p>
+									<div class="money">
+										<span><i>￥29</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+	
+						<a href="#" class="mui-card-show" id="insur_card_show_6">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img13.jpg" alt="">
+								<div class="right">
+									<h3>金俪佳人</h3>
+									<p>女性健康特别呵护</p>
+									<div class="money">
+										<span><i>￥87</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="mui-card-show" id="insur_card_show_7">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img14.jpg" alt="">
+								<div class="right">
+									<h3>金运人生</h3>
+									<p>男性健康特别呵护</p>
+									<div class="money">
+										<span><i>￥84</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="mui-card-show" id="insur_card_show_8">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img3.jpg" alt="">
+								<div class="right">
+									<h3>安益人生</h3>
+									<p>保障期长&nbsp;|&nbsp;无需体检</p>
+									<div class="money">
+										<span><i>￥103</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+					</form>
+				</section>
+			</div>
+			<div style="width:100%; height:10px;"></div>
+			<div class="doot">
+				<div class="doot-left">
+					<button class="huang" id="shopCart">购物车￥0.00</button>
+				</div>
+				<div class="doot-right">
+					<button class="hong" id="buying" id="buying">立即购买</button>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script>
+		mui.init();
+		window.addEventListener('show', function() {
+			//				alert("main");
+		}, false);
+		
+		mui.plusReady(function() {
+			var ws = plus.webview.currentWebview();
+			console.log( "当前Webview窗口："+ws.getURL() );
+			
+			//购物车按钮
+			var shopCartButton = document.getElementById("shopCart");
+			shopCartButton.addEventListener('tap', function(event) {
+				//					toshopCartPage();
+				mui.openWindow('insur_card_cart.html', 'insur_card_cart');
+			});
+			//结算付款按钮
+			var buyingButton = document.getElementById("buying");
+			buyingButton.addEventListener('tap', function(event) {
+				//					toBuyingPage();
+				mui.openWindow('insur_card_buying.html', 'insur_card_buying');
+			});
+			//产品详情
+			mui(".mui-card-table").on('tap', ".mui-card-show", function() {
+				//获取id
+				//					var id = this.getAttribute("id");
+				//					toinsur_card_infoPage();
+				mui.openWindow('insur_card_info.html', 'insur_card_info');
+			});
+			//自主激活
+			var auto_activeButton = document.getElementById("auto_active");
+			auto_activeButton.addEventListener('tap', function() {
+				//					toAuto_activePage();
+				mui.openWindow('insur_card_auto_active.html', 'insur_card_auto_active');
+			});
+		});
+		
+
+		
+		function getInsurCard(){
+			
+		}
+		
+		
+		
+		
+		//购物详情页面跳转
+		var toinsur_card_infoPage = function() {
+			//预加载页面
+			var insur_card_infoPage = $.preload({
+				"id": 'insur_card_info',
+				"url": 'insur_card_info.html'
+			});
+			//触发show事件
+			$.fire(insur_card_infoPage, 'show', null);
+			setTimeout(function() {
+				$.openWindow({
+					id: 'insur_card_info',
+					show: {
+						aniShow: aniShow
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}, 100);
+		};
+		
+		//购物车页面跳转
+		var toshopCartPage = function() {
+			//预加载页面
+			var shopCartPage = $.preload({
+				"id": 'insur_card_cart',
+				"url": 'insur_card_cart.html'
+			});
+			//触发show事件
+			$.fire(shopCartPage, 'show', null);
+			setTimeout(function() {
+				$.openWindow({
+					id: 'insur_card_cart',
+					show: {
+						aniShow: aniShow
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}, 100);
+		};
+		
+		//结算付款页面跳转
+		var toBuyingPage = function() {
+			//预加载页面
+			var buyingPage = $.preload({
+				"id": 'insur_card_buying',
+				"url": 'insur_card_buying.html'
+			});
+			//触发show事件
+			$.fire(buyingPage, 'show', null);
+			setTimeout(function() {
+				$.openWindow({
+					id: 'insur_card_buying',
+					show: {
+						aniShow: aniShow
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}, 100);
+		};
+		//自主激活页面跳转
+		var toAuto_activePage = function() {
+			//预加载页面
+			var auto_activePage = $.preload({
+				"id": 'auto_active',
+				"url": 'insur_card_auto_active.html'
+			});
+			//触发show事件
+			$.fire(auto_activePage, 'show', null);
+			setTimeout(function() {
+				$.openWindow({
+					id: 'auto_active',
+					show: {
+						aniShow: aniShow
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}, 100);
+		};
+	</script>
+
+</html>

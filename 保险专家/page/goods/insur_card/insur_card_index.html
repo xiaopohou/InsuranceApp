@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>保险卡单</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../../css/common.css" rel="stylesheet" />
+	</head>
+	<style>
+		img {
+			height: 75px;
+		}
+		.mui-btn {
+			width: 49%;
+			height: 150px;
+			font-size: 20px;
+			margin-top: 5px;
+		}
+		
+		.Btn1 {
+			background: rgb(7, 125, 186);
+		}
+		
+		.Btn2 {
+			background: rgb(23, 160, 125);
+		}
+		
+		.Btn3 {
+			background: rgb(171, 105, 255);
+		}
+	</style>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">保险卡单</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<button class=" mui-btn Btn1" id="card_show">
+					<img src="../../../images/goods/insur_card/goumai.png" />
+					<br /> 卡单采购
+				</button>
+				<button class=" mui-btn Btn2" id="online_card">
+					<img src="../../../images/goods/insur_card/online.png" />
+					<br /> 线上卡单
+				</button>
+				<button class=" mui-btn Btn3" id="auto_active">
+					<img src="../../../images/goods/insur_card/jihuo.png" />
+					<br /> 在线激活
+				</button>
+				<button class=" mui-btn Btn1" id="">
+					<img src="../../../images/goods/insur_card/gengduo.png" />
+					<br /> 更多
+				</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		
+		mui.plusReady(function(){
+			document.getElementById("card_show").addEventListener('tap',function(){
+//				console.log("11");
+				mui.openWindow('insur_card_show.html',"insur_card_show");
+			});
+			document.getElementById("online_card").addEventListener('tap',function(){
+				mui.openWindow('../online_card/online_card_show.html',"online_card");
+			});
+			document.getElementById("auto_active").addEventListener('tap',function(){
+				mui.openWindow('insur_card_auto_active.html',"insur_card_auto_active");
+			});
+		});
+	</script>
+
+</html>

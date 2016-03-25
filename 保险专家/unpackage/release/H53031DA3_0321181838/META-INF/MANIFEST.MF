@@ -1,0 +1,1079 @@
+Manifest-Version: 1.0
+Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+
+Name: res/layout/market_fragment_base.xml
+SHA1-Digest: DjnstVolfZR82AvXdm2Z/JZufSU=
+
+Name: assets/iflytek_skin/btn_left_n.png
+SHA1-Digest: Uy9Kt1Bqugq7rPUEFvWv//80UCk=
+
+Name: assets/logo_h.png
+SHA1-Digest: NiIXDIWMhuIXwHmFVSalyGsn3g0=
+
+Name: assets/apps/H53031DA3/www/images/homePage/main_my_money.png
+SHA1-Digest: i7+Mrd369uSbpZ8HAG7ZCyMz8xE=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/u2.jpg
+SHA1-Digest: WFV4t39Sd07+wsY3vc3YPTjnDT0=
+
+Name: assets/iflytek_skin/stop.png
+SHA1-Digest: ht5xRYY33N/ipK491p80D+qv82U=
+
+Name: assets/lineDashTexture.png
+SHA1-Digest: +/nYUlVgUpTAXggl82nRmgpS0Bw=
+
+Name: assets/apps/H53031DA3/www/libs/easymob-webim-sdk/json2.js
+SHA1-Digest: KYMrIkJ6aTu4MrgBq1mNVnMLEuw=
+
+Name: assets/apps/H53031DA3/www/images/homePage/main_group.png
+SHA1-Digest: qXY3hAEGTHIE++w10Cd41ak1D6A=
+
+Name: assets/data/properties.xml
+SHA1-Digest: abDC87q3P82Rd6Pgol+EzFs90TM=
+
+Name: assets/iflytek_skin/btn_left_f.png
+SHA1-Digest: p/1cIoJGJd/H8v6H8sAT8F4MpEg=
+
+Name: assets/Icon_end.png
+SHA1-Digest: LBMaCfaSy+zZcqGqKqu/dkvhnK0=
+
+Name: assets/apps/H53031DA3/www/js/template.js
+SHA1-Digest: s3tL16zfhbCCeMG8vhVxpdfZayM=
+
+Name: assets/iflytek_skin/btn_left_d.png
+SHA1-Digest: CcsNkIkH5AOGxMiFfeSxGk5yLvA=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/zbak_insur_card_
+ show.html
+SHA1-Digest: fhZ7hHfoEdENcCGnY9yc4a+s8Fc=
+
+Name: assets/iflytek_skin/recognizer.xml
+SHA1-Digest: eX1eSzc3xJj5quCG9p9/uz9bm5I=
+
+Name: assets/apps/H53031DA3/www/images/goods/life/chengchangbaoxian.pn
+ g
+SHA1-Digest: o8KS5KDHpShH5a7/T09F1cT6y8g=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/app_img16.jpg
+SHA1-Digest: ub3HddAoYqytGgvK1pcnBrV+USE=
+
+Name: res/drawable-hdpi/snow_black.png
+SHA1-Digest: XRjdkwjc+BXJKv2lJE4D8Rhx2z0=
+
+Name: lib/armeabi-v7a/libmsc.so
+SHA1-Digest: 5/iTmYoJafk1ySqZKYdXjX1ejiM=
+
+Name: assets/apps/H53031DA3/www/images/homePage/a4.png
+SHA1-Digest: liqoZgGbTJ6nApVy9zAxXLfrhPc=
+
+Name: res/drawable-xhdpi/dcloud_streamapp_qr.png
+SHA1-Digest: 2JTCiavU3HKM4+jL92o8uO1Yyog=
+
+Name: assets/apps/H53031DA3/www/json/goods/insur_card/insur_card_info.
+ json
+SHA1-Digest: bd7VqZkqtA2Mx42cY5kbPcbzA14=
+
+Name: assets/icon_scale.9.png
+SHA1-Digest: qIUctUAkthqkey8qZs8wMv+8+ow=
+
+Name: assets/cfg/l/DVHotMap.cfg
+SHA1-Digest: QDy7zXuBlzO1yvSe0qWNZURB6Z0=
+
+Name: assets/res/prograss_snow1.png
+SHA1-Digest: Vafj/Tc9mpFJC153T5KKSIRJtUg=
+
+Name: assets/res/beep.ogg
+SHA1-Digest: GlIsg8mvi6v0saqDdV7ZN0KoFcY=
+
+Name: res/layout/activity_main_market.xml
+SHA1-Digest: +H1/A5Sfa1Og7GLigN5sHTdv79w=
+
+Name: assets/Icon_road_blue_arrow.png
+SHA1-Digest: iZ082ij5Px2QVyA4yuq8nZS8heM=
+
+Name: assets/apps/H53031DA3/www/images/qq.png
+SHA1-Digest: vKv/ij8bgv1lD3QuBTqfzxw1Yj0=
+
+Name: assets/res/HBuilder.png
+SHA1-Digest: X6XOPF9oX7CfSofHOzAs61ojxh0=
+
+Name: assets/apps/H53031DA3/www/page/passport/forget-validate.html
+SHA1-Digest: nxDCeWTHNTH2L1tuncIS03zDvLo=
+
+Name: res/drawable-hdpi/snow_white_progress.xml
+SHA1-Digest: dVpqOJt3BWrNvH0huFZfodTDE/Q=
+
+Name: assets/apps/H53031DA3/www/libs/easymob-webim-sdk/quickstart.md
+SHA1-Digest: c/mnoz/+1HQ8qffITSnEQRweMg4=
+
+Name: assets/iflytek_skin/wave_3.png
+SHA1-Digest: Atxb2YBtBmQUZ5Ee+ozdvhgG+3s=
+
+Name: res/drawable/dcloud_tab_right_api_10_but_corners.xml
+SHA1-Digest: uCr6uOu8YgoeCHolFw1DcfmItwQ=
+
+Name: assets/iflytek_skin/play_bg_f.png
+SHA1-Digest: koFJIhikNTfHxxDbAT7T2v0gZeg=
+
+Name: assets/apps/H53031DA3/www/images/homePage/hook.png
+SHA1-Digest: vJq1QDMLKWAptlsnklrUHh/I4pE=
+
+Name: assets/apps/H53031DA3/www/images/homePage/main_person.png
+SHA1-Digest: ChefYTPKgKXbiSosJHD4kOUSUN8=
+
+Name: assets/iflytek_skin/progress_horizontal.xml
+SHA1-Digest: zesSyU/zpIj1OhqsFRTPnl35rVk=
+
+Name: assets/iflytek_skin/more_item_bg.xml
+SHA1-Digest: XcB6V62s+c4+gTRCeP7zQ9uNWJA=
+
+Name: assets/cfg/l/DVHotcity.cfg
+SHA1-Digest: pYRdHEvIe4tHhbRW127cuDCe2k4=
+
+Name: assets/apps/H53031DA3/www/libs/easymob-webim-sdk/jquery-1.11.1.j
+ s
+SHA1-Digest: z7U3noOZ09+YlnDKZTzd61i8gzk=
+
+Name: assets/apps/H53031DA3/www/index.html
+SHA1-Digest: BXu6JbBe5PmqeI8BhGOQzN2YNkQ=
+
+Name: assets/Icon_road_yellow_arrow.png
+SHA1-Digest: RDWwUfjcWrNv0o/SuGNkxuEz7/I=
+
+Name: assets/apps/H53031DA3/www/images/goods/banner1.jpg
+SHA1-Digest: MuduKFta31cwPgLa3aTLx7N4+0g=
+
+Name: assets/Icon_road_green_arrow.png
+SHA1-Digest: 7SiwhSFNOH0S3qFMlVc7ra7cVac=
+
+Name: assets/apps/H53031DA3/www/page/passport/login.html
+SHA1-Digest: ufIabm9TS1nQD+ghWQoIruaZRv4=
+
+Name: assets/apps/H53031DA3/www/page/goods/company/companyIndex.html
+SHA1-Digest: L8S4axkR6IMFnTSjmAEtEfCxi5E=
+
+Name: assets/Icon_mark7.png
+SHA1-Digest: sKKD7pJZIL+05Zj8WfN2Iu+BqSU=
+
+Name: res/drawable/image_pick_title_sel.xml
+SHA1-Digest: g6w8wf5saquiQqf4bg33FD6mqjo=
+
+Name: res/layout/snow_white_progress.xml
+SHA1-Digest: 60IjwQbqOfYSdNZsj9I5lLnIka4=
+
+Name: res/drawable-xhdpi/dcloud_streamapp_scan_back.png
+SHA1-Digest: rREir9vBdBkj6BSHxdvskklAA10=
+
+Name: assets/apps/H53031DA3/www/json/goods/insur_card/insur_card_show.
+ json
+SHA1-Digest: Mqefp84nnBmJ4+zVdE+YjhYE4cM=
+
+Name: res/layout/image_pick_gallery.xml
+SHA1-Digest: RfAY0Lxqpy/HnCRP2CV/PIzkZi0=
+
+Name: assets/Icon_mark10.png
+SHA1-Digest: brhelZiL1AZTlMx8OTzOldR2G7A=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/tuanti.png
+SHA1-Digest: bhRO+0Qtmm49k90N+Ibi2yeVkJI=
+
+Name: assets/apps/H53031DA3/www/images/homePage/a2.png
+SHA1-Digest: 5HH5mHvPN/8Mc1g0iBS7ZoiE3+c=
+
+Name: assets/apps/H53031DA3/www/json/goods/insur_card/insur_card_show_
+ client.json
+SHA1-Digest: uXAFtxkCxlHrn3jObQUQyZUbd9o=
+
+Name: res/layout/dcloud_streamapp_head.xml
+SHA1-Digest: IJPCTf316IwfUPJs6TmIcFDd8uw=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/app_img13.jpg
+SHA1-Digest: ny612Vh7iqVR8lDSiDhhbFPA66g=
+
+Name: assets/apps/H53031DA3/www/page/goods/company/companyAssets/compa
+ nyAssets_index.html
+SHA1-Digest: 8ekhVj1B8vABeReAHBoic3bS/Cs=
+
+Name: assets/res/point.png
+SHA1-Digest: 099YVv4Dd6pwlnu0C38LOERev4A=
+
+Name: assets/apps/H53031DA3/www/images/goods/banner3.jpg
+SHA1-Digest: mQHY9uKDZuFtPL4icuRFsYX/yX8=
+
+Name: assets/Icon_mark5.png
+SHA1-Digest: fhXU60vSeWOscJdoLYlS5RHB4xU=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/sousuo.png
+SHA1-Digest: ZSLsWY5WnxQIweBhzq/QeBmGR7s=
+
+Name: res/drawable/dcloud_dialog_shape_bg.xml
+SHA1-Digest: aaxyeTuWL1CycqYNyo/CumLOm9A=
+
+Name: assets/Icon_mark3.png
+SHA1-Digest: 10OVxu8Hw/b6BCt9qISWaAsJCEU=
+
+Name: assets/apps/H53031DA3/www/js/card.js
+SHA1-Digest: LcDeDzfxI17vAoo9kqCmkH8CxQs=
+
+Name: assets/apps/H53031DA3/www/images/homePage/button.png
+SHA1-Digest: oXUN3NL2qWuW5W0dEOAjqigg4pI=
+
+Name: res/drawable/tab_left_but_corners.xml
+SHA1-Digest: HPK6qvGrCfQ8AGjqUbR+Y0OY2CY=
+
+Name: assets/apps/H53031DA3/www/page/ucenter/setting.html
+SHA1-Digest: lJ7IDv9vu8GFrFxQbXZ6UKfK3HA=
+
+Name: assets/apps/H53031DA3/www/page/passport/forget.html
+SHA1-Digest: 2w4L/H8B3XHZ1yeUUODVwn9AcTg=
+
+Name: res/drawable/tab_but_corners.xml
+SHA1-Digest: ZsdDGN+uxqJgMjmBWnJ9g1PHrH4=
+
+Name: res/anim/dcloud_slide_right_out.xml
+SHA1-Digest: 0K+hsbIVs7N7sbQH2/d4NAUnRKU=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/home.png
+SHA1-Digest: gmryUov2+/HbNK/zTeblJRg1jq0=
+
+Name: assets/libso.so
+SHA1-Digest: VKRENEfegdZ82v48xiUf6j8x0YA=
+
+Name: assets/apps/H53031DA3/www/images/goods/life/baoxian.png
+SHA1-Digest: jR3+qLSNJl+BLQEm70mGxOGXx0M=
+
+Name: res/layout/dcloud_streamapp_list_item.xml
+SHA1-Digest: pY4FOd3lXUci0sPfaV2OuTmt0OE=
+
+Name: assets/apps/H53031DA3/www/page/ucenter/insurance.html
+SHA1-Digest: rcvpn/u5tK4ie1HLJyQfqhneMqI=
+
+Name: assets/apps/H53031DA3/www/manifest.json
+SHA1-Digest: 6m39Bh48T+4Y8bSdQq/KWwX0JBk=
+
+Name: assets/apps/H53031DA3/www/images/goods/car/qiche.png
+SHA1-Digest: 7JPQ4bP85rNTYtkqEyTAiWDp49M=
+
+Name: assets/apps/H53031DA3/www/images/myOrder/fileUpload.png
+SHA1-Digest: JH9MfG868QprKMCL0zrysvn8pEQ=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/goumai.png
+SHA1-Digest: m3Zng6+58EkHg1K5qPORv3e/vKU=
+
+Name: res/drawable/dcloud_dialog_shape.xml
+SHA1-Digest: +H3A0Rs4S/5jSfme5tNYw8GeYTg=
+
+Name: assets/apps/H53031DA3/www/json/goods/insur_card/insur_card_info_
+ client.json
+SHA1-Digest: bd7VqZkqtA2Mx42cY5kbPcbzA14=
+
+Name: assets/apps/H53031DA3/www/page/goods/company/groupAccident/group
+ Accident.html
+SHA1-Digest: 6dWEu2YK9mrBwmz+MzlUMAFOnkI=
+
+Name: assets/data/error.html
+SHA1-Digest: MBBRjQkqIQjqV4G74f1tLqabh6M=
+
+Name: assets/cfg/h/DVDirectory.cfg
+SHA1-Digest: ciPf3QD4BZ07g8KMb3140tyqBWk=
+
+Name: res/drawable-hdpi/stream_running.png
+SHA1-Digest: DRnfMREbN4Zx51q28/YYBhnw3LI=
+
+Name: assets/iflytek_skin/btn_right_d.png
+SHA1-Digest: DvJTQNmdsM8EoXmAKOBRggm6gZA=
+
+Name: assets/apps/H53031DA3/www/page/goods/online_card/online_card_pur
+ chase.html
+SHA1-Digest: IvkdL/ePro3JL2847FUgoKAeMFc=
+
+Name: assets/apps/H53031DA3/www/images/homePage/main_invite.png
+SHA1-Digest: d7G1+zLtCGjDarrEdYW5GYsnA7c=
+
+Name: assets/apps/H53031DA3/www/page/ucenter/moreSetting.html
+SHA1-Digest: LLJzx93SxTXzXzEdbhByrKhrGcQ=
+
+Name: assets/apps/H53031DA3/www/images/homePage/main_life.png
+SHA1-Digest: 5d1bFhllwg+FpuTfiH/OazGTuck=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/jj.png
+SHA1-Digest: N1oAXOlKFT5nDKsiNoO2sl9e2LE=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/insur_card_index
+ .html
+SHA1-Digest: HItejNrUTtf879LZ6xwyZoeBZeo=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: ZLhPsFTU+KfWL2DNq5BMFgJs1Gg=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/app_img24.jpg
+SHA1-Digest: 7IZWmfv6rQ4VkDpw+ORSHWd57u8=
+
+Name: assets/apps/H53031DA3/www/fonts/mui.ttf
+SHA1-Digest: ZTRCsrSCxXfQemMYWe9adoltU+E=
+
+Name: assets/Icon_road_nofocus.png
+SHA1-Digest: Uwg7gBCrh1S1FYmr4OscByLpvUg=
+
+Name: assets/apps/H53031DA3/www/images/homePage/person.png
+SHA1-Digest: EB8AckXB1HDNGQoN7G8XwZYLcAs=
+
+Name: assets/Icon_mark1.png
+SHA1-Digest: RMqITX92JYEbzb7P/39eL+9AfT0=
+
+Name: assets/iflytek_skin/btn_right_f.png
+SHA1-Digest: 2nCtLmCE9M7x5CLwEi5zmLT9C28=
+
+Name: res/layout/dcloud_streamapp_swipe_layout.xml
+SHA1-Digest: SbOrKy7vPrwQ1orDqhO0L4gLQ4w=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/app_img3.jpg
+SHA1-Digest: uL7fqcr+RFRGku17UR3rxrOglas=
+
+Name: res/drawable-xhdpi/splash.png
+SHA1-Digest: PN+gatFzFePpdICUi5AsWAAvAc8=
+
+Name: res/layout/dcloud_loadingview.xml
+SHA1-Digest: eaU2mt7W3R5uu8ftrjqeiBcqve8=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/companyAssets/use
+ rPhoto.jpg
+SHA1-Digest: 1mM7IG3lSLp7AJ1oMDwx9uob+Ms=
+
+Name: assets/apps/H53031DA3/www/page/goods/car/car_duty.html
+SHA1-Digest: mGLhkZP3zLZz6iQPQGs0LtWfG64=
+
+Name: res/anim/dcloud_slide_out_to_top.xml
+SHA1-Digest: tl8+vRVn6n9te/3PrIq4RKz2sSw=
+
+Name: assets/apps/H53031DA3/www/page/myOrder/myOrderIndex.html
+SHA1-Digest: u6mCOQPYQqVMZ+bJ4NZoKAqhE5E=
+
+Name: assets/iflytek_skin/more_expanded.png
+SHA1-Digest: vVb6fQSrPGMSm3aq3DmvpZH+RF4=
+
+Name: res/drawable/image_pick_no_media.png
+SHA1-Digest: dsogMWZPD4CTWdW/3NUaheChMTI=
+
+Name: assets/iflytek_skin/btn_f.png
+SHA1-Digest: JYNFj59SUT29gr5EZMC4OhpvV1Y=
+
+Name: assets/apps/H53031DA3/www/page/goods/online_card/online_card_sho
+ w.html
+SHA1-Digest: 1JBb7irt/MYL7lmPOa3nSaxp4Ts=
+
+Name: assets/apps/H53031DA3/www/page/myOrder/myOrder_info.html
+SHA1-Digest: Fk70hBYG4Kxeq7zWhIepjwq0ImQ=
+
+Name: assets/iflytek_skin/progress.xml
+SHA1-Digest: 3XAjHoXFwnlsGccJvPGI/AcxK8w=
+
+Name: assets/iflytek_skin/dot_highlight.png
+SHA1-Digest: d+ALjgIwK56qEToSQi8rt8UdYMM=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/logo-pingan.pn
+ g
+SHA1-Digest: 870zKlIJYGc7hPPhCZ4rq/ub84w=
+
+Name: assets/iflytek_skin/wave_4.png
+SHA1-Digest: TAhHCkJuRRVoEZsrVI5QY9bJz4c=
+
+Name: assets/data/control.xml
+SHA1-Digest: zs1KK34+rMIuyFUwHUaDfhmJ/UY=
+
+Name: assets/apps/H53031DA3/www/images/homePage/slider1.jpg
+SHA1-Digest: zQtUHwOjuR9V/RHQVxB1IrBJw3I=
+
+Name: res/layout/main_test_activity.xml
+SHA1-Digest: Di206SKhzinIhA506e6i9k/RSW8=
+
+Name: assets/cfg/h/DVVersion.cfg
+SHA1-Digest: ufzee4ZlPq1t61coCmBJz4d0VxA=
+
+Name: res/drawable-xhdpi/actionsheet_single_normal.9.png
+SHA1-Digest: +ooz/8dU/3APqD3nIlcnjVzTK1c=
+
+Name: assets/apps/H53031DA3/www/page/goods/life/lifeIndex.html
+SHA1-Digest: MvGv01KtY4Qc8ZdZED3pgnrvCVc=
+
+Name: assets/apps/H53031DA3/www/page/ucenter/takePic.html
+SHA1-Digest: o1saya0HhX5AWcGe63HPKc5zXWU=
+
+Name: assets/apps/H53031DA3/www/page/myOrder/applicationForm.html
+SHA1-Digest: 9oaQJ20mHAH0M6P1ETaTFSgv7GI=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/insur_card_auto_
+ active.html
+SHA1-Digest: avNnjuj7fu03YhUKd5PrkwHLoAM=
+
+Name: res/drawable-xhdpi/actionsheet_single_pressed.9.png
+SHA1-Digest: bsE1DB3cZdWpDyGLnmpnyA2KvHQ=
+
+Name: assets/apps/H53031DA3/www/images/homePage/phone.png
+SHA1-Digest: 9anXHzceBa+o1c4+EV9U5sbcnJc=
+
+Name: res/anim/dcloud_slide_in_from_top.xml
+SHA1-Digest: j9NoB6YvS+k2Hu4CpYn/g70kGaY=
+
+Name: assets/iflytek_skin/wave_2.png
+SHA1-Digest: amX3XVyUvO7IKVI4BkCsX2Ut8lA=
+
+Name: assets/apps/H53031DA3/www/images/homePage/slider4.jpg
+SHA1-Digest: WBewqtLrLZm9VEt5K8ZQ9F4J13o=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/zbak_insur_card_
+ cart
+SHA1-Digest: oY5p/zaKaiFBjLLO4+yDpMlS0DI=
+
+Name: res/drawable/dcloud_tab_left_api_10_but_corners.xml
+SHA1-Digest: UwjRRZ2fKfd6+9G9X8fTovaaYHY=
+
+Name: lib/armeabi/liblocSDK6a.so
+SHA1-Digest: RmLnGD1vu+jooNo4NZXAHOcS7yo=
+
+Name: assets/apps/H53031DA3/www/page/ucenter/home.html
+SHA1-Digest: 55Sw+GJidWctmf5C5QPFsiSqalY=
+
+Name: assets/apps/H53031DA3/www/css/mui.min.css
+SHA1-Digest: ucgqH0IhHG91w+fF+AyvUe1Sdpo=
+
+Name: assets/apps/H53031DA3/www/images/homePage/condiv_img2.jpg
+SHA1-Digest: 596fBZ2jkHH4Qw+Ie6T/jL8R3X8=
+
+Name: res/drawable-mdpi/splash.png
+SHA1-Digest: PN+gatFzFePpdICUi5AsWAAvAc8=
+
+Name: lib/armeabi/libBaiduMapSDK_v3_5_0_15.so
+SHA1-Digest: c79M3zVIJoquqEU3vMDoNWOlohQ=
+
+Name: assets/iflytek_skin/play_bg_p.png
+SHA1-Digest: Ah9E3GP74FNv14Xt3tcfIzRKRcU=
+
+Name: assets/Icon_mark9.png
+SHA1-Digest: Hr7HMZrDP8VeXS+315R/nFkbCwY=
+
+Name: res/drawable-xhdpi/as_bg_ios6.9.png
+SHA1-Digest: BdQQGRQgQduwDkl+hdW5pElCtno=
+
+Name: assets/apps/H53031DA3/www/images/goods/car/btruck.jpg
+SHA1-Digest: A7IaTGXmrLv3K6mfkLaFU1xLKK8=
+
+Name: assets/apps/H53031DA3/www/images/goods/car/huoche.png
+SHA1-Digest: QelOBNaKMUI3gUagZOP+ph8UDbA=
+
+Name: assets/apps/H53031DA3/www/page/goods/online_card/online_card_det
+ ails.html
+SHA1-Digest: PhUNxUxGy2T1zzbS1BHbEW9LTN8=
+
+Name: assets/apps/H53031DA3/www/images/person_code.png
+SHA1-Digest: BlwTTzdwtNXw2Bs+FRc0DzQP+GI=
+
+Name: assets/cfg/h/DVHotcity.cfg
+SHA1-Digest: 0pbsHj9Lrbbj5hZsFHP7VdQmV2E=
+
+Name: res/drawable-hdpi/dcloud_snow_black_progress.xml
+SHA1-Digest: mvDKoUns97TkCn1+lfDf2a0IDpY=
+
+Name: assets/iflytek_skin/btn_left_p.png
+SHA1-Digest: JAb93jQ+gdk4lB297qg140zrIcU=
+
+Name: assets/apps/H53031DA3/www/images/homePage/a3.png
+SHA1-Digest: niaGM8w5xYzvxSWAt/EtnC1Iay4=
+
+Name: res/drawable-hdpi/snow_white.png
+SHA1-Digest: p8jzodyDU0JoZxp3gQu823r6I3g=
+
+Name: res/layout/image_pick_gallery_item.xml
+SHA1-Digest: 9MW9nEj/wi46+W8ThkA0+XNCQmw=
+
+Name: assets/iflytek_skin/btn_right_n.png
+SHA1-Digest: 5wrAj3g1k1Opr0bYwHpTPv86QeA=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/insur_card_cart.
+ html
+SHA1-Digest: FbP/s7e6lEvXQnHzdGdG5A3G2tQ=
+
+Name: res/layout/dcloud_view_splash.xml
+SHA1-Digest: 5PDcDqQHLaHDIlcs8DVg6j5AzhU=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/sc.png
+SHA1-Digest: a3AQho60qz1oJEfPjt8ELDW2mSY=
+
+Name: res/drawable/image_pick_mask.9.png
+SHA1-Digest: dMjv7v9UF8YoYHbf5xP2TQoUwVw=
+
+Name: assets/Icon_start.png
+SHA1-Digest: U0bO85R4iXAolnKrTCo/XWsbh5Q=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/insur_card_show.
+ html
+SHA1-Digest: UM93gNvZmBad9YO8uwk2JVWyXT4=
+
+Name: lib/armeabi/libmsc.so
+SHA1-Digest: 5/iTmYoJafk1ySqZKYdXjX1ejiM=
+
+Name: assets/cfg/a/ResPack.cfg
+SHA1-Digest: LmxvFQEOiNrFB4804xqN314DLy8=
+
+Name: lib/armeabi-v7a/libBaiduMapSDK_v3_5_0_15.so
+SHA1-Digest: 4fSlxYCHon6qPfEtckkyJIDfg/M=
+
+Name: res/drawable-ldpi/splash.png
+SHA1-Digest: PN+gatFzFePpdICUi5AsWAAvAc8=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/groupAccident/acc
+ ident.jpg
+SHA1-Digest: vJqtRmgfmbWpvNyt7b2NMV2nK9k=
+
+Name: assets/iflytek_skin/wave_1.png
+SHA1-Digest: ih/VoxsoAyk1f/qCAPq/kELAefQ=
+
+Name: res/anim/dcloud_slide_right_in.xml
+SHA1-Digest: 3NXhOshe4uW5Z+pEzlgE2lBFA1Q=
+
+Name: assets/apps/H53031DA3/www/images/homePage/b3.png
+SHA1-Digest: NdJW2PAWqIh0eD41OrnDhMlmPQQ=
+
+Name: assets/apps/H53031DA3/www/images/goods/car/gengduo.png
+SHA1-Digest: ijzWKniGPhMlrfbuHPvFzFPykKI=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: O/NNfenup542qmOPFNKrE9Sq1wM=
+
+Name: assets/apps/H53031DA3/www/css/base.css
+SHA1-Digest: A6k6Yl0BRi+4+KXEUAtBpnRDErE=
+
+Name: assets/iflytek_skin/more_blank.png
+SHA1-Digest: 0jYsRXZUpKad1nT/szJuWYsPxT4=
+
+Name: assets/apps/H53031DA3/www/libs/easymob-webim-sdk/strophe-custom-
+ 2.0.0.js
+SHA1-Digest: S3ZbvJEeiObsnc1h1DKWAXudvgw=
+
+Name: assets/res/bubble_background.png
+SHA1-Digest: cDhfyEJsXAGr1usS1wYmA4VsGt8=
+
+Name: assets/Icon_walk_route.png
+SHA1-Digest: /ms0l+rN0Zkzr/GD/nbaJPgD5Zs=
+
+Name: assets/apps/H53031DA3/www/images/homePage/slider3.jpg
+SHA1-Digest: HTJ5ViCQyzTBwn0rkJ+n+8i4dyA=
+
+Name: io/dcloud/all.js
+SHA1-Digest: 230ew5IhwF/BmXr+MwQNg9VK30E=
+
+Name: res/layout/snow_black_progress.xml
+SHA1-Digest: R+hlAa8pJgsX/18gd7CkxRKqS8Q=
+
+Name: assets/apps/H53031DA3/www/images/sinaweibo.png
+SHA1-Digest: eERFtoGAaMeT6DccRaabcECT49Q=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/gengduo.png
+SHA1-Digest: ijzWKniGPhMlrfbuHPvFzFPykKI=
+
+Name: res/anim/dcloud_slide_static.xml
+SHA1-Digest: dafLGNIlOk+zCRhQVn9VbcgbrBM=
+
+Name: assets/apps/H53031DA3/www/page/myOrder/myOrder_companyAssets.htm
+ l
+SHA1-Digest: bswoF46NFflLv7DU/kbY4b7ACQ0=
+
+Name: res/layout/dcloud_dialog.xml
+SHA1-Digest: MM1E3e09zZRtJp7v9j9z3FzvraI=
+
+Name: assets/apps/H53031DA3/www/images/homePage/condiv_img1.jpg
+SHA1-Digest: y2zuvArzHuP21SRhSwIFnYNdbG8=
+
+Name: assets/apps/H53031DA3/www/plus/camera_image.html
+SHA1-Digest: kSHDBPVfTz8eSBaznYuYR25VxL8=
+
+Name: assets/iflytek_skin/dot_normal.png
+SHA1-Digest: jTJ73tF/ZSYqdnUbuJEw04vHY64=
+
+Name: com/tencent/mm/sdk/platformtools/rep5402863540997075488.tmp
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: assets/Icon_bus_station.png
+SHA1-Digest: ijMexAQ0II7KUGYEiaaiHPUGw44=
+
+Name: assets/iflytek_skin/more_collapsed.png
+SHA1-Digest: 4BAfu1NTdgXbj0ULmC/jAfAGHLQ=
+
+Name: assets/apps/H53031DA3/www/page/guide/index.html
+SHA1-Digest: CT1jdG973OSQlTam2ZeBgg/ARbk=
+
+Name: assets/apps/H53031DA3/www/images/homePage/app_topimg.png
+SHA1-Digest: wYRJ29bN7zMuCgSHIkRAgCJmUos=
+
+Name: assets/iflytek_skin/wave_5.png
+SHA1-Digest: 1myJM+xhtLrVDfa/Wai4jLzl4f8=
+
+Name: assets/Icon_mark8.png
+SHA1-Digest: vJHMIXsi8SPI0zapgfknlq2wAkE=
+
+Name: res/layout/dcloud_streamapp_tab_layout.xml
+SHA1-Digest: q56IiWEnaVBx/sO9y0COn6BP+A0=
+
+Name: assets/Icon_road_red_arrow.png
+SHA1-Digest: uEoDWUsxaFh/8MDvT6kB9z0jAO0=
+
+Name: assets/apps/H53031DA3/www/js/md5.js
+SHA1-Digest: L//FBekePZ7jN6s9tXKEDjFslb8=
+
+Name: assets/iflytek_skin/warning.png
+SHA1-Digest: IbIxXmhDAhwIz4zG6HfP+VP9uGY=
+
+Name: assets/apps/H53031DA3/www/page/goods/company/companyAssets/proli
+ st.css
+SHA1-Digest: 08dhVD/RyDhfPRCrxDxob+t5bwI=
+
+Name: assets/iflytek_skin/play_bg_n.png
+SHA1-Digest: m5gJkZ3t285QgZAjhm1QbWF64Kw=
+
+Name: res/drawable-xhdpi/image_pick_mask.9.png
+SHA1-Digest: dMjv7v9UF8YoYHbf5xP2TQoUwVw=
+
+Name: assets/apps/H53031DA3/www/page/passport/reg-validate.html
+SHA1-Digest: I5RTc2A+wFG2VlTHViZNZVELazk=
+
+Name: assets/cfg/a/trafficstyle.sty
+SHA1-Digest: XCAgA/Y0btuFF1uN98RgeT9VEsY=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/app_img1.jpg
+SHA1-Digest: QVOpaj8zL9lNjN8d18HbnsNvIBA=
+
+Name: assets/apps/H53031DA3/www/images/goods/car/car_banner.jpg
+SHA1-Digest: TUVvhjumO7cgZ7dNCS/4L2szD7Y=
+
+Name: assets/apps/H53031DA3/www/js/config.js
+SHA1-Digest: E2/oyjQRVSFO99nZkUfXqYxzeFw=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/companyAssets/qiy
+ ebaoxianIcon.png
+SHA1-Digest: HlvnqcV5WLL4hR6n7FAqTzN+AlM=
+
+Name: assets/apps/H53031DA3/www/page/passport/reg.html
+SHA1-Digest: 3Y/aiCjlZlFksKj6RFHoZa2EnB8=
+
+Name: assets/iflytek_skin/wave_0.png
+SHA1-Digest: J8e+9FxVDZ5yyxxLAhvKn9I7jOc=
+
+Name: assets/logo_l.png
+SHA1-Digest: WwqUEYbcRtro7LUcYuofXSP0AWc=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/u1.jpg
+SHA1-Digest: tCuh6zo/3nD9Hs3+pDMq+/1iOjs=
+
+Name: res/layout/stream_running_progress.xml
+SHA1-Digest: iV32XCNR+W32/+grvLNplds9cXU=
+
+Name: assets/apps/H53031DA3/www/images/goods/car/kache.png
+SHA1-Digest: r/YvRHtAX8ny5+BW3E0IS5PuQ8M=
+
+Name: res/drawable-xhdpi/actionsheet_top_pressed.9.png
+SHA1-Digest: ITrDfboVcvScvX5Id3ebOtIAR9Y=
+
+Name: assets/apps/H53031DA3/www/js/mui.min.js
+SHA1-Digest: wZh4SsBodI5KzWVOADmPqfxTG4o=
+
+Name: assets/apps/H53031DA3/www/images/homePage/title_img1.png
+SHA1-Digest: wFdpILJZ9zTP65/9DTv5AHLUrhA=
+
+Name: assets/apps/H53031DA3/www/css/insur_card_info.css
+SHA1-Digest: WOS4gnVsaV2gaJb0//E0XuXb3zY=
+
+Name: assets/iflytek_skin/editbox.png
+SHA1-Digest: sLk69NjJNJEecHgKXnhQl9hEvkI=
+
+Name: assets/apps/H53031DA3/www/js/mui.enterfocus.js
+SHA1-Digest: Znu560IVgRrwnFcs7Hy/vbSBVV0=
+
+Name: res/drawable-xhdpi/actionsheet_bottom_pressed.9.png
+SHA1-Digest: Kr64eCBbeZEu9d6U6KH0hlwsPmI=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/logo-xinhua.pn
+ g
+SHA1-Digest: vJi1DxXJ01xW1WtfuhGjG6i5AuI=
+
+Name: assets/cfg/a/satellitestyle.sty
+SHA1-Digest: lvDJOUOMSUzz/YkkbUWOksDHIDs=
+
+Name: assets/apps/H53031DA3/www/images/homePage/b4.png
+SHA1-Digest: xv1OLTgXnRZAYKr/JMWUsvjK5sI=
+
+Name: res/drawable-xhdpi/actionsheet_bottom_normal.9.png
+SHA1-Digest: sZWxe/9JNJLSYQSSNtkxkgS2daE=
+
+Name: res/drawable/tab_right_but_corners.xml
+SHA1-Digest: emu+gyoaUgFGGGudIFIlDIq8pH0=
+
+Name: assets/apps/H53031DA3/www/fonts/iconfont.ttf
+SHA1-Digest: OXJL2ywBVfpxx+g32cRMfzUXAJY=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/online.png
+SHA1-Digest: n+8DTURV2rwQBzf7wb2gBvNNvVc=
+
+Name: assets/apps/H53031DA3/www/images/homePage/main_car.png
+SHA1-Digest: SAzQW/+08TURmeAfF9faHFTCkwA=
+
+Name: assets/apps/H53031DA3/www/images/goods/banner2.jpg
+SHA1-Digest: zJEGOPuUmVLrZeReBNc+Z4XtZJM=
+
+Name: assets/iflytek_skin/loading.png
+SHA1-Digest: d518GuGTW93zTSIHI5TQr1kcwSE=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/gengduo.png
+SHA1-Digest: ijzWKniGPhMlrfbuHPvFzFPykKI=
+
+Name: res/drawable-xhdpi/as_other_bt_bg.9.png
+SHA1-Digest: N5YcfIlH1GjKtRU0uVVzLp0JfTQ=
+
+Name: assets/Icon_mark4.png
+SHA1-Digest: aO+806mdGudhrfRnuuWXiewohpQ=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/insur_card_info.
+ html
+SHA1-Digest: UaT0fePiVZAH+kSQf44X+PDfwgo=
+
+Name: assets/apps/H53031DA3/www/js/mui.view.js
+SHA1-Digest: /CgATnAia8caqrqoCShhopaxptE=
+
+Name: resources.arsc
+SHA1-Digest: poMO0gqjlwSw5cLMIILHRALUnI8=
+
+Name: assets/apps/H53031DA3/www/css/iconfont.ttf
+SHA1-Digest: OXJL2ywBVfpxx+g32cRMfzUXAJY=
+
+Name: assets/apps/H53031DA3/www/images/homePage/b1.png
+SHA1-Digest: 6zg/UoMqslP1pwamc9jxU56nejY=
+
+Name: assets/apps/H53031DA3/www/js/jquery-2.1.3.min.js
+SHA1-Digest: QbS/uqlr5tFEDbbngASt4cE04nY=
+
+Name: assets/apps/H53031DA3/www/page/myOrder/documentUpload.html
+SHA1-Digest: wtM6HLtWpj9chbBS5peabzvraPA=
+
+Name: assets/cfg/l/DVVersion.cfg
+SHA1-Digest: 9pfF9wKLomealta8UpHDj/lteYI=
+
+Name: AndroidManifest.xml
+SHA1-Digest: ven6fcz4S8GEqnqTdzWSmvqfasc=
+
+Name: assets/apps/H53031DA3/www/images/homePage/title_img2.png
+SHA1-Digest: GYen5rlD1kjbHMXnkbzsf1cBaTw=
+
+Name: res/drawable-xxhdpi/icon.png
+SHA1-Digest: iwx9rQPcPcIKc8+X1cLDJ6Cmm0Q=
+
+Name: assets/apps/H53031DA3/www/css/mui.css
+SHA1-Digest: Fe00hFNJTpvWqiiB89SJVL7T/W4=
+
+Name: assets/apps/H53031DA3/www/css/common.css
+SHA1-Digest: XuoU+FNsAvCdeH91p0qvDKXoptU=
+
+Name: res/drawable-hdpi/dcloud_snow_white_progress.xml
+SHA1-Digest: dVpqOJt3BWrNvH0huFZfodTDE/Q=
+
+Name: assets/apps/H53031DA3/www/page/ucenter/userInfo.html
+SHA1-Digest: 9SWKJvwEgsULs3+GMEobCiX4urA=
+
+Name: assets/iflytek_skin/speechbox.xml
+SHA1-Digest: QzBSzyXzt80fgx+dRNVUxyJg0yI=
+
+Name: assets/iflytek_skin/btn_n.png
+SHA1-Digest: DuByL0UQXY6DZdewl5EIze8zQYs=
+
+Name: lib/x86/liblocSDK6a.so
+SHA1-Digest: ZyFnzYKH/KAVl5IHjqg+NZssYXE=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/insur_card_buyin
+ g.html
+SHA1-Digest: EWzHAeos12YxvWGtMn1ME3ZokDk=
+
+Name: assets/apps/H53031DA3/www/page/goods/company/employer/employer_i
+ ndex.html
+SHA1-Digest: RY3RgGQhwBeqKJy24e6Trq0upPg=
+
+Name: assets/apps/H53031DA3/www/page/goods/company/companyAssets/test.
+ html
+SHA1-Digest: Ob7MVnc4iL9vsCZC5PyxblaxFrI=
+
+Name: classes.dex
+SHA1-Digest: HqiJOYmU9y6GzBeIygRV4C3ulfU=
+
+Name: res/drawable-xhdpi/actionsheet_top_normal.9.png
+SHA1-Digest: s97O3pxT1sFSO9Mj0fugvq3J8/w=
+
+Name: res/drawable-hdpi/snow_black_progress.xml
+SHA1-Digest: mvDKoUns97TkCn1+lfDf2a0IDpY=
+
+Name: res/drawable-xxhdpi/splash.png
+SHA1-Digest: PN+gatFzFePpdICUi5AsWAAvAc8=
+
+Name: res/drawable-xhdpi/image_pick_no_media.png
+SHA1-Digest: dsogMWZPD4CTWdW/3NUaheChMTI=
+
+Name: assets/apps/H53031DA3/www/js/app.js
+SHA1-Digest: 7QwIDfbdhyuELYPnDhb1fzO+XoU=
+
+Name: assets/apps/H53031DA3/www/images/goods/car/car.jpg
+SHA1-Digest: b55LczcXr53LGtNacC6nQep/Djk=
+
+Name: res/layout/dcloud_streamapp_swipe_item.xml
+SHA1-Digest: k7VA4czocNW3SMl91QxALv0KnI8=
+
+Name: assets/apps/H53031DA3/www/images/homePage/main_insur_card.png
+SHA1-Digest: ly3L1KLMDuhDWZAlGd5ZKP51s8s=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/zbak_insur_card_
+ info.html
+SHA1-Digest: Xtr4aMJKgx3/eiYSQVNRnJJ/IgU=
+
+Name: lib/x86/libBaiduMapSDK_v3_5_0_15.so
+SHA1-Digest: DGAkWvjo4PhElZW8bMYZUi775TA=
+
+Name: assets/Icon_mark6.png
+SHA1-Digest: sLqXOe/Pkf8RC0la1z7FEJtfrbw=
+
+Name: res/layout/loadingview.xml
+SHA1-Digest: R8MoEsjCf0wBtzk+CgekT0nieo0=
+
+Name: res/drawable-xhdpi/actionsheet_middle_pressed.9.png
+SHA1-Digest: pUFFInHh2HOhvXwCg/ZHEyxam5I=
+
+Name: assets/apps/H53031DA3/www/images/homePage/slider2.jpg
+SHA1-Digest: uwIC/uD4HgL/75tipzEZFgntog4=
+
+Name: assets/apps/H53031DA3/www/images/goods/car/other.jpg
+SHA1-Digest: 1lPJfl4sXCnpIHeRCBHTL6wOHms=
+
+Name: assets/iflytek_skin/btn_right_p.png
+SHA1-Digest: 7lYW0Cogj1TlnEfqJEQnKT1QbL8=
+
+Name: assets/cfg/a/mapstyle.sty
+SHA1-Digest: kVyzvC8Alt7eOK/BzX8JyHgjYKk=
+
+Name: assets/cfg/l/DVDirectory.cfg
+SHA1-Digest: sRW1J/dOTCke3KqxmzFqRGrKj1s=
+
+Name: assets/apps/H53031DA3/www/page/ucenter/message.html
+SHA1-Digest: 3upBy4oormI2t9H7/YdZjLmhNbA=
+
+Name: res/drawable/slt_as_ios7_other_bt_top.xml
+SHA1-Digest: F90M8eaUK+h8e9BEFpK3sNaPyOo=
+
+Name: res/drawable-hdpi/splash.png
+SHA1-Digest: PN+gatFzFePpdICUi5AsWAAvAc8=
+
+Name: res/layout/dcloud_streamapp_rclayout.xml
+SHA1-Digest: WLtqsyKuBji02Dresx/SjlTvY7s=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/test.json
+SHA1-Digest: 6On07PIj0hTJrK8x4j49kf3fziw=
+
+Name: res/layout/custom_notification.xml
+SHA1-Digest: K3eND9dM2BTmr/uKsAtOM5YzVJ4=
+
+Name: assets/apps/H53031DA3/www/images/homePage/a1.png
+SHA1-Digest: VqbZjBwT/uOv22aVAXpgZvTJ82M=
+
+Name: assets/apps/H53031DA3/www/page/myOrder/myOrder_pay.html
+SHA1-Digest: RsnoC04TLSvXdnEz7th/99qzYaY=
+
+Name: res/drawable/slt_as_ios7_cancel_bt.xml
+SHA1-Digest: BqbQthGP5jISXCKaLfDCTIaIw44=
+
+Name: assets/apps/H53031DA3/www/page/goods/company/companyAssets/compa
+ nyAssets_duty.html
+SHA1-Digest: 24to1LIlnBAJehB7CoBIJFvLwqo=
+
+Name: assets/apps/H53031DA3/www/page/goods/car/car_index.html
+SHA1-Digest: 0tea3A95HO2VNdGEX7N42AUnMGs=
+
+Name: assets/iflytek_skin/play.png
+SHA1-Digest: TCgWMoy43NcE0ywGNyj1UxsDMS0=
+
+Name: assets/iflytek_skin/synthesizer.xml
+SHA1-Digest: g0G1zF4lxt98beOVuW1cRCSLQhM=
+
+Name: res/drawable-ldpi/icon.png
+SHA1-Digest: ZLhPsFTU+KfWL2DNq5BMFgJs1Gg=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/guzhuzeren.png
+SHA1-Digest: TrRjnivQOmWOhRo9Ano+QKH+4WI=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/area.png
+SHA1-Digest: U8L+vZ/lj5pSDTGOGzd+G2f4PMQ=
+
+Name: res/drawable-xhdpi/as_cancel_bt_bg.9.png
+SHA1-Digest: XyzC+Z7SAmzp+5jyVplpojG3Ub0=
+
+Name: assets/apps/H53031DA3/www/page/ucenter/client.html
+SHA1-Digest: K8vt0qK37gijQSpZcFbIIkrijUg=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/jihuo.png
+SHA1-Digest: 6fzs8WqirM6fEby1QGc4VUPLpH4=
+
+Name: assets/apps/H53031DA3/www/images/iconfont-tianjia.png
+SHA1-Digest: CFRQT2Mx5QZnf/13Z3CMfuwPsbo=
+
+Name: lib/armeabi-v7a/liblocSDK6a.so
+SHA1-Digest: DosDzmXZfofYMLlkMlAVovM5C4Y=
+
+Name: assets/apps/H53031DA3/www/images/goods/life/jibingbaoxian.png
+SHA1-Digest: H1ZkUQq2ceAQWDmP3nT874Ydlds=
+
+Name: assets/apps/H53031DA3/www/images/user-photo.png
+SHA1-Digest: dRX/cqspe0U9Jzjj04jiiDhDDgo=
+
+Name: assets/iflytek_skin/btn_p.png
+SHA1-Digest: zzGyuyYQkRGfHtQlzUar799JT4c=
+
+Name: res/layout/dcloud_streamapp_list.xml
+SHA1-Digest: Br+DKro9a7uht0MzmY4EV/I/2tI=
+
+Name: assets/apps/H53031DA3/www/images/goods/car/truck.jpg
+SHA1-Digest: ihGl3o8PJ0rCYEYdX4eKwREimQI=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/app_img14.jpg
+SHA1-Digest: 5ftFNV8kkoTRlcO3UNo+ctQ3AlA=
+
+Name: res/drawable/list_itme_selector.xml
+SHA1-Digest: BXIVLXgqR3iif2zsk0jJ0Hs8c5M=
+
+Name: assets/apps/H53031DA3/www/js/app_java.js
+SHA1-Digest: GgrE/dzn6cKPQdugVO19s4NLoY4=
+
+Name: assets/apps/H53031DA3/www/json/goods/insur_card/insur_card_cart.
+ json
+SHA1-Digest: C61Ez7LfsqXemLPerVdYiXkjES0=
+
+Name: assets/apps/H53031DA3/www/page/goods/insur_card/insur_card_addre
+ ss.html
+SHA1-Digest: EE2tX+5IPSjOopgoUpCmYBvd0NM=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/app_img15.jpg
+SHA1-Digest: j7fH/t8OdLeOgMRVrXXqj67SmL0=
+
+Name: assets/apps/H53031DA3/www/page/myOrder/myOrder_employer.html
+SHA1-Digest: M0Ic6uNgUwkwg0azYMTwIF3W8Jw=
+
+Name: assets/apps/H53031DA3/www/images/goods/life/xianglebaoxian.png
+SHA1-Digest: qbZas2Fj23hw2TqvNMKw7QT/Q9Y=
+
+Name: assets/apps/H53031DA3/www/css/iconfont.css
+SHA1-Digest: Fw7Y6/loY2zC2mPGyJLstxDAoLM=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/companyAssets/tua
+ ntiduanqiyiwaixian.jpg
+SHA1-Digest: h1ZRZva1j1m/A1GkGPPyUmVM9TY=
+
+Name: assets/apps/H53031DA3/www/images/homePage/app_botimg.png
+SHA1-Digest: HusDKLPUNjz1hpcGhXdanPkHbpw=
+
+Name: res/drawable/longding_bg.xml
+SHA1-Digest: UF7dw8Ll52tzRMvz/MAGUfJVg5g=
+
+Name: assets/apps/H53031DA3/www/images/homePage/logo.png
+SHA1-Digest: QVa8VO+pTkqeMzEpqcw7TDzqjoo=
+
+Name: assets/Icon_mark2.png
+SHA1-Digest: NHBeA/o9A//4UUN6/FBMPcIK0Yc=
+
+Name: assets/apps/H53031DA3/www/images/homePage/main_my_order.png
+SHA1-Digest: y2bF7QZB/1jGaFLBebeVFJDH5vs=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/companyAssets/tua
+ nyixian.jpg
+SHA1-Digest: 5AxJPb01NtaqTCmvDC2cTpZhVwM=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/companyAssets/rig
+ ht02.jpg
+SHA1-Digest: 1TNjMxpM7OQKLp/VEIWzk0IgSww=
+
+Name: res/drawable/slt_as_ios7_other_bt_middle.xml
+SHA1-Digest: E+BV7V7Y9j4OqFc7ww3yxKQGzrQ=
+
+Name: assets/apps/H53031DA3/www/page/ucenter/index.html
+SHA1-Digest: xCnYiEfb5PKNzP3/F65wCEsVhyY=
+
+Name: res/drawable-hdpi/stream.png
+SHA1-Digest: Yqlc/S4xqBe7soIUbLzEjPy/AVE=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/companyAssets/guz
+ huzerenxian.jpg
+SHA1-Digest: uDmPLhfdmi6pXZmCLoO6P1wyO/g=
+
+Name: assets/Icon_line_node.png
+SHA1-Digest: dK/CGB9imvWReQfRrkGjiDX2mkI=
+
+Name: assets/apps/H53031DA3/www/images/goods/company/qiye.png
+SHA1-Digest: EN6fVwmo7pDEW/xO+9zRG74LMQc=
+
+Name: assets/apps/H53031DA3/www/page/goods/online_card/online_card_ins
+ ure.html
+SHA1-Digest: R/eqOqIAtgLiBVGTVo6Bh1i+eKg=
+
+Name: res/drawable-xhdpi/icon.png
+SHA1-Digest: HavQS7zjxBRWc0yGQ3vIiVREEto=
+
+Name: res/drawable/slt_as_ios7_other_bt_bottom.xml
+SHA1-Digest: VU70+AYjgy05vpJTTUMQhFtw1+Q=
+
+Name: assets/apps/H53031DA3/www/images/homePage/b2.png
+SHA1-Digest: wp/T08acmnFTtzFB/bbGGNvBGIA=
+
+Name: assets/apps/H53031DA3/www/json/goods/insur_card/jsoninfo.txt
+SHA1-Digest: +bRxxN9gxiaUp2y9kY9ImqzPOSk=
+
+Name: assets/iflytek_skin/pen.png
+SHA1-Digest: 9UWDgwvuQwgfs2s/N/CwSVM3hBc=
+
+Name: assets/apps/H53031DA3/www/images/weixin.png
+SHA1-Digest: 9RRUbYPJPuklB0tczwCTcp//IK0=
+
+Name: assets/apps/H53031DA3/www/page/goods/company/employer/employer.h
+ tml
+SHA1-Digest: 4Cy3wlaYTqYtIuzdURvgMlvcovk=
+
+Name: assets/iflytek_skin/panel_bg.png
+SHA1-Digest: xTV6Ip7SqVQAivhNE6DkLwIJM8Q=
+
+Name: res/drawable/slt_as_ios7_other_bt_single.xml
+SHA1-Digest: BqbQthGP5jISXCKaLfDCTIaIw44=
+
+Name: assets/res/arrow.png
+SHA1-Digest: ErPx7HUXUOYNFb3F9ydynoix5uw=
+
+Name: assets/Icon_subway_station.png
+SHA1-Digest: 8FR6NAAChDPCs8r2j53QSLY4GQg=
+
+Name: assets/apps/H53031DA3/www/page/myOrder/myOrder_groupAccident.htm
+ l
+SHA1-Digest: vTPbrHcpYOW2hBkJPntnk/M2LCs=
+
+Name: assets/cfg/h/DVHotMap.cfg
+SHA1-Digest: LQmgSNG41VbYnU1yOUfp4jS15Zs=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/right.png
+SHA1-Digest: FrisVPjmqYBWzrFrkxbDVt50jnI=
+
+Name: assets/apps/H53031DA3/www/libs/easymob-webim-sdk/easemob.im-1.0.
+ 5.js
+SHA1-Digest: ZHOmk5boebrEoROeKzlJHwvLHTY=
+
+Name: res/drawable-xhdpi/actionsheet_middle_normal.9.png
+SHA1-Digest: TR75EgrBbToSqPBljtKchCeAKTs=
+
+Name: res/drawable-hdpi/stream_running_progress.xml
+SHA1-Digest: CKYHmqA2C05BF1hbzs6+apzOiVY=
+
+Name: assets/apps/H53031DA3/www/images/goods/insur_card/app_img12.jpg
+SHA1-Digest: GYUACe6QGGsHmnCtK7CmjM4pI3A=
+
+Name: res/drawable-xhdpi/dcloud_streamapp_icon_appdefault.png
+SHA1-Digest: vIZfzCGRlzyaQ77egAe9cVy9YI0=
+
+Name: res/drawable/slt_as_ios7_other_bt_title.xml
+SHA1-Digest: 2Z4TL3k4mbtsAy9iA0ZCZlFIc4I=
+

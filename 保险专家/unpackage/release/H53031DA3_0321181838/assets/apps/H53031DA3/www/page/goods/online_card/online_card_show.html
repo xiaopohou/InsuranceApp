@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>线上卡单</title>
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+		<style>
+			.mui-table h4,
+			.mui-table h5,
+			.mui-table .mui-h5,
+			.mui-table .mui-h6,
+			.mui-table p {
+				margin-top: 0;
+			}
+			
+			.mui-table h4 {
+				line-height: 21px;
+				font-weight: 500;
+			}
+			
+			.mui-table .oa-icon {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+			
+			.mui-table .oa-icon-star-filled {
+				color: #f14e41;
+			}
+			
+			.mui-col-xs-10 {
+				width: 70%;
+			}
+			
+			.mui-col-xs-2 {
+				width: 30%;
+			}
+			/*底部选项卡*/
+			
+			.mui-tab-item:first-child {
+				border-right: 1px solid grey;
+			}
+			
+			.left {
+				padding: 5px;
+			}
+			
+			#auto_active {
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" id="mui-bar-title" style="padding-right: 15px;">
+			<a class="mui-action-back mui-icon mui-icon-back"></a>
+			<h1 class="mui-title">线上卡单</h1>
+			<button class="mui-pull-right mui-btn-link" id="auto_active">自主激活</button>
+		</header>
+		<div class="mui-content">
+			<div class="content" id="card_body">
+				<section class="all on">
+					<form action="" class="mui-card-table" >
+						<a href="#" id="insur_card_show_1" class="mui-card-show">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img14.jpg" alt="">
+								<div class="right">
+									<h3>金运人生</h3>
+									<p>男性健康特别呵护</p>
+									<div class="money">
+										<span><i>￥84</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" id="insur_card_show_2" class="mui-card-show">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img3.jpg" alt="">
+								<div class="right">
+									<h3>安益人生</h3>
+									<p>保障期长&nbsp;|&nbsp;无需体检</p>
+									<div class="money">
+										<span><i>￥103</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+
+					</form>
+				</section>
+			</div>
+
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script>
+		(function($, doc) {
+			$.init();
+			window.addEventListener('show', function() {
+				//				alert("main");
+			}, false);
+			$.plusReady(function() {
+				//购物详情页面跳转
+				var toinsur_card_infoPage = function() {
+					//预加载页面
+					var insur_card_infoPage = $.preload({
+						"id": 'insur_card_info',
+						"url": 'online_card_details.html'
+					});
+					//触发show事件
+					$.fire(insur_card_infoPage, 'show', null);
+					setTimeout(function() {
+						$.openWindow({
+							id: 'insur_card_info',
+							show: {
+								aniShow: aniShow
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, 100);
+				};
+				//自主激活页面跳转
+				var toAuto_activePage = function() {
+					//预加载页面
+					var auto_activePage = $.preload({
+						"id": 'auto_active',
+						"url": '../insur_card/insur_card_auto_active.html'
+					});
+					//触发show事件
+					$.fire(auto_activePage, 'show', null);
+					setTimeout(function() {
+						$.openWindow({
+							id: 'auto_active',
+							show: {
+								aniShow: aniShow
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, 100);
+				};
+				//产品详情
+				mui(".mui-card-table").on('tap',".mui-card-show",function(){
+					//获取id
+					var id = this.getAttribute("id");
+					plus.nativeUI.toast("亲"+id+"还在开发中哦");
+//					toinsur_card_infoPage();
+				});
+				//自主激活
+				var auto_activeButton = document.getElementById("auto_active");
+				auto_activeButton.addEventListener('tap',function(){
+					toAuto_activePage();
+				});
+				
+			});
+		}(mui, document));
+	</script>
+
+</html>

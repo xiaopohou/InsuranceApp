@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>结算付款</title>
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/base.css" />
+		<style>
+			.mui-flex.align-center{-webkit-box-align:center;align-items:center;}
+			.order-address{padding:15px 9px;margin-bottom:9px;background-color: #FFFFFF;box-shadow:0 1px 0 0 rgba(0,0,0,.2),0 .5px 0 0 rgba(0,0,0,.3);}
+			.mui-flex, .mui-flex *, .mui-flex :after, .mui-flex :before{box-sizing:border-box;}
+			.mui-flex{flex-wrap:wrap;}
+			.mui-flex>.cell.align-center{align-self: center;}
+			.mui-flex>.cell.fixed{-webkit-box-flex:0!important;flex: none!important;width: auto;}
+			.mui-flex>.cell{max-width:100%;display: block;padding: 0!important;position: relative;}
+			.order-address .icon{float: left; margin-right: 9px; margin-top:10px; height: 21px;width: 21px;background: url(../../../images/goods/insur_card/area.png) 50% 50% no-repeat;background-size: 15px 20px;}
+			.order-address .content{margin-right: 15px;  margin-left: 30px; margin-right: 10px;}
+			.mui-flex>.cell{-webkit-box-flex:1;flex: 1;width: auto;flex-basis: 0;max-width: 100%;display: block;padding: 0!important;position: relative;}
+			.order-address .content .info{line-height: 1.5;}
+			.order-address .content .detail{line-height:1.3;margin-bottom: 2px;}
+			.order-address .content .ext{font-size: 12px;line-height: 1.3;color: #ffa800;}
+			.order-address .content .tel{float: right;}
+			.mui-flex>.cell.align-center{align-self: center;}
+			.nav{float:left; width: 6.5px;height: 12px;background: url(../../../images/goods/insur_card/right.png) 50% 50% no-repeat;background-size:100%;}
+			
+			.mui-col-xs-10 {width: 70%;}
+			.mui-col-xs-4 {width: 20%;}
+			.mui-col-xs-1 {width: 10%;}
+			.mui-table-view-cell {padding-right: 0px;}
+			.mui-h5{color: #666666;}
+			
+			.mui-table-cell-select{padding-left: 13px;padding-bottom: 13px;padding-top: 0px;}
+			.totalprice{color: #f50;font-weight: bolder; font-size: 16px;margin-right: 15px;}
+			
+			.hong{width: 84%;margin-left: 8%;margin-right: 8%;margin-top: 5px; height: 40px; font-size: 16px;padding-top: 8px;}
+			
+			#address{color: #FFFFFF;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" id="mui-bar-title" style="padding-right: 15px;">
+			<a class="mui-action-back mui-icon mui-icon-back"></a>
+			<h1 class="mui-title">结算付款</h1>
+			<button class="mui-pull-right mui-btn-link" id="address">修改地址</button>
+		</header>
+		<div class="mui-content">
+			<div id="page">
+				<div class="order-address mui-flex align-center">
+					<div class="cell fixed align-center">
+						<div class="icon"></div>
+					</div>
+					<div class="cell content">
+						<div class="info">
+							<span>收货人： </span>
+							<span>蒋鹏</span>
+							<span> </span>
+							<span class="tel">15751776629</span>
+						</div>
+						<div class="detail">
+							<span>收货地址：</span>
+							<span></span>
+							<span>江苏省 </span>
+							<span>镇江市 </span>
+							<span>京口区 </span>
+							<span>正东路街道 </span>
+							<span>梦溪路2号江苏科技大学东校区 </span>
+						</div>
+						<div class="ext">(收货不便时,可选择免费代收货服务)</div>
+					</div>
+				</div>
+			</div>
+						<!--商品列表-->
+			<div class="order-list">
+				<li class="list">
+					<div class="seller">
+						<div class="o-t-title-shop">
+							<div class="tcont">
+								<div class="ico">
+									<img src="../../../images/goods/insur_card/logo-pingan.png" />
+								</div>
+								<div class="contact">
+									<a>
+										<p class="o-title">中国平安保险公司</p>
+										<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img1.jpg" />
+								</p>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国平安】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p">5<span></p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img14.jpg" />
+								</p>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国平安】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p">5<span></p>
+							</div>
+						</div>
+					</div>
+				</li>
+	
+				<li class="list">
+					<div class="seller">
+						<div class="o-t-title-shop">
+							<div class="tcont">
+								<div class="ico">
+									<img src="../../../images/goods/insur_card/logo-xinhua.png" />
+								</div>
+								<div class="contact">
+									<a>
+										<p class="o-title">中国新华保险公司</p>
+										<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img15.jpg" />
+								</p>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国新华】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p">5<span></p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img13.jpg" />
+								</p>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国新华】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p">5<span></p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img3.jpg" />
+								</p>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">【中国新华】团体意外险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">19.98<span></p>
+								<p class="nums"> x<span class="nums-p">5<span></p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</div>
+			
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="mui-h5">配送方式</h4>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="mui-h5">快递免邮</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a id="tel" class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="mui-h5">运费险</h4>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="mui-h5">请选择</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a id="tel" class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="mui-h5">开具发票</h4>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="mui-h5">是</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a id="tel" class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<span>共<span id="totalNum">20</span>件，合计：</span>
+							<span class="totalprice">￥<span id="totalprice-p">278.86</span></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="mui-h5">可用379会员积分抵￥3.79</h4>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="mui-h5">使用积分</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a id="tel" class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span class="mui-h5">无会员券可用</h4>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span class="mui-h5"></span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+			<div style="width:100%; height:60px;"></div>
+			<div class="doot">
+				<button type="button" class="mui-btn mui-btn-red hong" id="buying">提交订单</button>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		mui.init();
+		mui.plusReady(function() {
+			var addressButton = document.getElementById("address");
+			addressButton.addEventListener('tap',function(){
+				mui.openWindow('insur_card_address.html','insur_card_address');
+			});
+			setTotalNumPrice();
+		});
+			
+			
+		//计算总件数和总价，并进行设置
+	    function setTotalNumPrice(){
+	    	var numArray = getPriceNumArray();
+	    	var priceArray = getPricePriceArray();
+	    	var totalNum = 0;
+	    	var totalPrice = 0.00;
+	    	for (i = 0; i < numArray.length; i++) {
+	    		totalNum += numArray[i];
+	    		totalPrice += numArray[i] * priceArray[i];
+	    	}
+	    	$("span#totalNum").text(totalNum);
+	    	$("span#totalprice-p").text(totalPrice);
+	    }
+	    
+	    //获取价格单上的物品件数数组
+		function getPriceNumArray(){
+			var numArray = [];
+			$('.nums').each(function(){
+				var str = $(this).text();
+				str = str.replace(/[^0-9]*/g,"");
+				num = parseInt(str);
+				numArray.push(num);
+			});
+//			console.log(numArray);
+			return numArray;
+		}
+		//获取价格单上的物品价格数组
+		function getPricePriceArray(){
+			var priceArray = [];
+			$('.price').each(function(){
+				var str = $(this).text();
+				str = str.replace(/[^0-9.]*/g,"");
+				price = parseFloat(str);
+				priceArray.push(price);
+			});
+//			console.log(priceArray);
+			return priceArray;
+		}
+	    
+	</script>
+
+</html>

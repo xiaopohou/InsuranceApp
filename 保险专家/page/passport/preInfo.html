@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>上线成员</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="../../js/mui.min.js"></script>
+		<script>
+			mui.init();
+			mui.plusReady(function() {
+				var prePersonName = "Default";
+				var prePersonId = 111111;
+				mui.openWindow({
+					url: "login.html",
+					id: "login",
+					show: {
+						aniShow: 'none'
+					},
+					waiting: {
+						autoShow: false
+					},
+					extras:{
+						prePersonName : prePersonName,
+						prePersonId : prePersonId
+					}
+				})
+			});
+		</script>
+	</body>
+
+</html>

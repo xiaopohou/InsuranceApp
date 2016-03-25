@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="../../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../../css/common.css" rel="stylesheet"/>
+</head>
+<style>
+	img{
+		height: 75px;
+	}
+	.mui-btn{
+		width: 49%;
+		height:150px ;
+		font-size: 20px;
+		margin-top: 5px;
+	}
+	.Btn1{
+		background: rgb(7,125,186);
+	}
+	.Btn2{
+		background: rgb(23,160,125);
+	}
+	.Btn3{
+		background: rgb(171,105,255);
+	}
+</style>
+<body>
+	<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">企业保险</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-content-padded">
+			<button class=" mui-btn Btn1" id="groupAccident">
+				<img src="../../../images/goods/company/tuanti.png" />
+				<br />
+				团体意外险
+			</button>
+			<button class=" mui-btn Btn2" id="employer">
+				<img src="../../../images/goods/company/guzhuzeren.png" />
+				<br />
+				雇主责任险
+			</button>
+			<button class=" mui-btn Btn3" id="companyAssets">
+				<img src="../../../images/goods/company/qiye.png" />
+				<br />
+				企业财产险
+			</button>
+			<button class=" mui-btn Btn1" id="groupAccident">
+				<img src="../../../images/goods/insur_card/gengduo.png" />
+				<br />
+				更多险种
+			</button>
+		</div>
+	</div>
+	<script src="../../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init();
+		mui.plusReady(function(){
+			//团体意外险
+			var groupAccidentButton = document.getElementById("groupAccident");
+			groupAccidentButton.addEventListener('tap', function() {
+//					toGroupAccidentPage();
+				mui.openWindow('groupAccident/groupAccident.html','groupAccident');
+			});
+			//雇主意外险
+			var employerButton = document.getElementById("employer");
+			employerButton.addEventListener('tap', function() {
+//					toEmployerPage();
+				mui.openWindow('employer/employer_index.html','employer_index');
+			});
+			//企业财产险
+			var companyAssetsButton = document.getElementById("companyAssets");
+			companyAssetsButton.addEventListener('tap', function() {
+				mui.openWindow('companyAssets/companyAssets_index.html','companyAssets_index');
+			});
+		});
+	</script>
+</body>
+</html>

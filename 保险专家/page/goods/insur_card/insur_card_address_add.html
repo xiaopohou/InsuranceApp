@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>管理收货地址</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../../css/common.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../css/base.css"/>
+		<style>
+			.mui-table-view-cell {position: relative;width: 100%;}
+			.mui-col-xs-10 {width: 100px;}
+			.mui-col-xs-4 {padding-right: 5px;}
+			.mui-col-xs-1 {width: 20px;}
+			.mui-table-view-cell {padding-left: 20px;padding-right: 0px;}
+			.mui-navigate-right:after, .mui-push-right:after{right: 10px;}
+			
+			.doot{ width:100%; height:50px; position:fixed; bottom:0px; background:#F7F7F7; max-width:640px; min-width:320px; margin:0px auto; margin-left:auto; margin-right:auto;}
+			.doot-left{ float:left; width:48%; margin:10px auto; text-align:center;}
+			.doot-right{ float:right; width:48%; margin:10px auto; text-align:center;}
+			.hong{width: 84%;margin-left: 8%;margin-right: 8%;margin-top: 5px; height: 40px; font-size: 16px;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-action-back mui-pull-left"></a>
+			<h1 class="mui-title textsize-fontcolor">管理收货地址</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell" id="areaSelect">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span>省市区</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span>请选择</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span >街道</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span >正东路街道</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				
+				
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span >详细地址</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span >江苏科技大学东校区梦溪路2号</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span >收件人姓名</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span >蒋鹏</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-table">
+						<div class="mui-table-cell mui-col-xs-10">
+							<span >手机号码</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+							<span >15751776629</span>
+						</div>
+						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
+							<a class="mui-navigate-right"></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div style="width:100%; height:60px;"></div>
+			<div class="doot">
+				<button type="button" class="mui-btn mui-btn-red hong" id="saveBt">保存</button>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="../../../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		document.getElementById("areaSelect").addEventListener('tap',function(){
+			mui.openWindow('areaSelect.html','areaSelect');
+		});
+	</script>
+</html>
