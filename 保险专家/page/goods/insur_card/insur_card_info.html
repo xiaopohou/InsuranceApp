@@ -164,28 +164,33 @@
 					dataType: "json",
 					timeout: 1000,
 					success: function(data) {
-						console.log("ajax请求成功");
-						var cardInfoList = document.getElementById("cardInfoList");
-
-						
-						//循环遍历result数组，给数组中 img_big 添加 url 头属性
-						for(var i = 0; i < data.result.length; i++){
-							data.result[i].img_big = imgUrl + data.result[i].img_big;
-//							console.log(data.result[i].img_big);
+						if(data.status == 1){
+							console.log("ajax请求成功");
+							var cardInfoList = document.getElementById("cardInfoList");
+	
+							//循环遍历result数组，给数组中 img_big 添加 url 头属性
+							for(var i = 0; i < data.result.length; i++){
+								data.result[i].img_big = imgUrl + data.result[i].img_big;
+	//							console.log(data.result[i].img_big);
+							}
+							
+							var content = template("cardInfoTmpl", data);
+							cardInfoList.innerHTML = content;
+							
+							// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
+							addNumListener();
+	//						settlementPrice(1);
+							
+							//立即购买，前往购物车
+							toShopCart();
+						}else{
+							plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
 						}
-						
-						var content = template("cardInfoTmpl", data);
-						cardInfoList.innerHTML = content;
-						
-						// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
-						addNumListener();
-//						settlementPrice(1);
-						
-						//立即购买，前往购物车
-						toShopCart();
 					},
-					error: function(data){
-						console.log(data);
+					error:function(xhr,type,errorThrown){
+						//异常处理
+						plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
+						console.log(type);
 					}
 				});
 			};

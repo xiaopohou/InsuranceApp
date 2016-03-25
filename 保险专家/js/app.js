@@ -95,21 +95,6 @@
 				},
 				success: function(data) 
 				{
-//{
-//  "isError": "false",
-//  "message": "回馈信息",
-//  "info": 
-//	    {
-//	        "username": "Jepson",
-//	        "realname": "Jepson",
-//	        "mobile": "1571776629",
-//	        "city": "镇江",
-//	        "uid": "id"
-//	    }
-//  
-//}
-					
-//					return callback("注册成功");
 					if(data.isError)
 					{
 						return callback(data.message);
@@ -117,7 +102,6 @@
 					else
 					{
 //						return callback(data.message);
-						
 						owner.createState(data.info);
 						var state = owner.getState();
 						return callback();

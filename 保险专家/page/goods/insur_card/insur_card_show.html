@@ -159,18 +159,27 @@
 						dataType: "json",
 						timeout: 1000,
 						success: function(data) {
-							var insur_card_list = document.getElementById("insur_card_list");
-							
-							//循环遍历result数组，给数组中 img_big 添加 url 头属性
-							for(var i = 0; i < data.result.length; i++){
-								data.result[i].img_small = imgUrl + data.result[i].img_small;
-//								console.log(data.result[i].img_small);
+							if(data.status == 1){
+								var insur_card_list = document.getElementById("insur_card_list");
+								
+								//循环遍历result数组，给数组中 img_big 添加 url 头属性
+								for(var i = 0; i < data.result.length; i++){
+									data.result[i].img_small = imgUrl + data.result[i].img_small;
+	//								console.log(data.result[i].img_small);
+								}
+								
+								var content = template("insur_cardTmpl", data);
+								insur_card_list.innerHTML = content;
+								// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
+								toinsur_card_info();
+							}else{
+								plus.nativeUI.toast("页面加载失败，请重新加载");
 							}
-							
-							var content = template("insur_cardTmpl", data);
-							insur_card_list.innerHTML = content;
-							// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
-							toinsur_card_info();
+						},
+						error:function(xhr,type,errorThrown){
+							//异常处理
+							plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
+							console.log(type);
 						}
 					});	
 			}
