@@ -10,7 +10,6 @@
 		<link rel="stylesheet" href="../../../css/mui.min.css" />
 		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
 		<link rel="stylesheet" type="text/css" href="../../../css/insur_card_info.css" />
-		<script src="../../../js/config.js" type="text/javascript" charset="utf-8"></script>
 		<title>卡单详情</title>
 		<style type="text/css">
 			.hong{padding-top: 8px;}
@@ -138,6 +137,7 @@
 		
 		<script type="text/javascript" src="../../../js/mui.min.js" ></script>
 		<script type="text/javascript" src="../../../js/template.js" ></script>
+		<script src="../../../js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			mui.init();
 			mui.plusReady(function(){
@@ -154,6 +154,10 @@
 
 			//获取卡单展示列表
 			function getInsurCard() {
+				var settings = app.getSettings();
+				var webServiceUrl = settings.webServiceUrl;
+				var imgUrl = settings.imgUrl;
+				plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
 //				url: "http://www.annpeter.cn:8080/app/kadan/index?id=productID"
 				mui.ajax({
 					url: "../../../json/goods/insur_card/card_info.json",
@@ -251,24 +255,26 @@
 //				});
 			}
 			
-//			//加入购物车
-//			function addToShopCart(){
-//				/**
-//				 * 这里ajax请求的是一个本地json文件
-//				 * 实际项目调用接口只需要将url地址替换成接口地址即可
-//				 */
-//				mui.ajax({
-//					url: "url",
-//					type: "post",
-//					async: true,
-//					data: {},
-//					dataType: "json",
-//					timeout: 1000,
-//					success: function(data) {
-//						
-//					}
-//				});
-//			}
+			//加入购物车
+			function addToShopCart(){
+				/**
+				 * 这里ajax请求的是一个本地json文件
+				 * 实际项目调用接口只需要将url地址替换成接口地址即可
+				 */
+				mui.ajax({
+					url: "url",
+					type: "post",
+					async: true,
+					data: {
+						
+					},
+					dataType: "json",
+					timeout: 1000,
+					success: function(data) {
+						
+					}
+				});
+			}
 			
 			//加入购物车
 			function toShopCart(){
