@@ -197,6 +197,7 @@
 			setTotalNumPrice();
 		});
 		
+		
 		function deleteCard(id){
 			$('.list[data-id=' + id + ']').hide();
 			$('.mui-input-numbox[data-id=' + id + ']').val(0);
@@ -298,7 +299,7 @@
 //			console.log(numArray);
 			return numArray;
 		}
-		//设置价格上物品件数
+		//设置价格单上物品件数
 		function setListNum(numArray){
 			var numArr = numArray;
 			$('.nums-p').each(function(){
