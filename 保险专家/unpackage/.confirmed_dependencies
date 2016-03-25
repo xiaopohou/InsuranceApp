@@ -521,7 +521,8 @@
 			"css/common.css",
 			"fonts/mui.ttf",
 			"css/mui.min.css",
-			"images/goods/groupAccident/accident.jpg"
+			"images/goods/groupAccident/accident.jpg",
+			"js/jquery-2.1.3.min.js"
 		],
 		"refer": [
 			"page/myOrder/myOrder_groupAccident.html",
