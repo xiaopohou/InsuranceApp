@@ -32,40 +32,36 @@
 			<div class="content" id="card_body">
 				<section class="all on">
 					<form action="" class="mui-card-table">
-						<a  class="mui-card-show">
-							<div class="pro-list">
-								<div class="details">
-									<img class="left" src="../../../../images/goods/insur_card/logo-pingan.png" alt="">
-									<div class="p-right">
-										<h3>平安癌症医疗保险基础款</h3>
-										<p>百万身价保障，涵盖身故、全残、公交意外、自驾车意外，保额自选，更可享满期125%返还，实现财富保值增值。</p>
-									</div>
+						<div class="pro-list">
+							<div class="details">
+								<img class="left" src="../../../../images/goods/insur_card/logo-pingan.png" alt="">
+								<div class="p-right">
+									<h3>平安癌症医疗保险基础款</h3>
+									<p>百万身价保障，涵盖身故、全残、公交意外、自驾车意外，保额自选，更可享满期125%返还，实现财富保值增值。</p>
 								</div>
-								<div class="d-date"><li>保障期限： <span>30</span><span>年</span></li></div>
-								<div class="d-info"><li>满期保险金 <span>主保险费的125%</span></li></div>
-								<div class="d-info"><li>自驾车意外<span>200万元</span></li></div>
-								<div class="d-info"><li>意外身故或全残 <span>20万元</span></li></div>
-								<div class="d-info"><li>一般身故或全残 <span>主保险费的105%</span></li></div>
-								<div class="d-price"><li>￥  <span class="price">1680</span><span class="text"> 起</span></li></div>
 							</div>
-						</a>
-						<a class="mui-card-show">
-							<div class="pro-list">
-								<div class="details">
-									<img class="left" src="../../../../images/goods/insur_card/logo-pingan.png" alt="">
-									<div class="p-right">
-										<li>平安癌症医疗保险基础款</li>
-										<p>百万身价保障，涵盖身故、全残、公交意外、自驾车意外，保额自选，更可享满期125%返还，实现财富保值增值。</p>
-									</div>
+							<div class="d-date"><li>保障期限： <span>30</span><span>年</span></li></div>
+							<div class="d-info"><li>满期保险金 <span>主保险费的125%</span></li></div>
+							<div class="d-info"><li>自驾车意外<span>200万元</span></li></div>
+							<div class="d-info"><li>意外身故或全残 <span>20万元</span></li></div>
+							<div class="d-info"><li>一般身故或全残 <span>主保险费的105%</span></li></div>
+							<div class="d-price"><li>￥  <span class="price">1680</span><span class="text"> 起</span></li></div>
+						</div>
+						<div class="pro-list">
+							<div class="details">
+								<img class="left" src="../../../../images/goods/insur_card/logo-pingan.png" alt="">
+								<div class="p-right">
+									<li>平安癌症医疗保险基础款</li>
+									<p>百万身价保障，涵盖身故、全残、公交意外、自驾车意外，保额自选，更可享满期125%返还，实现财富保值增值。</p>
 								</div>
-								<div class="d-date"><li>保障期限： <span>30</span><span>年</span></li></div>
-								<div class="d-info"><li>满期保险金 <span>主保险费的125%</span></li></div>
-								<div class="d-info"><li>自驾车意外<span>200万元</span></li></div>
-								<div class="d-info"><li>意外身故或全残 <span>20万元</span></li></div>
-								<div class="d-info"><li>一般身故或全残 <span>主保险费的105%</span></li></div>
-								<div class="d-price"><li>￥  <span class="price">1680</span><span class="text"> 起</span></li></div>
 							</div>
-						</a>
+							<div class="d-date"><li>保障期限： <span>30</span><span>年</span></li></div>
+							<div class="d-info"><li>满期保险金 <span>主保险费的125%</span></li></div>
+							<div class="d-info"><li>自驾车意外<span>200万元</span></li></div>
+							<div class="d-info"><li>意外身故或全残 <span>20万元</span></li></div>
+							<div class="d-info"><li>一般身故或全残 <span>主保险费的105%</span></li></div>
+							<div class="d-price"><li>￥  <span class="price">1680</span><span class="text"> 起</span></li></div>
+						</div>
 					</form>
 				</section>
 			</div>
@@ -75,8 +71,9 @@
 		<script>
 			mui.init();
 			mui.plusReady(function() {
-				
-				
+				mui(".mui-card-table").on('tap',".pro-list",function(){
+					plus.nativeUI.toast("11");					
+				});
 			});
 		</script>
 	</body>
