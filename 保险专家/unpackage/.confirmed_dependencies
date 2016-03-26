@@ -718,7 +718,8 @@
 		"resources": [
 			"css/base.css",
 			"images/goods/insur_card/logo-pingan.png",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"js/mui.min.js"
 		]
 	}
 }
