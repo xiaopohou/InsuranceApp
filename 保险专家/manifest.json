@@ -1149,7 +1149,9 @@
 					"css/base.css",
 					"images/goods/insur_card/logo-pingan.png",
 					"fonts/mui.ttf",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"css/common.css",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
