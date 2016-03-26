@@ -512,7 +512,8 @@
 					"images/homePage/main_invite.png",
 					"images/homePage/main_person.png",
 					"images/homePage/main_my_order.png",
-					"js/config.js"
+					"js/config.js",
+					"fonts/mui.ttf"
 				],
 				"refer": [
 					"page/goods/insur_card/insur_card_show.html",
@@ -1149,7 +1150,23 @@
 					"css/base.css",
 					"images/goods/insur_card/logo-pingan.png",
 					"fonts/mui.ttf",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"css/common.css",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"page/goods/life/shouxian/shouxian_info.html"
+				],
+				"priority": 0
+			},
+			"page/goods/life/shouxian/shouxian_info.html": {
+				"resources": [
+					"css/base.css",
+					"images/goods/insur_card/logo-pingan.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0

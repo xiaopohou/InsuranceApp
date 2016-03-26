@@ -20,7 +20,7 @@
 			.d-info span{float: right;}
 			.d-price{margin-top: 1px;background: #FFFFFF;padding: 10px;height: 40px;}
 			.d-price li{color: #f50;font-weight: bold;}
-			.d-price .text{font-size: 13px;}
+			.d-price .text{font-size: 12px;color: #666666;}
 		</style>
 	</head>
 	<body>
@@ -32,7 +32,7 @@
 			<div class="content" id="card_body">
 				<section class="all on">
 					<form action="" class="mui-card-table">
-						<div class="pro-list">
+						<div class="pro-list" data-id = "1">
 							<div class="details">
 								<img class="left" src="../../../../images/goods/insur_card/logo-pingan.png" alt="">
 								<div class="p-right">
@@ -45,9 +45,9 @@
 							<div class="d-info"><li>自驾车意外<span>200万元</span></li></div>
 							<div class="d-info"><li>意外身故或全残 <span>20万元</span></li></div>
 							<div class="d-info"><li>一般身故或全残 <span>主保险费的105%</span></li></div>
-							<div class="d-price"><li>￥  <span class="price">1680</span><span class="text"> 起</span></li></div>
+							<div class="d-price"><li>￥<span class="price">1680</span><span class="text"> 起</span></li></div>
 						</div>
-						<div class="pro-list">
+						<div class="pro-list" data-id = "2">
 							<div class="details">
 								<img class="left" src="../../../../images/goods/insur_card/logo-pingan.png" alt="">
 								<div class="p-right">
@@ -60,7 +60,7 @@
 							<div class="d-info"><li>自驾车意外<span>200万元</span></li></div>
 							<div class="d-info"><li>意外身故或全残 <span>20万元</span></li></div>
 							<div class="d-info"><li>一般身故或全残 <span>主保险费的105%</span></li></div>
-							<div class="d-price"><li>￥  <span class="price">1680</span><span class="text"> 起</span></li></div>
+							<div class="d-price"><li>￥<span class="price">1680</span><span class="text"> 起</span></li></div>
 						</div>
 					</form>
 				</section>
@@ -72,7 +72,11 @@
 			mui.init();
 			mui.plusReady(function() {
 				mui(".mui-card-table").on('tap',".pro-list",function(){
-					plus.nativeUI.toast("11");					
+					console.log(this.getAttribute("data-id"));
+					mui.openWindow({
+						"url" : "shouxian_info.html",
+						"id" : "shouxian_info"
+					});
 				});
 			});
 		</script>
