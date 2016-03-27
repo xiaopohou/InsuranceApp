@@ -88,9 +88,11 @@
 					//返回键计数器
 					var backButtonPress = 0;
 					
-					$("#version").text("版本号:"+ plus.runtime.version);
+					$("#version").text("含推荐人id的版本号:"+ plus.runtime.version);
 					$("#version2").text("appid:"+ plus.runtime.appid);
 					$("#version3").text("5+运行环境版本号:"+ plus.runtime.innerVersion);
+					
+					plus.nativeUI.toast("服务器初始化成功\n地址: http://115.28.72.167/")
 					
 //					plus.nativeUI.toast("当前apk推荐人:" + prePersonName + "\n推荐人id:"+ prePersonId);
 					

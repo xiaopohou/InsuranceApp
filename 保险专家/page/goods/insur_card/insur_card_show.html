@@ -20,11 +20,15 @@
 			.mui-col-xs-2 {width: 30%;}
 			/*底部选项卡*/
 			.mui-tab-item:first-child {border-right: 1px solid grey;}
-			#card_body {margin-top: 10px;margin-bottom: 60px;}
+			#card_body {margin-top: -5px;margin-bottom: 60px;}
 			.left {padding: 5px;}
 			
 			/*标题部右侧字体*/
 			#auto_active {color: white;}
+			
+			input[type=search]{height: 50px;font-size: 17px;background-color:white;}
+			.mui-input-row{padding: 0;}
+			.mui-search .mui-placeholder{line-height:50px ;height: 50px;font-size: 17px;}
 			
 			/*搜索框*/
 			.nav-all{width:100%; height:40px; background:#f0f0f0; border-bottom:#f0f0f0 1px solid; margin:0px auto; padding-top:10px; padding-bottom:10px;}
@@ -56,10 +60,14 @@
 //		-->
 
 		<div class="mui-content">
+			<div class="mui-indexed-list-search mui-input-row mui-search">
+				<input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索卡单产品">
+			</div>
+			
 			<div class="content" id="card_body">
 				<section class="all on">
 					<form action="" class="mui-card-table" id="insur_card_list">
-						<!--<a  class="mui-card-show" id="insur_card_show_1">
+						<a  class="mui-card-show" id="insur_card_show_1">
 							<div class="details">
 								<img class="left" src="../../../images/goods/insur_card/app_img24.jpg" alt="">
 								<div class="right">
@@ -70,11 +78,11 @@
 									</div>
 								</div>
 							</div>
-						</a>-->
+						</a>
 					</form>
 				</section>
 			</div>
-			<div style="width:100%; height:10px;"></div>
+			<div style="width:100%; height:30px;"></div>
 			<div class="doot">
 				<div class="doot-left">
 					<button type="button" class="mui-btn mui-btn-yellow huang" id="shopCart">购物车￥0.00</button>
@@ -105,6 +113,7 @@
 		<script type="text/javascript" src="../../../js/template.js" ></script>
 		<script src="../../../js/mui.min.js"></script>
 		<script src="../../../js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/mui.indexedlist.js"></script>
 		<script>
 			mui.init();
 			window.addEventListener('show', function() {
