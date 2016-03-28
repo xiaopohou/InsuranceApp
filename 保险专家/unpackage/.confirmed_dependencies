@@ -333,7 +333,10 @@
 			"images/goods/insur_card/app_img14.jpg",
 			"images/goods/insur_card/app_img15.jpg",
 			"images/goods/insur_card/logo-xinhua.png",
-			"js/jquery-2.1.3.min.js"
+			"js/jquery-2.1.3.min.js",
+			"js/template.js",
+			"json/goods/insur_card/card_cart.json",
+			"js/app.js"
 		],
 		"refer": [
 			"page/goods/insur_card/insur_card_address.html"
@@ -383,7 +386,12 @@
 			"images/goods/insur_card/app_img3.jpg",
 			"images/goods/insur_card/app_img14.jpg",
 			"js/jquery-2.1.3.min.js",
-			"images/goods/insur_card/app_img24.jpg"
+			"images/goods/insur_card/app_img24.jpg",
+			"js/template.js",
+			"json/goods/insur_card/card_cart.json",
+			"js/app.js",
+			"js/goods/insur_card/insur_card_cart.js",
+			"json/goods/insur_card/product_change_return.json"
 		],
 		"refer": [
 			"page/goods/insur_card/insur_card_buying.html"
@@ -741,6 +749,7 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"js/jquery-2.1.3.min.js"
-		]
+		],
+		"refer": []
 	}
 }

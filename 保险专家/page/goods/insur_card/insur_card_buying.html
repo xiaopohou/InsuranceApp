@@ -71,58 +71,8 @@
 				</div>
 			</div>
 						<!--商品列表-->
-			<div class="order-list">
-				<li class="list">
-					<div class="seller">
-						<div class="o-t-title-shop">
-							<div class="tcont">
-								<div class="ico">
-									<img src="../../../images/goods/insur_card/logo-pingan.png" />
-								</div>
-								<div class="contact">
-									<a>
-										<p class="o-title">中国平安保险公司</p>
-										<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-list o-t-item">
-							<div class="item-img">
-								<p>
-									<img src="../../../images/goods/insur_card/app_img1.jpg" />
-								</p>
-							</div>
-							<div class="item-info">
-								<h3 class="o-title">【中国平安】团体意外险 线上投保 电子保单 全程人性化服务</h3>
-							</div>
-							<div class="item-pay">
-								<p class="price h">￥<span class="price-p">19.98<span></p>
-								<p class="nums"> x<span class="nums-p">5<span></p>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-list o-t-item">
-							<div class="item-img">
-								<p>
-									<img src="../../../images/goods/insur_card/app_img14.jpg" />
-								</p>
-							</div>
-							<div class="item-info">
-								<h3 class="o-title">【中国平安】团体意外险 线上投保 电子保单 全程人性化服务</h3>
-							</div>
-							<div class="item-pay">
-								<p class="price h">￥<span class="price-p">19.98<span></p>
-								<p class="nums"> x<span class="nums-p">5<span></p>
-							</div>
-						</div>
-					</div>
-				</li>
-	
-				<li class="list">
+			<div class="order-list" id="order_list">
+				<!--<li class="list">
 					<div class="seller">
 						<div class="o-t-title-shop">
 							<div class="tcont">
@@ -154,39 +104,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="item">
-						<div class="item-list o-t-item">
-							<div class="item-img">
-								<p>
-									<img src="../../../images/goods/insur_card/app_img13.jpg" />
-								</p>
-							</div>
-							<div class="item-info">
-								<h3 class="o-title">【中国新华】团体意外险 线上投保 电子保单 全程人性化服务</h3>
-							</div>
-							<div class="item-pay">
-								<p class="price h">￥<span class="price-p">19.98<span></p>
-								<p class="nums"> x<span class="nums-p">5<span></p>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-list o-t-item">
-							<div class="item-img">
-								<p>
-									<img src="../../../images/goods/insur_card/app_img3.jpg" />
-								</p>
-							</div>
-							<div class="item-info">
-								<h3 class="o-title">【中国新华】团体意外险 线上投保 电子保单 全程人性化服务</h3>
-							</div>
-							<div class="item-pay">
-								<p class="price h">￥<span class="price-p">19.98<span></p>
-								<p class="nums"> x<span class="nums-p">5<span></p>
-							</div>
-						</div>
-					</div>
-				</li>
+				</li>-->
 			</div>
 			
 			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
@@ -273,10 +191,50 @@
 			</div>
 			<div style="clear:both;"></div>
 		</div>
+		
+		<script type="text/html" id="cartListTmpl">
+			{{each jsonShoppingCarts as value i}}
+					<li class="list" data-id="{{value.id}}">
+						<div class="seller">
+							<div class="o-t-title-shop">
+								<div class="tcont">
+									<div class="ico">
+										<img src="{{value.supplier__logo}}" />
+									</div>
+									<div class="contact">
+										<a>
+											<p class="o-title" >{{value.supplier__title}}</p>
+											<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item" data-id="{{value.id}}">
+							<div class="item-list o-t-item">
+								<div class="item-img">
+									<p>
+										<img src="../../../images/goods/insur_card/app_img3.jpg" />
+									</p>
+								</div>
+								<div class="item-info">
+									<h3 class="o-title">{{value.kadan_name}}</h3>
+								</div>
+								<div class="item-pay">
+									<p class="price h">￥<span class="price-p">{{value.kadan_price}}<span></p>
+									<p class="nums"> x<span class="nums-p" data-id="{{value.id}}">{{value.card_num}}<span></p>
+								</div>
+							</div>
+						</div>
+					</li>
+				{{/each}}
+			</script>
 	
 	</body>
 	<script src="../../../js/mui.min.js"></script>
 	<script src="../../../js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/template.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/app.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		mui.init();
 		mui.plusReady(function() {
@@ -284,49 +242,93 @@
 			addressButton.addEventListener('tap',function(){
 				mui.openWindow('insur_card_address.html','insur_card_address');
 			});
-			setTotalNumPrice();
+			getCartList();
 		});
+		
+		//获取商品列表
+		function getCartList() {
+			//获取用户 uid
+			var state = app.getState();
+			uid = state.uid;
 			
+			var settings = app.getSettings();
+			var webServiceUrl = settings.webServiceUrl;
+			var imgUrl = settings.imgUrl;
+			plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
+			mui.ajax({
+				url: "../../../json/goods/insur_card/card_cart.json",
+				type: "post",
+				async: true,
+				data: {
+					"id": uid
+				},
+				dataType: "json",
+				timeout: 1000,
+				success: function(data) {
+					if(data.status == 1){
+						console.log(data.message);
+						var order_list = document.getElementById("order_list");
+						
+		//						console.log(data.result[0].jsonShoppingCarts);
+						
+						var content = template("cartListTmpl", data.result[0]);
+						order_list.innerHTML = content;
+						
+						// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
+						initFunc();
+					}else{
+						plus.nativeUI.toast(data.message);
+					}
+				},
+				error:function(xhr,type,errorThrown){
+					//异常处理
+					plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
+					console.log(type);
+				}
+			});
+		};
+		
+		function initFunc(){
+			setTotalNumPrice();
 			
-		//计算总件数和总价，并进行设置
-	    function setTotalNumPrice(){
-	    	var numArray = getPriceNumArray();
-	    	var priceArray = getPricePriceArray();
-	    	var totalNum = 0;
-	    	var totalPrice = 0.00;
-	    	for (i = 0; i < numArray.length; i++) {
-	    		totalNum += numArray[i];
-	    		totalPrice += numArray[i] * priceArray[i];
-	    	}
-	    	$("span#totalNum").text(totalNum);
-	    	$("span#totalprice-p").text(totalPrice);
-	    }
-	    
-	    //获取价格单上的物品件数数组
-		function getPriceNumArray(){
-			var numArray = [];
-			$('.nums').each(function(){
-				var str = $(this).text();
-				str = str.replace(/[^0-9]*/g,"");
-				num = parseInt(str);
-				numArray.push(num);
-			});
-//			console.log(numArray);
-			return numArray;
+			//计算总件数和总价，并进行设置
+		    function setTotalNumPrice(){
+		    	var numArray = getPriceNumArray();
+		    	var priceArray = getPricePriceArray();
+		    	var totalNum = 0;
+		    	var totalPrice = 0.00;
+		    	for (i = 0; i < numArray.length; i++) {
+		    		totalNum += numArray[i];
+		    		totalPrice += numArray[i] * priceArray[i];
+		    	}
+		    	$("span#totalNum").text(totalNum);
+		    	$("span#totalprice-p").text(totalPrice);
+		    }
+		    
+		    //获取价格单上的物品件数数组
+			function getPriceNumArray(){
+				var numArray = [];
+				$('.nums').each(function(){
+					var str = $(this).text();
+					str = str.replace(/[^0-9]*/g,"");
+					num = parseInt(str);
+					numArray.push(num);
+				});
+	//			console.log(numArray);
+				return numArray;
+			}
+			//获取价格单上的物品价格数组
+			function getPricePriceArray(){
+				var priceArray = [];
+				$('.price').each(function(){
+					var str = $(this).text();
+					str = str.replace(/[^0-9.]*/g,"");
+					price = parseFloat(str);
+					priceArray.push(price);
+				});
+	//			console.log(priceArray);
+				return priceArray;
+			}
 		}
-		//获取价格单上的物品价格数组
-		function getPricePriceArray(){
-			var priceArray = [];
-			$('.price').each(function(){
-				var str = $(this).text();
-				str = str.replace(/[^0-9.]*/g,"");
-				price = parseFloat(str);
-				priceArray.push(price);
-			});
-//			console.log(priceArray);
-			return priceArray;
-		}
-	    
 	</script>
-
 </html>
