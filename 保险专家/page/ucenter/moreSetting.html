@@ -66,7 +66,7 @@
 				  <ul class="mui-table-view">
 				    <li class="mui-table-view-cell"><a class="url" data-url = "http://115.28.72.167/">地址一：115.28.72.167/</a></li>
 				    <li class="mui-table-view-cell"><a class="url" data-url = "http://www.annpeter.cn:8080">地址二：www.annpeter.cn:8080</a></li>
-				    <li class="mui-table-view-cell"><a >自定义服务器地址</a></li>
+				    <li class="mui-table-view-cell"><a id="reDefined">自定义服务器地址</a></li>
 				  </ul>
 			</div>
 			
@@ -103,6 +103,20 @@
 			app.setSettings(settings);
 			
 			plus.nativeUI.toast("服务器地址切换成功，当前服务器地址为"+settings.webServiceUrl);
+		});
+		
+		document.getElementById("reDefined").addEventListener('tap',function(){
+			var btnArray = ['取消','确定'];
+			mui.prompt('请输入服务器地址：','例如：http://115.28.72.167/','自定义服务器',btnArray,function(e){
+				if(e.index == 1){
+					var settings = app.getSettings();
+					settings.webServiceUrl = e.value;
+					app.setSettings(settings);
+					plus.nativeUI.toast("服务器地址切换成功，当前服务器地址为"+settings.webServiceUrl);
+				}else{
+					plus.nativeUI.toast("取消成功");
+				}
+			});
 		});
 
 		//客服电话
