@@ -58,7 +58,18 @@ function getallArea(val,val1,val2){
 	var allarea=province[val].NAME+city[val1].NAME+area[val2].NAME;
 	$("#shengshi").attr({"SS":province[val].NAME,"SQ":city[val1].NAME,"XS":area[val2].NAME});
 	$("#shengshi").val(allarea);
-	console.log(allarea);
-	$("body .dqld_div").remove();
-	
+//	$("body .dqld_div").remove();
+	mui.openWindow({
+		url: 'insur_card_address_add.html',
+		id: 'insur_card_address_add',
+		waiting: {
+			autoShow: true
+		},
+		extras:{
+			province:province[val].NAME,
+			city:city[val1].NAME,
+			area:area[val2].NAME,
+			allarea:allarea
+		}
+	});
 }
