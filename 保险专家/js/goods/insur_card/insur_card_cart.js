@@ -25,7 +25,7 @@ function getCartList() {
 		type: "post",
 		async: true,
 		data: {
-			"id": uid
+			"member_id": uid
 		},
 		dataType: "json",
 		timeout: 1000,
