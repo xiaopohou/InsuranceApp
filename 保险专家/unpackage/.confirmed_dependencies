@@ -274,7 +274,9 @@
 			"json/goods/insur_card/insur_card_info.json",
 			"json/goods/insur_card/card_info.json",
 			"js/config.js",
-			"js/app.js"
+			"js/app.js",
+			"js/jquery-2.1.3.min.js",
+			"json/goods/insur_card/product_change_return.json"
 		]
 	},
 	"page/location.html": {
