@@ -66,11 +66,12 @@
 							<span>正东路街道 </span>
 							<span>梦溪路2号江苏科技大学东校区 </span>
 						</div>
-						<div class="ext">(收货不便时,可选择免费代收货服务)</div>
+						<div class="ext" style="display: none;">(收货不便时,可选择免费代收货服务)</div>
 					</div>
 				</div>
 			</div>
-						<!--商品列表-->
+			
+			<!--商品列表-->
 			<div class="order-list" id="order_list">
 				<!--<li class="list">
 					<div class="seller">
@@ -194,41 +195,41 @@
 		
 		<script type="text/html" id="cartListTmpl">
 			{{each jsonShoppingCarts as value i}}
-					<li class="list" data-id="{{value.id}}">
-						<div class="seller">
-							<div class="o-t-title-shop">
-								<div class="tcont">
-									<div class="ico">
-										<img src="{{value.supplier__logo}}" />
-									</div>
-									<div class="contact">
-										<a>
-											<p class="o-title" >{{value.supplier__title}}</p>
-											<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
-										</a>
-									</div>
+				<li class="list" data-id="{{value.id}}">
+					<div class="seller">
+						<div class="o-t-title-shop">
+							<div class="tcont">
+								<div class="ico">
+									<img src="{{value.supplier__logo}}" />
+								</div>
+								<div class="contact">
+									<a>
+										<p class="o-title" >{{value.supplier__title}}</p>
+										<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
+									</a>
 								</div>
 							</div>
 						</div>
-						<div class="item" data-id="{{value.id}}">
-							<div class="item-list o-t-item">
-								<div class="item-img">
-									<p>
-										<img src="../../../images/goods/insur_card/app_img3.jpg" />
-									</p>
-								</div>
-								<div class="item-info">
-									<h3 class="o-title">{{value.kadan_name}}</h3>
-								</div>
-								<div class="item-pay">
-									<p class="price h">￥<span class="price-p">{{value.kadan_price}}<span></p>
-									<p class="nums"> x<span class="nums-p" data-id="{{value.id}}">{{value.card_num}}<span></p>
-								</div>
+					</div>
+					<div class="item" data-id="{{value.id}}">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img3.jpg" />
+								</p>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">{{value.kadan_name}}</h3>
+							</div>
+							<div class="item-pay">
+								<p class="price h">￥<span class="price-p">{{value.kadan_price}}<span></p>
+								<p class="nums"> x<span class="nums-p" data-id="{{value.id}}">{{value.card_num}}<span></p>
 							</div>
 						</div>
-					</li>
-				{{/each}}
-			</script>
+					</div>
+				</li>
+			{{/each}}
+		</script>
 	
 	</body>
 	<script src="../../../js/mui.min.js"></script>

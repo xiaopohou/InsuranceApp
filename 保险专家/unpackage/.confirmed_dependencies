@@ -1,755 +1,758 @@
 {
-	"index.html": {
-		"resources": [
-			"js/app.js",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"page/guide/index.html",
-			"page/passport/login.html",
-			"page/ucenter/index.html",
-			"page/passport/top_thread.html",
-			"page/passport/preInfo.html"
-		]
-	},
-	"page/guide/index.html": {
-		"resources": [
-			"css/mui.css"
-		],
-		"refer": [
-			"page/passport/login.html"
-		]
-	},
-	"page/ucenter/setting.html": {
-		"refer": [
-			"page/ucenter/moreSetting.html",
-			"page/ucenter/userInfo.html"
-		],
-		"resources": [
-			"css/mui.min.css",
-			"css/common.css",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"images/person_code.png",
-			"images/homePage/app_topimg.png",
-			"images/homePage/logo.png",
-			"js/app.js",
-			"js/config.js"
-		]
-	},
-	"page/ucenter/index.html": {
-		"resources": [
-			"page/ucenter/home.html",
-			"js/app.js",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.css",
-			"js/config.js"
-		],
-		"refer": [
-			"page/ucenter/setting.html",
-			"page/ucenter/message.html",
-			"page/ucenter/home.html",
-			"page/ucenter/client.html",
-			"page/ucenter/takePic.html",
-			"page/ucenter/insurance.html"
-		]
-	},
-	"page/passport/reg.html": {
-		"refer": [
-			"page/passport/reg-validate.html"
-		],
-		"resources": [
-			"fonts/mui.ttf",
-			"js/app.js",
-			"js/mui.min.js",
-			"css/common.css",
-			"css/style.css",
-			"css/mui.css"
-		]
-	},
-	"page/passport/login.html": {
-		"resources": [
-			"images/sinaweibo.png",
-			"fonts/mui.ttf",
-			"css/style.css",
-			"images/weixin.png",
-			"images/qq.png",
-			"js/mui.enterfocus.js",
-			"css/mui.css",
-			"js/app.js",
-			"js/mui.min.js",
-			"css/common.css",
-			"js/config.js",
-			"js/jquery-2.1.3.min.js"
-		],
-		"refer": [
-			"page/passport/forget_password.html",
-			"page/ucenter/index.html",
-			"page/passport/reg.html",
-			"page/passport/forget.html"
-		]
-	},
-	"page/ucenter/moreSetting.html": {
-		"resources": [
-			"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
-			"libs/easymob-webim-sdk/json2.js",
-			"libs/easymob-webim-sdk/jquery-1.11.1.js",
-			"js/mui.locker.js",
-			"css/feedback-page.css",
-			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-			"js/mui.view.js",
-			"js/app.js",
-			"css/mui.css",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"js/jquery-2.1.3.min.js"
-		],
-		"refer": [
-			"page/passport/login.html"
-		]
-	},
-	"page/ucenter/home.html": {
-		"resources": [
-			"js/jquery-1.12.0.js",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"js/jquery-1.11.0.js",
-			"images/homePage/b3.png",
-			"css/base.css",
-			"images/homePage/title_img2.png",
-			"images/homePage/slider4.jpg",
-			"images/homePage/condiv_img2.jpg",
-			"images/homePage/b1.png",
-			"images/homePage/slider2.jpg",
-			"images/homePage/a4.png",
-			"images/homePage/a3.png",
-			"images/homePage/slider3.jpg",
-			"images/homePage/button.png",
-			"images/homePage/b4.png",
-			"images/homePage/slider1.jpg",
-			"images/homePage/main_car.png",
-			"images/homePage/main_life.png",
-			"images/homePage/a1.png",
-			"images/homePage/main_insur_card.png",
-			"images/homePage/b2.png",
-			"images/homePage/a2.png",
-			"images/homePage/main_group.png",
-			"css/swiper.min.css",
-			"images/homePage/logo.png",
-			"images/homePage/app_botimg.png",
-			"images/homePage/person.png",
-			"images/homePage/main_my_money.png",
-			"images/homePage/main_invite.png",
-			"images/homePage/main_person.png",
-			"images/homePage/main_my_order.png",
-			"js/config.js",
-			"fonts/mui.ttf"
-		],
-		"refer": [
-			"page/goods/insur_card/insur_card_show.html",
-			"page/goods/company/companyIndex.html",
-			"page/goods/car/car_index.html",
-			"page/ucenter/userInfo.html",
-			"page/goods/online_card/online_card_show.html",
-			"page/myOrder/myOrderIndex.html",
-			"page/goods/insur_card/insur_card_index.html",
-			"page/goods/life/lifeIndex.html"
-		]
-	},
-	"page/ucenter/message.html": {
-		"resources": [
-			"css/mui.min.css",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf"
-		],
-		"refer": []
-	},
-	"page/ucenter/client.html": {
-		"resources": [
-			"css/mui.min.css",
-			"images/homePage/app_botimg.png",
-			"images/homePage/person.png",
-			"images/homePage/logo.png",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"js/config.js"
-		],
-		"refer": []
-	},
-	"page/goods/insur_card/insur_card_show.html": {
-		"resources": [
-			"css/common.css",
-			"fonts/mui.ttf",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"images/goods/banner1.jpg",
-			"images/goods/banner3.jpg",
-			"images/goods/banner2.jpg",
-			"images/goods/insur_card/app_img3.jpg",
-			"images/goods/insur_card/app_img13.jpg",
-			"images/goods/insur_card/app_img16.jpg",
-			"images/goods/insur_card/app_img14.jpg",
-			"images/goods/insur_card/app_img15.jpg",
-			"images/goods/insur_card/app_img24.jpg",
-			"images/goods/insur_card/app_img12.jpg",
-			"images/goods/insur_card/app_img1.jpg",
-			"css/base.css",
-			"images/goods/insur_card/sousuo.png",
-			"page/goods/insur_card/insur_card_show.html",
-			"js/template.js",
-			"json/main/shop.json",
-			"page/goods/insur_card/shop.json",
-			"json/goods/insur_card/insur_card_show.json",
-			"json/goods/insur_card/card_show.json",
-			"js/config.js",
-			"js/app.js",
-			"js/mui.indexedlist.js"
-		],
-		"refer": [
-			"page/goods/insur_card/insur_card_info.html",
-			"page/goods/insur_card/insur_card_cart.html",
-			"page/goods/insur_card/insur_card_buying.html",
-			"page/goods/insur_card/insur_card_auto_active.html",
-			"page/goods/insur_card/insur_card_show.html"
-		]
-	},
-	"page/passport/reg-validate.html": {
-		"resources": [
-			"js/app.js",
-			"js/mui.min.js",
-			"css/common.css",
-			"css/style.css",
-			"css/mui.css",
-			"fonts/mui.ttf"
-		],
-		"refer": [
-			"page/passport/login.html",
-			"page/ucenter/index.html"
-		]
-	},
-	"page/passport/forget_password.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/app.js",
-			"css/common.css",
-			"css/mui.css",
-			"js/mui.min.js"
-		],
-		"refer": []
-	},
-	"page/goods/insur_card/insur_card_info.html": {
-		"refer": [
-			"page/goods/insur_card/insur_card_buying.html",
-			"page/goods/insur_card/insur_card_cart.html"
-		],
-		"resources": [
-			"images/goods/banner1.jpg",
-			"css/common.css",
-			"css/mui.min.css",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/base.css",
-			"images/goods/insur_card/u1.jpg",
-			"images/goods/insur_card/jj.png",
-			"images/goods/insur_card/u2.jpg",
-			"images/goods/insur_card/sc.png",
-			"images/homePage/a1.png",
-			"images/homePage/slider4.jpg",
-			"images/homePage/a2.png",
-			"css/insur_card_info.css",
-			"page/goods/insur_card/test.json",
-			"js/template.js",
-			"images/goods/insur_card/app_img16.jpg",
-			"images/goods/insur_card/app_img12.jpg",
-			"images/goods/insur_card/app_img1.jpg",
-			"images/goods/insur_card/app_img14.jpg",
-			"images/goods/insur_card/app_img24.jpg",
-			"images/goods/insur_card/app_img15.jpg",
-			"json/goods/insur_card/insur_card_show.json",
-			"json/goods/insur_card/insur_card_info.json",
-			"json/goods/insur_card/card_info.json",
-			"js/config.js",
-			"js/app.js",
-			"js/jquery-2.1.3.min.js",
-			"json/goods/insur_card/product_change_return.json"
-		]
-	},
-	"page/location.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"page/ucenter/userInfo.html": {
-		"resources": [
-			"images/homePage/app_botimg.png",
-			"js/mui.min.js",
-			"images/person_code.png",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/app.js",
-			"js/config.js",
-			"js/jquery-2.1.3.min.js"
-		],
-		"refer": [
-			"page/passport/login.html"
-		]
-	},
-	"page/ucenter/insurance.html": {
-		"resources": [
-			"css/mui.min.css",
-			"js/mui.min.js",
-			"js/config.js"
-		],
-		"refer": []
-	},
-	"page/ucenter/takePic.html": {
-		"resources": [
-			"css/mui.min.css",
-			"js/mui.min.js",
-			"fonts/mui.ttf"
-		],
-		"refer": []
-	},
-	"page/goods/insur_card/insur_card_buying.html": {
-		"resources": [
-			"css/common.css",
-			"css/mui.min.css",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/base.css",
-			"images/goods/insur_card/area.png",
-			"images/goods/insur_card/logo-pingan.png",
-			"images/goods/insur_card/app_img13.jpg",
-			"images/goods/insur_card/app_img1.jpg",
-			"images/goods/insur_card/app_img3.jpg",
-			"images/goods/insur_card/app_img14.jpg",
-			"images/goods/insur_card/app_img15.jpg",
-			"images/goods/insur_card/logo-xinhua.png",
-			"js/jquery-2.1.3.min.js",
-			"js/template.js",
-			"json/goods/insur_card/card_cart.json",
-			"js/app.js"
-		],
-		"refer": [
-			"page/goods/insur_card/insur_card_address.html"
-		]
-	},
-	"page/passport/forget.html": {
-		"resources": [
-			"js/app.js",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.css"
-		],
-		"refer": [
-			"page/passport/forget-validate.html"
-		]
-	},
-	"page/passport/forget-validate.html": {
-		"resources": [
-			"js/app.js",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.css"
-		],
-		"refer": []
-	},
-	"page/ERcode.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"page/goods/insur_card/insur_card_cart.html": {
-		"resources": [
-			"css/base.css",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/goods/insur_card/logo-pingan.png",
-			"images/goods/insur_card/logo-xinhua.png",
-			"images/goods/insur_card/app_img15.jpg",
-			"images/goods/insur_card/app_img1.jpg",
-			"images/goods/insur_card/app_img13.jpg",
-			"images/goods/insur_card/app_img3.jpg",
-			"images/goods/insur_card/app_img14.jpg",
-			"js/jquery-2.1.3.min.js",
-			"images/goods/insur_card/app_img24.jpg",
-			"js/template.js",
-			"json/goods/insur_card/card_cart.json",
-			"js/app.js",
-			"js/goods/insur_card/insur_card_cart.js",
-			"json/goods/insur_card/product_change_return.json"
-		],
-		"refer": [
-			"page/goods/insur_card/insur_card_buying.html"
-		]
-	},
-	"page/goods/insur_card/insur_card_address.html": {
-		"resources": [
-			"css/base.css",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/mui.min.js"
-		],
-		"refer": [
-			"page/goods/insur_card/areaSelect.html",
-			"page/goods/insur_card/insur_card_address_add.html"
-		]
-	},
-	"page/goods/company/companyIndex.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/goods/groupAccident/accident.jpg",
-			"css/mui.css",
-			"images/goods/company/groupAccident/accident.jpg",
-			"images/homePage/main_invite.png",
-			"images/homePage/main_person.png",
-			"images/homePage/main_group.png",
-			"images/goods/company/tuanti.png",
-			"images/goods/company/qiye.png",
-			"images/goods/company/guzhuzeren.png",
-			"images/goods/insur_card/gengduo.png"
-		],
-		"refer": [
-			"page/goods/company/groupAccident/groupAccident.html",
-			"page/goods/company/employer/employer.html",
-			"page/goods/company/companyAssets/companyAssets_index.html",
-			"page/goods/company/employer/employer_index.html"
-		]
-	},
-	"page/goods/car/car_index.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/goods/car/car_banner.jpg",
-			"images/goods/car/car.jpg",
-			"images/goods/car/truck.jpg",
-			"images/goods/car/btruck.jpg",
-			"images/goods/car/other.jpg",
-			"images/goods/car/qiche.png",
-			"images/goods/car/huoche.png",
-			"images/goods/car/kache.png",
-			"images/goods/car/gengduo.png"
-		],
-		"refer": []
-	},
-	"page/goods/online_card/online_card_show.html": {
-		"resources": [
-			"images/goods/insur_card/app_img3.jpg",
-			"images/goods/insur_card/app_img16.jpg",
-			"images/goods/insur_card/app_img13.jpg",
-			"images/goods/insur_card/app_img14.jpg",
-			"images/goods/insur_card/app_img15.jpg",
-			"images/goods/insur_card/app_img24.jpg",
-			"images/goods/insur_card/app_img12.jpg",
-			"images/goods/insur_card/app_img1.jpg",
-			"css/base.css",
-			"fonts/mui.ttf",
-			"css/common.css",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"page/goods/insur_card/insur_card_auto_active.html"
-		]
-	},
-	"page/goods/insur_card/insur_card_auto_active.html": {
-		"resources": [
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/mui.min.js"
-		],
-		"refer": []
-	},
-	"page/myOrder/myOrderIndex.html": {
-		"resources": [
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.css",
-			"js/mui.min.js",
-			"images/goods/groupAccident/accident.jpg",
-			"css/base.css",
-			"images/goods/company/groupAccident/accident.jpg"
-		],
-		"refer": [
-			"page/myOrder/myOrder_groupAccident.html"
-		]
-	},
-	"page/goods/company/groupAccident/groupAccident.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/goods/groupAccident/accident.jpg",
-			"js/jquery-2.1.3.min.js",
-			"page/goods/company/groupAccident/groupAccident.html",
-			"css/base.css",
-			"css/insur_card_info.css",
-			"images/goods/company/groupAccident/accident.jpg"
-		],
-		"refer": [
-			"page/goods/company/groupAccident/groupAccidentInfo.html",
-			"page/myOrder/myOrder_groupAccident.html",
-			"page/goods/company/groupAccident/groupAccident.html"
-		]
-	},
-	"page/goods/company/groupAccident/groupAccidentInfo.html": {
-		"resources": [
-			"css/base.css",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"page/goods/company/groupAccident/groupAccidentInfo.html"
-		],
-		"refer": [
-			"page/goods/company/groupAccident/groupAccidentInfo.html",
-			"page/myOrder/myOrder_groupAccident.html"
-		]
-	},
-	"page/goods/company/employer/employer.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/goods/groupAccident/accident.jpg",
-			"js/jquery-2.1.3.min.js"
-		],
-		"refer": [
-			"page/myOrder/myOrder_groupAccident.html",
-			"page/myOrder/myOrder_employer.html"
-		]
-	},
-	"page/myOrder/myOrder_groupAccident.html": {
-		"resources": [
-			"css/base.css",
-			"images/goods/insur_card/logo-pingan.png",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/goods/insur_card/logo-xinhua.png"
-		],
-		"refer": [
-			"page/myOrder/applicationForm.html",
-			"page/myOrder/documentUpload.html",
-			"page/myOrder/myOrder_pay.html",
-			"page/myOrder/myOrder_info.html"
-		]
-	},
-	"page/myOrder/applicationForm.html": {
-		"resources": [
-			"images/goods/groupAccident/accident.jpg",
-			"css/base.css",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/goods/company/groupAccident/accident.jpg"
-		],
-		"refer": []
-	},
-	"page/myOrder/documentUpload.html": {
-		"resources": [
-			"images/myOrder/fileUpload.jpg",
-			"js/mui.min.js",
-			"css/base.css",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/myOrder/fileUpload.png",
-			"images/goods/banner3.jpg",
-			"images/goods/groupAccident/accident.jpg"
-		],
-		"refer": []
-	},
-	"page/myOrder/myOrder_info.html": {
-		"resources": [
-			"images/goods/groupAccident/accident.jpg"
-		],
-		"refer": []
-	},
-	"page/goods/company/employer/employer_index.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"page/goods/company/employer/employer.html"
-		]
-	},
-	"page/myOrder/myOrder_pay.html": {
-		"resources": [
-			"images/myOrder/fileUpload.png"
-		],
-		"refer": []
-	},
-	"page/goods/company/companyAssets/companyAssets_index.html": {
-		"refer": [
-			"page/goods/company/companyAssets/companyAssets.html",
-			"page/myOrder/myOrder_companyAssets.html"
-		],
-		"resources": [
-			"js/jquery-2.1.3.min.js",
-			"images/goods/company/groupAccident/accident.jpg"
-		]
-	},
-	"page/goods/company/companyAssets/companyAssets.html": {
-		"refer": [
-			"page/myOrder/myOrder_groupAccident.html",
-			"page/myOrder/myOrder_companyAssets.html"
-		],
-		"resources": [
-			"css/base.css",
-			"js/jquery-2.1.3.min.js",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/goods/groupAccident/accident.jpg"
-		]
-	},
-	"page/myOrder/myOrder_employer.html": {
-		"refer": [
-			"page/myOrder/applicationForm.html"
-		],
-		"resources": [
-			"images/goods/insur_card/logo-pingan.png",
-			"images/goods/insur_card/logo-xinhua.png"
-		]
-	},
-	"page/myOrder/myOrder_companyAssets.html": {
-		"resources": [
-			"images/goods/insur_card/logo-pingan.png",
-			"images/goods/insur_card/logo-xinhua.png"
-		],
-		"refer": [
-			"page/myOrder/applicationForm.html",
-			"page/myOrder/myOrder_pay.html"
-		]
-	},
-	"page/goods/insur_card/insur_card_index.html": {
-		"resources": [
-			"css/common.css",
-			"fonts/mui.ttf",
-			"images/goods/groupAccident/accident.jpg",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"images/goods/company/groupAccident/accident.jpg",
-			"images/goods/insur_card/goumai.png",
-			"images/goods/insur_card/online.png",
-			"images/goods/insur_card/jihuo.png",
-			"images/goods/insur_card/gengduo.png"
-		],
-		"refer": [
-			"page/goods/online_card/online_card_show.html",
-			"page/goods/insur_card/insur_card_auto_active.html",
-			"page/goods/insur_card/insur_card_show.html"
-		]
-	},
-	"page/goods/life/lifeIndex.html": {
-		"resources": [
-			"images/goods/life/chengchangbaoxian.png",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"images/goods/life/baoxian.png",
-			"images/goods/life/xianglebaoxian.png",
-			"images/goods/life/jibingbaoxian.png",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"js/jquery-2.1.3.min.js"
-		],
-		"refer": [
-			"page/goods/life/shouxian/shouxian_index.html"
-		]
-	},
-	"page/goods/insur_card/areaSelect.html": {
-		"resources": [
-			"js/jquery-1.9.1.area.js",
-			"css/area.css",
-			"js/area.js",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"page/goods/insur_card/insur_card_address_add.html": {
-		"resources": [
-			"css/base.css",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"page/goods/insur_card/areaSelect.html"
-		]
-	},
-	"page/passport/top_thread.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"page/passport/login.html"
-		]
-	},
-	"page/passport/preInfo.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"page/passport/login.html"
-		]
-	},
-	"page/goods/life/shouxian/shouxian_index.html": {
-		"resources": [
-			"css/base.css",
-			"images/goods/insur_card/logo-pingan.png",
-			"fonts/mui.ttf",
-			"js/mui.min.js",
-			"css/common.css",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"page/goods/life/shouxian/shouxian_info.html"
-		]
-	},
-	"page/goods/life/shouxian/shouxian_info.html": {
-		"resources": [
-			"css/base.css",
-			"images/goods/insur_card/logo-pingan.png",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/jquery-2.1.3.min.js"
-		],
-		"refer": []
-	}
+  "index.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "page/guide/index.html",
+      "page/passport/login.html",
+      "page/ucenter/index.html",
+      "page/passport/top_thread.html",
+      "page/passport/preInfo.html"
+    ]
+  },
+  "page/guide/index.html": {
+    "resources": [
+      "css/mui.css"
+    ],
+    "refer": [
+      "page/passport/login.html"
+    ]
+  },
+  "page/ucenter/setting.html": {
+    "refer": [
+      "page/ucenter/moreSetting.html",
+      "page/ucenter/userInfo.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/common.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "images/person_code.png",
+      "images/homePage/app_topimg.png",
+      "images/homePage/logo.png",
+      "js/app.js",
+      "js/config.js"
+    ]
+  },
+  "page/ucenter/index.html": {
+    "resources": [
+      "page/ucenter/home.html",
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "js/config.js"
+    ],
+    "refer": [
+      "page/ucenter/setting.html",
+      "page/ucenter/message.html",
+      "page/ucenter/home.html",
+      "page/ucenter/client.html",
+      "page/ucenter/takePic.html",
+      "page/ucenter/insurance.html"
+    ]
+  },
+  "page/passport/reg.html": {
+    "refer": [
+      "page/passport/reg-validate.html"
+    ],
+    "resources": [
+      "fonts/mui.ttf",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "css/style.css",
+      "css/mui.css"
+    ]
+  },
+  "page/passport/login.html": {
+    "resources": [
+      "images/sinaweibo.png",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "images/weixin.png",
+      "images/qq.png",
+      "js/mui.enterfocus.js",
+      "css/mui.css",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "js/config.js",
+      "js/jquery-2.1.3.min.js"
+    ],
+    "refer": [
+      "page/passport/forget_password.html",
+      "page/ucenter/index.html",
+      "page/passport/reg.html",
+      "page/passport/forget.html"
+    ]
+  },
+  "page/ucenter/moreSetting.html": {
+    "resources": [
+      "libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+      "libs/easymob-webim-sdk/json2.js",
+      "libs/easymob-webim-sdk/jquery-1.11.1.js",
+      "js/mui.locker.js",
+      "css/feedback-page.css",
+      "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+      "js/mui.view.js",
+      "js/app.js",
+      "css/mui.css",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "js/jquery-2.1.3.min.js"
+    ],
+    "refer": [
+      "page/passport/login.html"
+    ]
+  },
+  "page/ucenter/home.html": {
+    "resources": [
+      "js/jquery-1.12.0.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/jquery-1.11.0.js",
+      "images/homePage/b3.png",
+      "css/base.css",
+      "images/homePage/title_img2.png",
+      "images/homePage/slider4.jpg",
+      "images/homePage/condiv_img2.jpg",
+      "images/homePage/b1.png",
+      "images/homePage/slider2.jpg",
+      "images/homePage/a4.png",
+      "images/homePage/a3.png",
+      "images/homePage/slider3.jpg",
+      "images/homePage/button.png",
+      "images/homePage/b4.png",
+      "images/homePage/slider1.jpg",
+      "images/homePage/main_car.png",
+      "images/homePage/main_life.png",
+      "images/homePage/a1.png",
+      "images/homePage/main_insur_card.png",
+      "images/homePage/b2.png",
+      "images/homePage/a2.png",
+      "images/homePage/main_group.png",
+      "css/swiper.min.css",
+      "images/homePage/logo.png",
+      "images/homePage/app_botimg.png",
+      "images/homePage/person.png",
+      "images/homePage/main_my_money.png",
+      "images/homePage/main_invite.png",
+      "images/homePage/main_person.png",
+      "images/homePage/main_my_order.png",
+      "js/config.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "page/goods/insur_card/insur_card_show.html",
+      "page/goods/company/companyIndex.html",
+      "page/goods/car/car_index.html",
+      "page/ucenter/userInfo.html",
+      "page/goods/online_card/online_card_show.html",
+      "page/myOrder/myOrderIndex.html",
+      "page/goods/insur_card/insur_card_index.html",
+      "page/goods/life/lifeIndex.html"
+    ]
+  },
+  "page/ucenter/message.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "page/ucenter/client.html": {
+    "resources": [
+      "css/mui.min.css",
+      "images/homePage/app_botimg.png",
+      "images/homePage/person.png",
+      "images/homePage/logo.png",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "js/config.js"
+    ],
+    "refer": []
+  },
+  "page/goods/insur_card/insur_card_show.html": {
+    "resources": [
+      "css/common.css",
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/goods/banner1.jpg",
+      "images/goods/banner3.jpg",
+      "images/goods/banner2.jpg",
+      "images/goods/insur_card/app_img3.jpg",
+      "images/goods/insur_card/app_img13.jpg",
+      "images/goods/insur_card/app_img16.jpg",
+      "images/goods/insur_card/app_img14.jpg",
+      "images/goods/insur_card/app_img15.jpg",
+      "images/goods/insur_card/app_img24.jpg",
+      "images/goods/insur_card/app_img12.jpg",
+      "images/goods/insur_card/app_img1.jpg",
+      "css/base.css",
+      "images/goods/insur_card/sousuo.png",
+      "page/goods/insur_card/insur_card_show.html",
+      "js/template.js",
+      "json/main/shop.json",
+      "page/goods/insur_card/shop.json",
+      "json/goods/insur_card/insur_card_show.json",
+      "json/goods/insur_card/card_show.json",
+      "js/config.js",
+      "js/app.js",
+      "js/mui.indexedlist.js"
+    ],
+    "refer": [
+      "page/goods/insur_card/insur_card_info.html",
+      "page/goods/insur_card/insur_card_cart.html",
+      "page/goods/insur_card/insur_card_buying.html",
+      "page/goods/insur_card/insur_card_auto_active.html",
+      "page/goods/insur_card/insur_card_show.html"
+    ]
+  },
+  "page/passport/reg-validate.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "css/style.css",
+      "css/mui.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "page/passport/login.html",
+      "page/ucenter/index.html"
+    ]
+  },
+  "page/passport/forget_password.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/app.js",
+      "css/common.css",
+      "css/mui.css",
+      "js/mui.min.js"
+    ],
+    "refer": []
+  },
+  "page/goods/insur_card/insur_card_info.html": {
+    "refer": [
+      "page/goods/insur_card/insur_card_buying.html",
+      "page/goods/insur_card/insur_card_cart.html"
+    ],
+    "resources": [
+      "images/goods/banner1.jpg",
+      "css/common.css",
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/base.css",
+      "images/goods/insur_card/u1.jpg",
+      "images/goods/insur_card/jj.png",
+      "images/goods/insur_card/u2.jpg",
+      "images/goods/insur_card/sc.png",
+      "images/homePage/a1.png",
+      "images/homePage/slider4.jpg",
+      "images/homePage/a2.png",
+      "css/insur_card_info.css",
+      "page/goods/insur_card/test.json",
+      "js/template.js",
+      "images/goods/insur_card/app_img16.jpg",
+      "images/goods/insur_card/app_img12.jpg",
+      "images/goods/insur_card/app_img1.jpg",
+      "images/goods/insur_card/app_img14.jpg",
+      "images/goods/insur_card/app_img24.jpg",
+      "images/goods/insur_card/app_img15.jpg",
+      "json/goods/insur_card/insur_card_show.json",
+      "json/goods/insur_card/insur_card_info.json",
+      "json/goods/insur_card/card_info.json",
+      "js/config.js",
+      "js/app.js",
+      "js/jquery-2.1.3.min.js",
+      "json/goods/insur_card/product_change_return.json"
+    ]
+  },
+  "page/location.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "page/ucenter/userInfo.html": {
+    "resources": [
+      "images/homePage/app_botimg.png",
+      "js/mui.min.js",
+      "images/person_code.png",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/app.js",
+      "js/config.js",
+      "js/jquery-2.1.3.min.js"
+    ],
+    "refer": [
+      "page/passport/login.html"
+    ]
+  },
+  "page/ucenter/insurance.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/config.js"
+    ],
+    "refer": []
+  },
+  "page/ucenter/takePic.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "page/goods/insur_card/insur_card_buying.html": {
+    "resources": [
+      "css/common.css",
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/base.css",
+      "images/goods/insur_card/area.png",
+      "images/goods/insur_card/logo-pingan.png",
+      "images/goods/insur_card/app_img13.jpg",
+      "images/goods/insur_card/app_img1.jpg",
+      "images/goods/insur_card/app_img3.jpg",
+      "images/goods/insur_card/app_img14.jpg",
+      "images/goods/insur_card/app_img15.jpg",
+      "images/goods/insur_card/logo-xinhua.png",
+      "js/jquery-2.1.3.min.js",
+      "js/template.js",
+      "json/goods/insur_card/card_cart.json",
+      "js/app.js"
+    ],
+    "refer": [
+      "page/goods/insur_card/insur_card_address.html"
+    ]
+  },
+  "page/passport/forget.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.css"
+    ],
+    "refer": [
+      "page/passport/forget-validate.html"
+    ]
+  },
+  "page/passport/forget-validate.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "page/ERcode.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "page/goods/insur_card/insur_card_cart.html": {
+    "resources": [
+      "css/base.css",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/goods/insur_card/logo-pingan.png",
+      "images/goods/insur_card/logo-xinhua.png",
+      "images/goods/insur_card/app_img15.jpg",
+      "images/goods/insur_card/app_img1.jpg",
+      "images/goods/insur_card/app_img13.jpg",
+      "images/goods/insur_card/app_img3.jpg",
+      "images/goods/insur_card/app_img14.jpg",
+      "js/jquery-2.1.3.min.js",
+      "images/goods/insur_card/app_img24.jpg",
+      "js/template.js",
+      "json/goods/insur_card/card_cart.json",
+      "js/app.js",
+      "js/goods/insur_card/insur_card_cart.js",
+      "json/goods/insur_card/product_change_return.json"
+    ],
+    "refer": [
+      "page/goods/insur_card/insur_card_buying.html"
+    ]
+  },
+  "page/goods/insur_card/insur_card_address.html": {
+    "resources": [
+      "css/base.css",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "page/goods/insur_card/areaSelect.html",
+      "page/goods/insur_card/insur_card_address_add.html"
+    ]
+  },
+  "page/goods/company/companyIndex.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/goods/groupAccident/accident.jpg",
+      "css/mui.css",
+      "images/goods/company/groupAccident/accident.jpg",
+      "images/homePage/main_invite.png",
+      "images/homePage/main_person.png",
+      "images/homePage/main_group.png",
+      "images/goods/company/tuanti.png",
+      "images/goods/company/qiye.png",
+      "images/goods/company/guzhuzeren.png",
+      "images/goods/insur_card/gengduo.png"
+    ],
+    "refer": [
+      "page/goods/company/groupAccident/groupAccident.html",
+      "page/goods/company/employer/employer.html",
+      "page/goods/company/companyAssets/companyAssets_index.html",
+      "page/goods/company/employer/employer_index.html"
+    ]
+  },
+  "page/goods/car/car_index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/goods/car/car_banner.jpg",
+      "images/goods/car/car.jpg",
+      "images/goods/car/truck.jpg",
+      "images/goods/car/btruck.jpg",
+      "images/goods/car/other.jpg",
+      "images/goods/car/qiche.png",
+      "images/goods/car/huoche.png",
+      "images/goods/car/kache.png",
+      "images/goods/car/gengduo.png"
+    ],
+    "refer": []
+  },
+  "page/goods/online_card/online_card_show.html": {
+    "resources": [
+      "images/goods/insur_card/app_img3.jpg",
+      "images/goods/insur_card/app_img16.jpg",
+      "images/goods/insur_card/app_img13.jpg",
+      "images/goods/insur_card/app_img14.jpg",
+      "images/goods/insur_card/app_img15.jpg",
+      "images/goods/insur_card/app_img24.jpg",
+      "images/goods/insur_card/app_img12.jpg",
+      "images/goods/insur_card/app_img1.jpg",
+      "css/base.css",
+      "fonts/mui.ttf",
+      "css/common.css",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "page/goods/insur_card/insur_card_auto_active.html"
+    ]
+  },
+  "page/goods/insur_card/insur_card_auto_active.html": {
+    "resources": [
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": []
+  },
+  "page/myOrder/myOrderIndex.html": {
+    "resources": [
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "js/mui.min.js",
+      "images/goods/groupAccident/accident.jpg",
+      "css/base.css",
+      "images/goods/company/groupAccident/accident.jpg"
+    ],
+    "refer": [
+      "page/myOrder/myOrder_groupAccident.html"
+    ]
+  },
+  "page/goods/company/groupAccident/groupAccident.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/goods/groupAccident/accident.jpg",
+      "js/jquery-2.1.3.min.js",
+      "page/goods/company/groupAccident/groupAccident.html",
+      "css/base.css",
+      "css/insur_card_info.css",
+      "images/goods/company/groupAccident/accident.jpg"
+    ],
+    "refer": [
+      "page/goods/company/groupAccident/groupAccidentInfo.html",
+      "page/myOrder/myOrder_groupAccident.html",
+      "page/goods/company/groupAccident/groupAccident.html"
+    ]
+  },
+  "page/goods/company/groupAccident/groupAccidentInfo.html": {
+    "resources": [
+      "css/base.css",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "page/goods/company/groupAccident/groupAccidentInfo.html"
+    ],
+    "refer": [
+      "page/goods/company/groupAccident/groupAccidentInfo.html",
+      "page/myOrder/myOrder_groupAccident.html"
+    ]
+  },
+  "page/goods/company/employer/employer.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/goods/groupAccident/accident.jpg",
+      "js/jquery-2.1.3.min.js"
+    ],
+    "refer": [
+      "page/myOrder/myOrder_groupAccident.html",
+      "page/myOrder/myOrder_employer.html"
+    ]
+  },
+  "page/myOrder/myOrder_groupAccident.html": {
+    "resources": [
+      "css/base.css",
+      "images/goods/insur_card/logo-pingan.png",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/goods/insur_card/logo-xinhua.png"
+    ],
+    "refer": [
+      "page/myOrder/applicationForm.html",
+      "page/myOrder/documentUpload.html",
+      "page/myOrder/myOrder_pay.html",
+      "page/myOrder/myOrder_info.html"
+    ]
+  },
+  "page/myOrder/applicationForm.html": {
+    "resources": [
+      "images/goods/groupAccident/accident.jpg",
+      "css/base.css",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/goods/company/groupAccident/accident.jpg"
+    ],
+    "refer": []
+  },
+  "page/myOrder/documentUpload.html": {
+    "resources": [
+      "images/myOrder/fileUpload.jpg",
+      "js/mui.min.js",
+      "css/base.css",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/myOrder/fileUpload.png",
+      "images/goods/banner3.jpg",
+      "images/goods/groupAccident/accident.jpg"
+    ],
+    "refer": []
+  },
+  "page/myOrder/myOrder_info.html": {
+    "resources": [
+      "images/goods/groupAccident/accident.jpg"
+    ],
+    "refer": []
+  },
+  "page/goods/company/employer/employer_index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "page/goods/company/employer/employer.html"
+    ]
+  },
+  "page/myOrder/myOrder_pay.html": {
+    "resources": [
+      "images/myOrder/fileUpload.png"
+    ],
+    "refer": []
+  },
+  "page/goods/company/companyAssets/companyAssets_index.html": {
+    "refer": [
+      "page/goods/company/companyAssets/companyAssets.html",
+      "page/myOrder/myOrder_companyAssets.html"
+    ],
+    "resources": [
+      "js/jquery-2.1.3.min.js",
+      "images/goods/company/groupAccident/accident.jpg"
+    ]
+  },
+  "page/goods/company/companyAssets/companyAssets.html": {
+    "refer": [
+      "page/myOrder/myOrder_groupAccident.html",
+      "page/myOrder/myOrder_companyAssets.html"
+    ],
+    "resources": [
+      "css/base.css",
+      "js/jquery-2.1.3.min.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/goods/groupAccident/accident.jpg"
+    ]
+  },
+  "page/myOrder/myOrder_employer.html": {
+    "refer": [
+      "page/myOrder/applicationForm.html"
+    ],
+    "resources": [
+      "images/goods/insur_card/logo-pingan.png",
+      "images/goods/insur_card/logo-xinhua.png"
+    ]
+  },
+  "page/myOrder/myOrder_companyAssets.html": {
+    "resources": [
+      "images/goods/insur_card/logo-pingan.png",
+      "images/goods/insur_card/logo-xinhua.png"
+    ],
+    "refer": [
+      "page/myOrder/applicationForm.html",
+      "page/myOrder/myOrder_pay.html"
+    ]
+  },
+  "page/goods/insur_card/insur_card_index.html": {
+    "resources": [
+      "css/common.css",
+      "fonts/mui.ttf",
+      "images/goods/groupAccident/accident.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/goods/company/groupAccident/accident.jpg",
+      "images/goods/insur_card/goumai.png",
+      "images/goods/insur_card/online.png",
+      "images/goods/insur_card/jihuo.png",
+      "images/goods/insur_card/gengduo.png"
+    ],
+    "refer": [
+      "page/goods/online_card/online_card_show.html",
+      "page/goods/insur_card/insur_card_auto_active.html",
+      "page/goods/insur_card/insur_card_show.html"
+    ]
+  },
+  "page/goods/life/lifeIndex.html": {
+    "resources": [
+      "images/goods/life/chengchangbaoxian.png",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "images/goods/life/baoxian.png",
+      "images/goods/life/xianglebaoxian.png",
+      "images/goods/life/jibingbaoxian.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/jquery-2.1.3.min.js"
+    ],
+    "refer": [
+      "page/goods/life/shouxian/shouxian_index.html"
+    ]
+  },
+  "page/goods/insur_card/areaSelect.html": {
+    "resources": [
+      "js/jquery-1.9.1.area.js",
+      "css/area.css",
+      "js/area.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "page/goods/insur_card/insur_card_address_add.html"
+    ]
+  },
+  "page/goods/insur_card/insur_card_address_add.html": {
+    "resources": [
+      "css/base.css",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-2.1.3.min.js"
+    ],
+    "refer": [
+      "page/goods/insur_card/areaSelect.html"
+    ]
+  },
+  "page/passport/top_thread.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "page/passport/login.html"
+    ]
+  },
+  "page/passport/preInfo.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "page/passport/login.html"
+    ]
+  },
+  "page/goods/life/shouxian/shouxian_index.html": {
+    "resources": [
+      "css/base.css",
+      "images/goods/insur_card/logo-pingan.png",
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/common.css",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "page/goods/life/shouxian/shouxian_info.html"
+    ]
+  },
+  "page/goods/life/shouxian/shouxian_info.html": {
+    "resources": [
+      "css/base.css",
+      "images/goods/insur_card/logo-pingan.png",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-2.1.3.min.js"
+    ],
+    "refer": []
+  }
 }
