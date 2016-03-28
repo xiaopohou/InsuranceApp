@@ -6,7 +6,7 @@
                 {
                     "id": 1, 
                     "supplier__id": 1, 
-                    "supplier__title": "1", 
+                    "supplier__title": "中国新华保险公司", 
                     "supplier__logo": "1", 
                     "kadan_name": "1", 
                     "kadan_price": 1, 
@@ -15,7 +15,7 @@
                 {
                     "id": 2, 
                     "supplier__id": 1, 
-                    "supplier__title": "1", 
+                    "supplier__title": "中国平安保险公司", 
                     "supplier__logo": "1", 
                     "kadan_name": "2", 
                     "kadan_price": 2, 

@@ -170,7 +170,7 @@
 					timeout: 1000,
 					success: function(data) {
 						if(data.status == 1){
-							console.log("ajax请求成功");
+							console.log("卡单详情ajax请求成功");
 							var cardInfoList = document.getElementById("cardInfoList");
 	
 							//循环遍历result数组，给数组中 img_big 添加 url 头属性
@@ -266,6 +266,9 @@
 				var addtoCart = document.getElementById("addtoCart");
 				addtoCart.addEventListener('tap',function(){
 					var productNum = document.getElementById("productNum").value;
+					var state = app.getState();
+					uid = state.uid;
+					console.log(uid);
 					console.log(product_id);
 					console.log(document.getElementById("productNum").value);
 					mui.ajax({
@@ -273,7 +276,7 @@
 						type: "post",
 						async: true,
 						data: {
-						"member_id": "1",
+						"member_id": uid,
 						"jsonShoppingCartModifies": [
 						    {
 						        "id": product_id,
