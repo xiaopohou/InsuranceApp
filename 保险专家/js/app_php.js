@@ -1,29 +1,74 @@
 (function($, owner) {
-	//服务器地址
-	webServiceUrl="http://115.28.72.167/";
+	//服务器地址初始化
+	owner.serverUrlInit = function(){
+		var settings = owner.getSettings();
+		
+//		var webServiceUrl = "http://115.28.72.167/";
+//		var imgUrl = "http://www.annpeter.cn:8080/";
+		
+		var webServiceUrl = "http://192.168.1.247:8080/";
+		var imgUrl = "http://192.168.1.247:8080/";
+
+		//定义 urlInfo数组存放 url信息
+		var urlInfoArray = [];
+		
+		//object  url键值对
+		var urlInfoObj = {
+			webServiceUrl : webServiceUrl
+		}
+//		console.log(urlInfoObj.webServiceUrl);
+		
+		//将urlObj Push 到数组中
+		urlInfoArray.push(urlInfoObj);
+//		console.log(urlInfoArray[0].webServiceUrl);
+		
+		//保存到本地设置中
+		settings.webServiceUrl = webServiceUrl;
+		settings.imgUrl = imgUrl;
+		settings.urlInfoArray = urlInfoArray;
+//		console.log(settings.urlInfoArray[0].webServiceUrl);
+		owner.setSettings(settings);
+		console.log("服务器初始化成功");
+	}
+	
+	//动态更改服务器地址
+	owner.setServerUrl = function(info){
+		//获取当前设置
+		var settings = owner.getSettings();
+		
+		//保存到本地设置中
+		settings.webServiceUrl = info.webServiceUrl;
+		owner.setSettings(settings);
+	}
+	
+////服务器地址
+//	webServiceUrl="http://115.28.72.167/";
+//	ptServerUrl = "http://www.annpeter.cn:8080";
+	
+//	console.log("app.js");
 //---------------------------------------------------------新用户注册-----------------------------------------------------
 //---------------------------------------------------------       -----------------------------------------------------
 
-////   发送的json格式
+// 发送的json格式
 //{
 //  "realname": "Jepson",
 //  "mobile": "1571776629",
 //  "city": "镇江",
 //  "code": "123456",
 //  "password": "123456",
+//  "repassword": "123456"
 //}
-//
-////    返回json格式
+//  返回json格式
 //{
-//  "status": "1",
+//  "isError": "false",
 //  "message": "回馈信息",
 //  "info": 
 //	    {
-//	        "uid": "id"
 //	        "username": "Jepson",
 //	        "realname": "Jepson",
 //	        "mobile": "1571776629",
 //	        "city": "镇江",
+//	        "uid": "id"
 //	    }
 //  
 //}
@@ -73,6 +118,9 @@
 		}
 		else
 		{
+			var settings = owner.getSettings();
+			webServiceUrl = settings.webServiceUrl;
+			console.log(webServiceUrl);
 //			return owner.createState("11",callback);
 			mui.ajax(webServiceUrl+'jt/index.php/User/mobileRegister',
 			{				
@@ -95,18 +143,16 @@
 				},
 				success: function(data) 
 				{
-//					return callback("注册成功");
-					if(data.status == "1")
+					if(data.isError)
 					{
-						//						return callback(data.message);
-						
-						owner.createState(data.info);
-						var state = owner.getState();
-						return callback();
+						return callback(data.message);
 					}
 					else
 					{
-						return callback(data.message);
+//						return callback(data.message);
+						owner.createState(data.info);
+						var state = owner.getState();
+						return callback();
 					}
 				},
 				error: function(xhr, type, errorThrown)
@@ -127,7 +173,7 @@
 //}
 //  返回json格式
 //{
-//  "status": "1",
+//  "isError": "false",
 //  "message": "回馈信息",
 //  "info": 
 //	    {
@@ -162,7 +208,10 @@
 		{
 //			http://115.28.72.167/jt/index.php/User/register
 //			return owner.createState(loginInfo.account,callback);
-			
+			var settings = owner.getSettings();
+			webServiceUrl = settings.webServiceUrl;
+			console.log(webServiceUrl);
+
 			mui.ajax(webServiceUrl+'jt/index.php/User/mobileLogin',{
 				data:{
 					mobile: loginInfo.account,
@@ -180,17 +229,17 @@
 				success: function(data) 
 				{
 //					return callback("登录成功");
-					if(data.status == "1")
+					if(data.isError)
+					{
+						return callback(data.message);	
+					}
+					else
 					{
 						owner.createState(data.info);
 						var state = owner.getState();
 						return callback();
 //						return owner.createState(data.info,callback);
 //						return callback(data.message);
-					}
-					else
-					{						
-						return callback(data.message);
 					}
 				},
 				error: function(xhr, type, errorThrown)
@@ -210,8 +259,8 @@
 //}
 //  返回json格式
 //{
-//  "status": "1",
-//  "message": "回馈信息",
+//  "success": "true",
+//  "msg": "回馈信息",
 //}
 	owner.sendMsg = function(mobile, callback)
 	{
@@ -229,7 +278,13 @@
 		else
 		{
 //			return callback();
-			mui.ajax(webServiceUrl+'jt/index.php/User/mobileVsms',
+			var settings = owner.getSettings();
+			webServiceUrl = settings.webServiceUrl;
+			console.log(webServiceUrl);
+
+			//php服务器端  jt/index.php/User/mobileVsms
+			//java 服务器端 /app/member/identifyphone
+			mui.ajax(webServiceUrl+'/app/member/identifyphone',
 			{
 				data:{
 					mobile: mobile
@@ -245,18 +300,18 @@
 				},
 				success: function(data) 
 				{					
-					if(data.status == "1")
+					if(data.success)
 					{
 						return callback();	
 					}
 					else
 					{
-						return callback(data.message);	
+						return callback(data.msg);	
 					}
 				},
 				error: function(xhr, type, errorThrown)
 				{
-					return callback('当前网络不通畅，或短信发送次数过多，请稍后重新操作');
+					return callback('当前注册验证网络较忙，请稍后重试');
 				}
 			});
 		}
@@ -268,22 +323,8 @@
 //	mobile: state.forgetMobile,
 //	code: codeBox.value,
 //	password: passwordBox.value,
+//	repassword: repasswordBox.value
 //};
-
-
-//// 发送的json格式
-//{
-//  "mobile": "1571776629",
-//  "code" : "123456"
-//  "password" : "123456"
-//}
-//
-//  //返回json格式
-//{
-//  "status": "1",
-//  "message": "回馈信息",
-//}
-
 	owner.forget = function(subInfo, callback) {
 		callback = callback || $.noop;
 		subInfo = subInfo || {};
@@ -324,6 +365,10 @@
 		}
 		else
 		{
+			var settings = owner.getSettings();
+			webServiceUrl = settings.webServiceUrl;
+			console.log(webServiceUrl);
+			
 //			return owner.createState("11",callback);
 			mui.ajax(webServiceUrl+'jt/index.php/User/mobileForgetPass',
 			{				
@@ -344,15 +389,15 @@
 				},
 				success: function(data) 
 				{
-					if(data.status == "1")
+					if(data.isError)
 					{
-						//owner.createState(data.info);
-//						var state = owner.getState();
-						return callback();
+						return callback(data.message);
 					}
 					else
 					{
-						return callback(data.message);
+//						owner.createState(data.info);
+//						var state = owner.getState();
+						return callback();
 					}
 				},
 				error: function(xhr, type, errorThrown)
@@ -391,6 +436,10 @@
 			else
 			{
 				return callback();
+//				var settings = owner.getSettings();
+//				webServiceUrl = settings.webServiceUrl;
+//				console.log(webServiceUrl);
+				
 //				mui.ajax(webServiceUrl+'simple/token_login',
 //				{
 //					data:{
@@ -408,14 +457,13 @@
 //					},
 //					success: function(data) 
 //					{					
-//						if(data.status == "1")
+//						if(data.isError)
 //						{
-//							return owner.createState(data.info,callback);
-//							
+//							return callback(data.message);
 //						}
 //						else
 //						{
-//							return callback(data.message);
+//							return owner.createState(data.info,callback);
 //						}
 //					},
 //					error: function(xhr, type, errorThrown)
@@ -431,7 +479,8 @@
 		}
 	};
 	
-		
+
+	
 //--------------------------------------------------设置登录信息-----------------------------------------------------
 //--------------------------------------------------       -----------------------------------------------------
 	owner.createState = function(info) {

@@ -45,29 +45,27 @@
 			<button class="mui-pull-right mui-btn-link" id="address">修改地址</button>
 		</header>
 		<div class="mui-content">
-			<div id="page">
-				<div class="order-address mui-flex align-center">
-					<div class="cell fixed align-center">
-						<div class="icon"></div>
+			<div class="order-address mui-flex align-center" id="addressDiv">
+				<div class="cell fixed align-center">
+					<div class="icon"></div>
+				</div>
+				<div class="cell content">
+					<div class="info">
+						<span>收货人： </span>
+						<span>蒋鹏</span>
+						<span> </span>
+						<span class="tel">15751776629</span>
 					</div>
-					<div class="cell content">
-						<div class="info">
-							<span>收货人： </span>
-							<span>蒋鹏</span>
-							<span> </span>
-							<span class="tel">15751776629</span>
-						</div>
-						<div class="detail">
-							<span>收货地址：</span>
-							<span></span>
-							<span>江苏省 </span>
-							<span>镇江市 </span>
-							<span>京口区 </span>
-							<span>正东路街道 </span>
-							<span>梦溪路2号江苏科技大学东校区 </span>
-						</div>
-						<div class="ext" style="display: none;">(收货不便时,可选择免费代收货服务)</div>
+					<div class="detail">
+						<span>收货地址：</span>
+						<span></span>
+						<span>江苏省 </span>
+						<span>镇江市 </span>
+						<span>京口区 </span>
+						<span>正东路街道 </span>
+						<span>梦溪路2号江苏科技大学东校区 </span>
 					</div>
+					<div class="ext" style="display: none;">(收货不便时,可选择免费代收货服务)</div>
 				</div>
 			</div>
 			
@@ -151,8 +149,8 @@
 				<li class="mui-table-view-cell">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
-							<span>共<span id="totalNum">20</span>件，合计：</span>
-							<span class="totalprice">￥<span id="totalprice-p">278.86</span></span>
+							<span>共<span id="totalNum">0</span>件，合计：</span>
+							<span class="totalprice">￥<span id="totalprice-p">0.00</span></span>
 						</div>
 					</div>
 				</li>
@@ -200,11 +198,11 @@
 						<div class="o-t-title-shop">
 							<div class="tcont">
 								<div class="ico">
-									<img src="{{value.supplier__logo}}" />
+									<img src="{{value.supplier_logo}}" />
 								</div>
 								<div class="contact">
 									<a>
-										<p class="o-title" >{{value.supplier__title}}</p>
+										<p class="o-title" >{{value.supplier_title}}</p>
 										<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
 									</a>
 								</div>
@@ -215,7 +213,7 @@
 						<div class="item-list o-t-item">
 							<div class="item-img">
 								<p>
-									<img src="../../../images/goods/insur_card/app_img3.jpg" />
+									<img src="{{value.product_smallimg}}" />
 								</p>
 							</div>
 							<div class="item-info">
@@ -243,6 +241,12 @@
 			addressButton.addEventListener('tap',function(){
 				mui.openWindow('insur_card_address.html','insur_card_address');
 			});
+			
+			var addressDiv = document.getElementById("addressDiv");
+			addressDiv.addEventListener('tap',function(){
+				mui.openWindow('insur_card_address.html','insur_card_address');
+			});
+			
 			getCartList();
 		});
 		
@@ -255,22 +259,36 @@
 			var settings = app.getSettings();
 			var webServiceUrl = settings.webServiceUrl;
 			var imgUrl = settings.imgUrl;
-			plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
+			console.log("当前服务器地址为："+ webServiceUrl);
+			
+			///app/shoppingcart/list?id=memberID
+			//url: "../../../json/goods/insur_card/card_cart.json"
+			
 			mui.ajax({
-				url: "../../../json/goods/insur_card/card_cart.json",
+				url: webServiceUrl + "app/shoppingcart/list?id=" + uid,
 				type: "post",
 				async: true,
-				data: {
-					"id": uid
-				},
+				data: {},
 				dataType: "json",
 				timeout: 1000,
 				success: function(data) {
 					if(data.status == 1){
 						console.log(data.message);
 						var order_list = document.getElementById("order_list");
-						
+						console.log(imgUrl);
 		//						console.log(data.result[0].jsonShoppingCarts);
+						
+						//循环遍历result数组，给数组中 img_big 添加 url 头属性
+						for(var i = 0; i < data.result[0].jsonShoppingCarts.length; i++){
+							data.result[0].jsonShoppingCarts[i].supplier_logo = imgUrl + data.result[0].jsonShoppingCarts[i].supplier_logo;
+							data.result[0].jsonShoppingCarts[i].product_smallimg = imgUrl + data.result[0].jsonShoppingCarts[i].product_smallimg;
+							
+							console.log(data.result[0].jsonShoppingCarts[i].supplier_logo);
+							console.log(data.result[0].jsonShoppingCarts[i].product_smallimg);
+							
+		//							console.log(data.result[i].img_big);
+						}
+						
 						
 						var content = template("cartListTmpl", data.result[0]);
 						order_list.innerHTML = content;
@@ -288,7 +306,7 @@
 				}
 			});
 		};
-		
+
 		function initFunc(){
 			setTotalNumPrice();
 			

@@ -336,7 +336,8 @@
       "js/jquery-2.1.3.min.js",
       "js/template.js",
       "json/goods/insur_card/card_cart.json",
-      "js/app.js"
+      "js/app.js",
+      "json/goods/insur_card/area_return.json"
     ],
     "refer": [
       "page/goods/insur_card/insur_card_address.html"
@@ -362,7 +363,9 @@
       "fonts/mui.ttf",
       "css/mui.css"
     ],
-    "refer": []
+    "refer": [
+      "page/ucenter/index.html"
+    ]
   },
   "page/ERcode.html": {
     "resources": [
@@ -403,7 +406,11 @@
       "css/common.css",
       "fonts/mui.ttf",
       "css/mui.min.css",
-      "js/mui.min.js"
+      "js/mui.min.js",
+      "js/template.js",
+      "js/app.js",
+      "json/goods/insur_card/area.json",
+      "images/goods/insur_card/area.png"
     ],
     "refer": [
       "page/goods/insur_card/areaSelect.html",
@@ -706,10 +713,13 @@
       "css/common.css",
       "fonts/mui.ttf",
       "css/mui.min.css",
-      "js/jquery-2.1.3.min.js"
+      "js/jquery-2.1.3.min.js",
+      "js/app.js",
+      "json/goods/insur_card/area_return.json"
     ],
     "refer": [
-      "page/goods/insur_card/areaSelect.html"
+      "page/goods/insur_card/areaSelect.html",
+      "page/goods/insur_card/insur_card_address.html"
     ]
   },
   "page/passport/top_thread.html": {

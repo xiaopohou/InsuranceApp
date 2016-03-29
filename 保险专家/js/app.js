@@ -2,8 +2,12 @@
 	//服务器地址初始化
 	owner.serverUrlInit = function(){
 		var settings = owner.getSettings();
-		var webServiceUrl = "http://115.28.72.167/";
-		var imgUrl = "http://www.annpeter.cn:8080";
+		
+//		var webServiceUrl = "http://115.28.72.167/";
+//		var imgUrl = "http://www.annpeter.cn:8080/";
+		
+		var webServiceUrl = "http://192.168.1.247:8080/";
+		var imgUrl = "http://192.168.1.247:8080/";
 
 		//定义 urlInfo数组存放 url信息
 		var urlInfoArray = [];
@@ -47,27 +51,28 @@
 
 // 发送的json格式
 //{
-//  "realname": "Jepson",
-//  "mobile": "1571776629",
-//  "city": "镇江",
-//  "code": "123456",
-//  "password": "123456",
-//  "repassword": "123456"
+//  "realname": "test1",
+//	"userpwd": "test1",
+//	"mobile": "100",
+//	"city": "无锡",
+//	"code": "2121"
 //}
+//{"reqJsonStr":str}
+//
 //  返回json格式
-//{
-//  "isError": "false",
-//  "message": "回馈信息",
-//  "info": 
+//	{
+//	  "result": [
 //	    {
-//	        "username": "Jepson",
-//	        "realname": "Jepson",
-//	        "mobile": "1571776629",
-//	        "city": "镇江",
-//	        "uid": "id"
+//	      "uid": "5",
+//	      "city": "无锡",
+//	      "mobile": "500",
+//	      "username": "test1",
+//	      "realname": "test1"
 //	    }
-//  
-//}
+//	  ],
+//	  "message": "注册成功",
+//	  "status": 1
+//	}
 
 	owner.reg = function(regInfo, callback)
 	{
@@ -81,7 +86,7 @@
 		regInfo.code       = regInfo.code || '';
 		regInfo.password   = regInfo.password || '';
 		regInfo.repassword = regInfo.repassword || '';
-		
+
 		
 		//正则表达式   \s空格 +一个或多个 /g全局    这里就是将空格去掉，空格去掉为空说明信息无效
 		if (regInfo.mobile.replace(/\s+/g, '') == '' || regInfo.realname.replace(/\s+/g, '') == '')
@@ -118,15 +123,19 @@
 			webServiceUrl = settings.webServiceUrl;
 			console.log(webServiceUrl);
 //			return owner.createState("11",callback);
-			mui.ajax(webServiceUrl+'jt/index.php/User/mobileRegister',
+
+			var reqJsonStr = {
+				"realname" : regInfo.realname,
+				"userpwd"  : regInfo.password,
+				"mobile"   : regInfo.mobile,
+				"city"     : regInfo.city,
+				"code"     : regInfo.code
+			}
+			reqJsonStr = JSON.stringify(reqJsonStr);
+			mui.ajax(webServiceUrl+'app/member/register',
 			{				
 				data:{
-					realname: regInfo.realname,
-					mobile: regInfo.mobile,
-					city: regInfo.city,
-					code: regInfo.code,
-					password: regInfo.password,
-					repassword: regInfo.repassword
+					"reqJsonStr" : reqJsonStr
 				},
 				dataType:'json',
 				type:'post',
@@ -139,16 +148,15 @@
 				},
 				success: function(data) 
 				{
-					if(data.isError)
+					if(data.status == 1)
 					{
-						return callback(data.message);
+						owner.createState(data.result[0]);
+						var state = owner.getState();
+						return callback();
 					}
 					else
 					{
-//						return callback(data.message);
-						owner.createState(data.info);
-						var state = owner.getState();
-						return callback();
+						return callback(data.message);
 					}
 				},
 				error: function(xhr, type, errorThrown)
@@ -169,7 +177,7 @@
 //}
 //  返回json格式
 //{
-//  "isError": "false",
+//  "status": "1",
 //  "message": "回馈信息",
 //  "info": 
 //	    {
@@ -177,7 +185,7 @@
 //	        "realname": "Jepson",
 //	        "mobile": "1571776629",
 //	        "city": "镇江",
-//	        "uid": "id"
+//	        "id": "id"
 //	    }
 //  
 //}
@@ -207,11 +215,19 @@
 			var settings = owner.getSettings();
 			webServiceUrl = settings.webServiceUrl;
 			console.log(webServiceUrl);
+//jt/index.php/User/mobileLogin
+///app/member/login
 
-			mui.ajax(webServiceUrl+'jt/index.php/User/mobileLogin',{
+			var jsObj={
+			  "mobile": loginInfo.account,
+			  "userpwd": loginInfo.password
+			}
+			
+			var str=JSON.stringify(jsObj);
+
+			mui.ajax(webServiceUrl+'app/member/login',{
 				data:{
-					mobile: loginInfo.account,
-					password: loginInfo.password
+					"reqJsonStr": str,
 				},
 				dataType:'json',
 				type:'post',
@@ -224,16 +240,16 @@
 				},
 				success: function(data) 
 				{
-//					return callback("登录成功");
-					if(data.isError)
+					if(data.status == 1)
 					{
-						return callback(data.message);	
+						owner.createState(data.result[0]);
+						console.log(data.result[0].id);
+						var state = owner.getState();
+						return callback();
 					}
 					else
 					{
-						owner.createState(data.info);
-						var state = owner.getState();
-						return callback();
+						return callback(data.message);	
 //						return owner.createState(data.info,callback);
 //						return callback(data.message);
 					}
@@ -251,13 +267,13 @@
 
 // 发送的json格式
 //{
-//  "mobile": "1571776629",
+//	"reqJsonStr":{
+//		"mobile": "1571776629"
+//	}
 //}
 //  返回json格式
-//{
-//  "success": "true",
-//  "msg": "回馈信息",
-//}
+
+//{"result":[],"message":"发送成功","status":1}
 	owner.sendMsg = function(mobile, callback)
 	{
 		callback = callback || $.noop;
@@ -277,11 +293,19 @@
 			var settings = owner.getSettings();
 			webServiceUrl = settings.webServiceUrl;
 			console.log(webServiceUrl);
-
-			mui.ajax(webServiceUrl+'jt/index.php/User/mobileVsms',
+			
+			var reqJsonStr = {
+				"mobile" : mobile
+			};
+			reqJsonStr = JSON.stringify(reqJsonStr);
+			
+			//php服务器端  jt/index.php/User/mobileVsms
+			//java 服务器端 /app/member/identifyphone
+			mui.ajax(webServiceUrl+'/app/member/identifyphone',
 			{
+	
 				data:{
-					mobile: mobile
+					"reqJsonStr" : reqJsonStr
 				},
 				dataType:'json',
 				type:'post',
@@ -294,13 +318,13 @@
 				},
 				success: function(data) 
 				{					
-					if(data.success)
+					if(data.status == "1")
 					{
 						return callback();	
 					}
 					else
 					{
-						return callback(data.msg);	
+						return callback(data.message);	
 					}
 				},
 				error: function(xhr, type, errorThrown)
@@ -364,13 +388,19 @@
 			console.log(webServiceUrl);
 			
 //			return owner.createState("11",callback);
-			mui.ajax(webServiceUrl+'jt/index.php/User/mobileForgetPass',
+///app/member/retrieve
+//jt/index.php/User/mobileForgetPass
+
+			var jsObj={
+				"userpwd": subInfo.password,
+				"code": subInfo.code,
+				"mobile": subInfo.mobile
+			}
+
+			mui.ajax(webServiceUrl+'app/member/retrieve',
 			{				
 				data:{
-					mobile: subInfo.mobile,
-					code: subInfo.code,
-					password: subInfo.password,
-					repassword: subInfo.repassword
+					"reqJsonStr" : str
 				},
 				dataType:'json',
 				type:'post',
@@ -383,15 +413,16 @@
 				},
 				success: function(data) 
 				{
-					if(data.isError)
+					if(data.status)
 					{
-						return callback(data.message);
+						return callback();
+						
 					}
 					else
 					{
 //						owner.createState(data.info);
 //						var state = owner.getState();
-						return callback();
+						return callback(data.message);
 					}
 				},
 				error: function(xhr, type, errorThrown)
@@ -482,7 +513,7 @@
 		var myDate    = new Date();
 		var timestamp = myDate.getTime();
 	
-		state.uid       = info.uid;
+		state.uid       = info.id;
 		state.username  = info.username;
 		state.realname  = info.realname;
 		state.city      = info.city;

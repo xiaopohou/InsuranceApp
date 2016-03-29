@@ -80,8 +80,8 @@
 				<li class="mui-table-view-cell">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
-							<span>共<span id="totalNum">20</span>件，合计：</span>
-							<span class="totalprice">￥<span id="totalprice-p">278.00</span></span>
+							<span>共<span id="totalNum">0</span>件，合计：</span>
+							<span class="totalprice">￥<span id="totalprice-p">0.00</span></span>
 						</div>
 					</div>
 				</li>
@@ -103,11 +103,11 @@
 							<div class="o-t-title-shop">
 								<div class="tcont">
 									<div class="ico">
-										<img src="{{value.supplier__logo}}" />
+										<img src="{{value.supplier_logo}}" />
 									</div>
 									<div class="contact">
 										<a>
-											<p class="o-title" >{{value.supplier__title}}</p>
+											<p class="o-title" >{{value.supplier_title}}</p>
 											<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
 										</a>
 									</div>
@@ -123,7 +123,7 @@
 							<div class="item-list o-t-item">
 								<div class="item-img">
 									<p>
-										<img src="../../../images/goods/insur_card/app_img3.jpg" />
+										<img src="{{value.product_smallimg}}" />
 									</p>
 								</div>
 								<div class="item-num" style="display: none;">

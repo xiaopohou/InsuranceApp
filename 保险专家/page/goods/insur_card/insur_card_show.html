@@ -158,15 +158,15 @@
 					 * 实际项目调用接口只需要将url地址替换成接口地址即可
 					 * http://dev.dcloud.net.cn/mui/ajax/
 					 */
-				//url: "../../../json/goods/insur_card/insur_card_info.json",
+				//url: "../../../json/goods/insur_card/card_show.json",
 //				url: "http://www.annpeter.cn:8080/app/kadan/list",
 				var settings = app.getSettings();
 				var webServiceUrl = settings.webServiceUrl;
 				var imgUrl = settings.imgUrl;
-				plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
+				console.log("当前服务器地址为："+ webServiceUrl);
 				
 				mui.ajax({
-						url: "../../../json/goods/insur_card/card_show.json",
+						url: webServiceUrl+"app/kadan/list",
 						type: "get",
 						async: true,
 						data: {},
@@ -179,7 +179,7 @@
 								//循环遍历result数组，给数组中 img_big 添加 url 头属性
 								for(var i = 0; i < data.result.length; i++){
 									data.result[i].img_small = imgUrl + data.result[i].img_small;
-	//								console.log(data.result[i].img_small);
+//									console.log(data.result[i].img_small);
 								}
 								
 								var content = template("insur_cardTmpl", data);
