@@ -820,7 +820,10 @@
 					"css/common.css",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"js/template.js",
+					"js/app.js",
+					"json/goods/insur_card/area.json"
 				],
 				"refer": [
 					"page/goods/insur_card/areaSelect.html",
