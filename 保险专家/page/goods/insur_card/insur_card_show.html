@@ -163,7 +163,7 @@
 				var settings = app.getSettings();
 				var webServiceUrl = settings.webServiceUrl;
 				var imgUrl = settings.imgUrl;
-				plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
+				console.log("当前服务器地址为："+ webServiceUrl);
 				
 				mui.ajax({
 						url: webServiceUrl+"app/kadan/list",

@@ -20,6 +20,7 @@
 			}
 			#textinfo ul li{
 			    list-style-type: disc;
+			    color: #8f8f94;
 			}
 			
 			#textinfo ol{
@@ -110,12 +111,6 @@
 						<div style="clear:both;"></div>
 					</div>
 				</div>
-				<div class="xmain">
-					<div class="xuanz-xq">
-						
-						<div style="clear:both;"></div>
-					</div>
-				</div>
 			{{/each}}
 		</script>
 		<!--<ul class="" id="mui-table-content">
@@ -174,7 +169,7 @@
 				var settings = app.getSettings();
 				var webServiceUrl = settings.webServiceUrl;
 				var imgUrl = settings.imgUrl;
-				plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
+				console.log("当前服务器地址为："+ webServiceUrl);
 				
 //				url: "http://www.annpeter.cn:8080/app/kadan/profile?id=productID"
 // 				url: "../../../json/goods/insur_card/card_info.json"
