@@ -20,12 +20,13 @@ function getCartList() {
 	var webServiceUrl = settings.webServiceUrl;
 	var imgUrl = settings.imgUrl;
 	plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
+	///app/shoppingcart/list?id=memberID
+	//url: "../../../json/goods/insur_card/card_cart.json"
 	mui.ajax({
-		url: "../../../json/goods/insur_card/card_cart.json",
+		url: webServiceUrl + "app/shoppingcart/list?id=" + uid,
 		type: "post",
 		async: true,
 		data: {
-			"member_id": uid
 		},
 		dataType: "json",
 		timeout: 1000,
@@ -33,6 +34,19 @@ function getCartList() {
 			if(data.status == 1){
 				console.log(data.message);
 				var order_list = document.getElementById("order_list");
+				
+				console.log(imgUrl);
+				
+				//循环遍历result数组，给数组中 img_big 添加 url 头属性
+				for(var i = 0; i < data.result[0].jsonShoppingCarts.length; i++){
+					data.result[0].jsonShoppingCarts[i].supplier_logo = imgUrl + data.result[0].jsonShoppingCarts[i].supplier_logo;
+					data.result[0].jsonShoppingCarts[i].product_smallimg = imgUrl + data.result[0].jsonShoppingCarts[i].product_smallimg;
+					
+					console.log(data.result[0].jsonShoppingCarts[i].supplier_logo);
+					console.log(data.result[0].jsonShoppingCarts[i].product_smallimg);
+					
+//							console.log(data.result[i].img_big);
+				}
 				
 //						console.log(data.result[0].jsonShoppingCarts);
 				
@@ -299,7 +313,11 @@ function initFunc(){
 	function updataCartNum(){
 		var state = app.getState();
 		uid = state.uid;
-		var jsonShopCartArray = [];
+		
+		var settings = app.getSettings();
+		var webServiceUrl = settings.webServiceUrl;
+		
+		var jsonShoppingCartModifies = [];
 		var numJsonArray = getNumJsonArray();
 		
 		//测试------------------------------------------------
@@ -308,16 +326,24 @@ function initFunc(){
 			console.log("id：" + numJsonArray[i].id +"，num：" +  numJsonArray[i].num);
 		}
 		//测试------------------------------------------------
+		jsonShoppingCartModifies = numJsonArray;
 		
-		jsonShopCartArray[0] = getNumJsonArray();
+		var jsObj = {
+            "member_id": uid,
+            "jsonShoppingCartModifies":jsonShoppingCartModifies
+        	};
+
+	    var str = JSON.stringify(jsObj);
+		
+//		url: "../../../json/goods/insur_card/product_change_return.json",
+		
 		
 		mui.ajax({
-			url: "../../../json/goods/insur_card/product_change_return.json",
+			url: webServiceUrl + "app/shoppingcart/modify",
 			type: "post",
 			async: true,
 			data: {
-				  "member_id": uid,
-				  "jsonShoppingCartModifies": jsonShopCartArray
+				 "reqJsonStr":str
 				},
 			dataType: "json",
 			timeout: 1000,

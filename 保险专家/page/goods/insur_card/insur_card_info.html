@@ -14,6 +14,20 @@
 		<style type="text/css">
 			.hong{padding-top: 8px;}
 			.huang{padding-top: 8px;}
+			
+			#textinfo{
+				padding-left: 5%;
+			}
+			#textinfo ul li{
+			    list-style-type: disc;
+			}
+			
+			#textinfo ol{
+				
+			}
+			#textinfo ul ul li{
+				list-style-type:none;
+			}
 		</style>
 	</head>
 
@@ -60,7 +74,7 @@
 						<div style="clear:both;"></div>
 					</div>
 				</div>
-				<div class="xmain">
+				<div class="xmain" style="display: none;">
 					<div class="baoz"><strong>售后保障</strong>
 						<p>卖家承诺以下服务</p>
 					</div>
@@ -72,7 +86,7 @@
 					<div style="clear:both;"></div>
 				</div>
 				<div class="xmain">
-					<div class="xuanz-fl">
+					<div class="xuanz-fl" style="display: none;">
 						<strong>卡单保障</strong>
 						<p>{{value.summary}}</p>
 					</div>
@@ -85,18 +99,26 @@
 				<div class="xmain">
 					<div class="xuanz-cp">
 						<strong>卡单简介</strong>
-						<p><strong>提供商</strong>中国平安</p>
+						<p><strong>提供商</strong>{{value.product__supplier__title}}</p>
 						<p><strong>保险分类</strong>{{value.card_cate}}</p>
 						<p><strong>种类</strong>保险卡单</p>
 						<p><strong>激活</strong>自主激活，线上激活</p>
 						<p><strong>投保要求</strong>{{value.conditions}}</p>
-						<p><strong>尺寸</strong>其他</p>
+						<div id="textinfo">
+							
+						</div>
 						<div style="clear:both;"></div>
 					</div>
 				</div>
 				<div class="xmain">
 					<div class="xuanz-xq">
-						<ul class="" id="mui-table-content">
+						
+						<div style="clear:both;"></div>
+					</div>
+				</div>
+			{{/each}}
+		</script>
+		<!--<ul class="" id="mui-table-content">
 							<li class="">
 								<a class="" >产品详情</a>
 								<div class="">
@@ -127,13 +149,7 @@
 									<p>{{value.form_detail}}</p>
 								</div>
 							</li>
-						</ul>
-						<div style="clear:both;"></div>
-					</div>
-				</div>
-			{{/each}}
-		</script>
-		
+						</ul>-->
 		
 		<script type="text/javascript" src="../../../js/mui.min.js" ></script>
 		<script type="text/javascript" src="../../../js/template.js" ></script>
@@ -149,20 +165,23 @@
 				product_id = self.product_id;
 				console.log("当前页面产品id: " + product_id);
 
-				getInsurCard();
+				getInsurCard(product_id);
 			});
 
 
 			//获取卡单展示列表
-			function getInsurCard() {
+			function getInsurCard(product_id) {
 				var settings = app.getSettings();
 				var webServiceUrl = settings.webServiceUrl;
 				var imgUrl = settings.imgUrl;
 				plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
-//				url: "http://www.annpeter.cn:8080/app/kadan/index?id=productID"
+				
+//				url: "http://www.annpeter.cn:8080/app/kadan/profile?id=productID"
+// 				url: "../../../json/goods/insur_card/card_info.json"
+
 				mui.ajax({
-					url: "../../../json/goods/insur_card/card_info.json",
-					type: "get",
+					url: webServiceUrl + "/app/kadan/profile?id=" + product_id,
+					type: "post",
 					async: true,
 					data: {
 					},
@@ -172,7 +191,7 @@
 						if(data.status == 1){
 							console.log("卡单详情ajax请求成功");
 							var cardInfoList = document.getElementById("cardInfoList");
-	
+							
 							//循环遍历result数组，给数组中 img_big 添加 url 头属性
 							for(var i = 0; i < data.result.length; i++){
 								data.result[i].img_big = imgUrl + data.result[i].img_big;
@@ -181,6 +200,10 @@
 							
 							var content = template("cardInfoTmpl", data);
 							cardInfoList.innerHTML = content;
+							
+							var textinfo = document.getElementById("textinfo");
+							var textinfoContent = data.result[0].textinfo;
+							textinfo.innerHTML = textinfoContent;
 							
 							// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
 							addNumListener();
@@ -268,21 +291,29 @@
 					var productNum = document.getElementById("productNum").value;
 					var state = app.getState();
 					uid = state.uid;
-					console.log(uid);
-					console.log(product_id);
-					console.log(document.getElementById("productNum").value);
+					
+					var settings = app.getSettings();
+					var webServiceUrl = settings.webServiceUrl;
+					
+					console.log("userid:" + uid);
+					console.log("productid:" + product_id);
+					console.log("num:" + document.getElementById("productNum").value);
+					
+					var jsObj = {
+	                	"member_id":uid,
+	                	"jsonShoppingCartModifies":[
+							{"id":product_id, "num":productNum},
+						]
+	            	};
+    				var str = JSON.stringify(jsObj);
+    				
+    				//url: "../../../json/goods/insur_card/product_change_return.json"
+    				///app/shoppingcart/modify
 					mui.ajax({
-						url: "../../../json/goods/insur_card/product_change_return.json",
+						url: webServiceUrl + "app/shoppingcart/modify",
 						type: "post",
 						async: true,
-						data: {
-						"member_id": uid,
-						"jsonShoppingCartModifies": [
-						    {
-						        "id": product_id,
-						        "num": productNum
-						    }]
-						},
+						data: {"reqJsonStr":str},
 						dataType: "json",
 						timeout: 1000,
 						success: function(data) {
