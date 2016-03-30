@@ -460,7 +460,8 @@
 					"js/mui.min.js",
 					"css/common.css",
 					"js/config.js",
-					"js/jquery-2.1.3.min.js"
+					"js/jquery-2.1.3.min.js",
+					"js/md5.js"
 				],
 				"refer": [
 					"page/passport/forget_password.html",
@@ -627,7 +628,8 @@
 					"css/common.css",
 					"css/style.css",
 					"css/mui.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/md5.js"
 				],
 				"refer": [
 					"page/passport/login.html",
