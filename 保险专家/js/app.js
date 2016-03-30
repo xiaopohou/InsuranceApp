@@ -124,6 +124,10 @@
 			console.log(webServiceUrl);
 //			return owner.createState("11",callback);
 
+			//加密密码
+			regInfo.password = hex_md5(regInfo.password);
+			console.log(regInfo.password);
+
 			var reqJsonStr = {
 				"realname" : regInfo.realname,
 				"userpwd"  : regInfo.password,
@@ -131,6 +135,7 @@
 				"city"     : regInfo.city,
 				"code"     : regInfo.code
 			}
+			
 			reqJsonStr = JSON.stringify(reqJsonStr);
 			mui.ajax(webServiceUrl+'app/member/register',
 			{				
@@ -217,6 +222,12 @@
 			console.log(webServiceUrl);
 //jt/index.php/User/mobileLogin
 ///app/member/login
+
+
+			//加密密码
+			loginInfo.password = hex_md5(loginInfo.password);
+			console.log(loginInfo.password);
+
 
 			var jsObj={
 			  "mobile": loginInfo.account,
@@ -390,6 +401,11 @@
 //			return owner.createState("11",callback);
 ///app/member/retrieve
 //jt/index.php/User/mobileForgetPass
+
+		    //加密密码
+			subInfo.password = hex_md5(subInfo.password);
+			console.log(subInfo.password);
+
 
 			var jsObj={
 				"userpwd": subInfo.password,
