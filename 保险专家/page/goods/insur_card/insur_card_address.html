@@ -52,7 +52,7 @@
 					<div class="info">
 						<span>收货人： </span>
 						<span>蒋鹏</span>
-						<span>(默认地址)</span>
+						<span>(当前默认)</span>
 						<span class="tel">15751776629</span>
 					</div>
 					<div class="detail">
@@ -67,10 +67,6 @@
 					<div class="ext" style="display: none;">(收货不便时,可选择免费代收货服务)</div>
 				</div>
 			</div>
-			
-			
-			
-			
 			<div id="addressList">
 					<!--<div class="order-address mui-flex align-center">
 					<div class="cell content">
@@ -100,23 +96,23 @@
 		</div>
 		
 		<script type="text/html" id="addressListTmpl">
-			{{each addresslist as value i}}
-				<div class="order-address mui-flex align-center">
+			{{each jsonShoppingCarts as value i}}
+				<div class="order-address mui-flex align-center" addressId = "{{value.address.id}}">
 					<div class="cell content">
 						<div class="info">
 							<span>收货人： </span>
-							<span>{{value.receiver}}</span>
+							<span>{{value.address.receiver}}</span>
 							<span> </span>
-							<span class="tel">{{value.phone}}</span>
+							<span class="tel">{{value.address.phone}}</span>
 						</div>
 						<div class="detail">
 							<span>收货地址：</span>
 							<span></span>
-							<span>{{value.province}} </span>
-							<span>{{value.city}} </span>
-							<span>{{value.area}} </span>
-							<span>{{value.street}} </span>
-							<span>{{value.address}} </span>
+							<span>{{value.address.province}} </span>
+							<span>{{value.address.city}} </span>
+							<span>{{value.address.area}} </span>
+							<span>{{value.address.street}} </span>
+							<span>{{value.address.address}} </span>
 						</div>
 					</div>
 				</div>
@@ -135,7 +131,7 @@
 		});
 		
 		mui.plusReady(function(){
-			plus.webview.close("insur_card_address_add","none");
+//			plus.webview.close("insur_card_address_add","none");
 			getAddressList();
 		});
 		
@@ -152,13 +148,13 @@
 			
 //			plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
 			
+//			url: webServiceUrl + "app/receaddr/list?id=" + uid,
+			
 			mui.ajax({
-				url: "../../../json/goods/insur_card/area.json",
+				url: webServiceUrl + "app/receaddr/list?id=" + uid,
 				type: "post",
 				async: true,
-				data: {
-					"member_id": uid
-				},
+				data: {},
 				dataType: "json",
 				timeout: 1000,
 				success: function(data) {

@@ -67,7 +67,11 @@
 					//获取id
 					var id = this.getAttribute("id");
 					var data = this.getAttribute("data");
-					createLocalPushMsg(id,data);
+					
+					//添加点击跳转事件
+					mui.openWindow("online_card_details.html","online_card_details");
+					
+//					createLocalPushMsg(id,data);
 				});
 				//自主激活
 				var auto_activeButton = document.getElementById("auto_active");

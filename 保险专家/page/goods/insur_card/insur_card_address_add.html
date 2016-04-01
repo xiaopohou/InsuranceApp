@@ -43,6 +43,7 @@
 						</div>
 					</div>
 				</li>
+				
 				<li class="mui-table-view-cell" id="streetLi">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-10">
@@ -71,6 +72,7 @@
 						</div>
 					</div>
 				</li>
+				
 				<li class="mui-table-view-cell" id="nameLi">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-10">
@@ -84,6 +86,7 @@
 						</div>
 					</div>
 				</li>
+				
 				<li class="mui-table-view-cell" id="phoneLi">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-10">
@@ -117,8 +120,16 @@
 //		}, false);
 		document.getElementById("saveBt").addEventListener('tap',function(){
 			
-//			console.log(province + city + area + allarea);
-//			console.log($("#streetSpan").text() + $("#addressSpan").text());
+			//获取用户id
+			var state = app.getState();
+			var uid = state.uid;
+			
+			//获取收件人姓名
+			var receiver = $("#nameSpan").text();
+			
+			//获取收件人手机号
+			var phone = $("#phoneNum").text();
+			
 			var addresslist = {
 				"province" : province,
 				"city"     : city,
@@ -126,19 +137,25 @@
 				"allarea"  : allarea,
 				"street"   : $("#streetSpan").text(),
 				"address"  : $("#addressSpan").text(),
-				"receiver" : $("#nameSpan").text(),
-				"phone"    : $("#phoneNum").text()
+				"receiver" : receiver,
+				"phone"    : phone
 			};
-//			"province" : "江苏省",
-//			"city"     : "镇江市",
-//			"area"	   : "京口区",
-//			"allarea"  : "江苏省镇江市京口区",
-//			"street"   : "正东路街道",
-//			"address"  : "梦溪路2号江苏科技大学东校区",
-//			"receiver" : "蒋鹏",
-//			"phone"    : "15751776629"
+			
+			addresslist = JSON.stringify(addresslist)
+			
+		    var jsObj = {
+                "member_id": uid,
+                "isdefault": "0",
+                "address": addresslist,
+                "contactor": receiver,
+                "tel": phone
+            	};
 
-			addAddressData(addresslist);
+	        var str = JSON.stringify(jsObj);
+	
+			data = {"reqJsonStr":str};
+
+			addAddressData(data);
 		});
 		
 		document.getElementById("areaSelect").addEventListener('tap',function(){
@@ -152,7 +169,7 @@
 			area = self.area || '';
 			allarea = self.allarea || '';
 			
-			plus.webview.close("insur_card_address","none");
+//			plus.webview.close("insur_card_address","none");
 			plus.webview.close("areaSelect","none");
 			
 //			console.log(allarea);
@@ -219,7 +236,7 @@
 		});
 		
 		
-		function addAddressData(addresslist){
+		function addAddressData(addressData){
 			//获取用户 uid
 			var state = app.getState();
 			uid = state.uid;
@@ -227,33 +244,42 @@
 			var settings = app.getSettings();
 			var webServiceUrl = settings.webServiceUrl;
 			var imgUrl = settings.imgUrl;
-//			plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
 			
-			mui.ajax({
-				url: "../../../json/goods/insur_card/area_return.json",
-				type: "post",
-				async: true,
-				data: {
-					"member_id": uid,
-					"addresslist":addresslist
-				},
-				dataType: "json",
-				timeout: 1000,
-				success: function(data) {
-					if(data.status == 1){
-						console.log(data.message);
-						plus.nativeUI.toast(data.message);
-						mui.openWindow('insur_card_address.html',"insur_card_address");
-					}else{
-						plus.nativeUI.toast(data.message);
-					}
-				},
-				error:function(xhr,type,errorThrown){
-					//异常处理
-					plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
-					console.log(type);
-				}
-			});
+			
+			mui.openWindow('insur_card_address.html',"insur_card_address");
+			plus.webview.close("insur_card_address_add","insur_card_address_add");
+			console.log("添加新地址已被关闭");
+			
+			
+//			plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
+
+			///app/receaddr/add
+			//../../../json/goods/insur_card/area_return.json
+//----------------------------------------------------------------------------------------------------
+//			mui.ajax({
+//				url: webServiceUrl + "app/receaddr/add",
+//				type: "post",
+//				async: true,
+//				data: addressData,
+//				dataType: "json",
+//				timeout: 1000,
+//				success: function(data) {
+//					if(data.status == 1){
+//						console.log(data.message);
+//						plus.nativeUI.toast(data.message);
+//						mui.openWindow('insur_card_address.html',"insur_card_address");
+//						plus.webview.close("insur_card_address_add","insur_card_address_add");
+//						console.log("添加新地址已被关闭");
+//					}else{
+//						plus.nativeUI.toast(data.message);
+//					}
+//				},
+//				error:function(xhr,type,errorThrown){
+//					//异常处理
+//					plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
+//					console.log(type);
+//				}
+//			});
 		}
 	</script>
 </html>

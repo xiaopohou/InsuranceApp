@@ -412,6 +412,8 @@
 				"code": subInfo.code,
 				"mobile": subInfo.mobile
 			}
+			
+			str = JSON.stringify(jsObj);
 
 			mui.ajax(webServiceUrl+'app/member/retrieve',
 			{				

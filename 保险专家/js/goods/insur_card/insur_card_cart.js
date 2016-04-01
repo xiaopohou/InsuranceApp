@@ -3,12 +3,8 @@ mui.init();
 btOpen = 0;
 
 mui.plusReady(function() {
-	
 	getCartList();
-
-	
 });
-
 
 //获取购物车列表
 function getCartList() {
@@ -20,6 +16,7 @@ function getCartList() {
 	var webServiceUrl = settings.webServiceUrl;
 	var imgUrl = settings.imgUrl;
 	plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
+	
 	///app/shoppingcart/list?id=memberID
 	//url: "../../../json/goods/insur_card/card_cart.json"
 	mui.ajax({
@@ -95,7 +92,7 @@ function initFunc(){
 			var numArray = getListNumArray();
 			setBtNum(numArray);
 		}else{
-//					console.log(btOpen);
+//			console.log(btOpen);
 			var numArray = getBtNumArray();
 			setListNum(numArray);
 			setTotalNumPrice();

@@ -198,11 +198,11 @@
 					"ipad": {}
 				},
 				"android": {
-					"mdpi": "C:/Users/54721/Desktop/guide_welcome.png", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "C:/Users/54721/Desktop/guide_welcome.png", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/54721/Desktop/guide_welcome.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/54721/Desktop/guide_welcome.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/54721/Desktop/guide_welcome.png"
+					"mdpi": "C:/Users/54721/Desktop/Imgs/guide_welcome.png", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "C:/Users/54721/Desktop/Imgs/guide_welcome.png", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "C:/Users/54721/Desktop/Imgs/guide_welcome.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "C:/Users/54721/Desktop/Imgs/guide_welcome.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "C:/Users/54721/Desktop/Imgs/guide_welcome.png"
 				}
 			}
 		}
@@ -752,7 +752,8 @@
 					"json/goods/insur_card/area_return.json"
 				],
 				"refer": [
-					"page/goods/insur_card/insur_card_address.html"
+					"page/goods/insur_card/insur_card_address.html",
+					"page/myOrder/insur_card/insur_card_order.html"
 				],
 				"priority": 0
 			},
@@ -775,7 +776,8 @@
 					"js/mui.min.js",
 					"css/common.css",
 					"fonts/mui.ttf",
-					"css/mui.css"
+					"css/mui.css",
+					"js/md5.js"
 				],
 				"refer": [
 					"page/ucenter/index.html"
@@ -828,7 +830,8 @@
 					"js/template.js",
 					"js/app.js",
 					"json/goods/insur_card/area.json",
-					"images/goods/insur_card/area.png"
+					"images/goods/insur_card/area.png",
+					"json/goods/insur_card/area_return.json"
 				],
 				"refer": [
 					"page/goods/insur_card/areaSelect.html",
@@ -877,7 +880,9 @@
 					"images/goods/car/kache.png",
 					"images/goods/car/gengduo.png"
 				],
-				"refer": [],
+				"refer": [
+					"page/goods/car/private_car.html"
+				],
 				"priority": 0
 			},
 			"page/goods/online_card/online_card_show.html": {
@@ -897,7 +902,8 @@
 					"css/mui.min.css"
 				],
 				"refer": [
-					"page/goods/insur_card/insur_card_auto_active.html"
+					"page/goods/insur_card/insur_card_auto_active.html",
+					"page/goods/online_card/online_card_details.html"
 				],
 				"priority": 0
 			},
@@ -1204,6 +1210,37 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"js/jquery-2.1.3.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/goods/car/private_car.html": {
+				"resources": [
+					"js/jquery-2.1.3.min.js",
+					"images/goods/car/car_title.jpg",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/goods/online_card/online_card_details.html": {
+				"resources": [
+					"css/base.css",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/myOrder/insur_card/insur_card_order.html": {
+				"resources": [
+					"images/goods/insur_card/app_img1.jpg",
+					"images/goods/insur_card/logo-xinhua.png"
 				],
 				"refer": [],
 				"priority": 0

@@ -37,7 +37,7 @@
 		</header>
 		<div class="mui-content">
 			<div class="mui-content-padded">
-				<button class="mui-btn Btn1">
+				<button class="mui-btn Btn1" id="private_car">
 					<img src="../../../images/goods/car/qiche.png"/>
 					<br />
 					私家车
@@ -63,5 +63,9 @@
 	<script src="../../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		mui.init();
+		document.getElementById("private_car").addEventListener("tap",function(){
+			mui.openWindow("private_car.html","private_car");
+		});
+		
 	</script>
 </html>

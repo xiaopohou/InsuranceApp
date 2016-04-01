@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的订单-卡单</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+		
+		<style type="text/css">
+		
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title textsize-fontcolor">我的订单 - 卡单 </h1>
+		</header>
+
+		<div class="mui-content">
+			
+			<div class="mui-segmented-control" style="margin-top: 5px; background: white;">
+			    <a class="mui-control-item mui-active" id="duty_bt" data="duty">待付款</a>
+			    <a class="mui-control-item" id="require_bt" data="require" >待发货</a>
+			    <a class="mui-control-item" id="info_bt" data="info" >待签收</a>
+			    <a class="mui-control-item" id="info_bt" data="info" >历史订单</a>
+			</div>
+
+			<div class="order-list" style="margin-top: 0px;">
+				<li>
+					<div class="seller">
+						<div class="o-t-title-shop">
+							<div class="tcont">
+								<div class="ico">
+									<img src="../../../images/goods/insur_card/logo-xinhua.png" />
+								</div>
+								<div class="contact">
+									<a>
+										<p class="o-title">中国新华保险公司</p>
+										<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
+									</a>
+								</div>
+								<div id="state">
+									<div class="state-cont">
+										<p class="h">卖家已发货</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img1.jpg" />
+								</p>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">中国新华企业财产险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-pay">
+								<p class="price">￥39.98</p>
+								<p class="nums"> x1</p>
+							</div>
+						</div>
+					</div>
+					<div class="pay">
+						<div class="o-total-price">
+							<div class="cont">
+								<span>共 <b> 1</b> 件商品</span>
+								<span>合计 ￥<b>39.98</b></span>
+							</div>
+						</div>
+					</div>
+					<div class="orderop">
+						<div class="o-tab-btn">
+							<ul>
+								<li class="h pay myOrder_pay" style="margin-left: 10px;">支付订单</li>
+								<li class="applicationForm" id="2" >取消订单</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="seller">
+						<div class="o-t-title-shop">
+							<div class="tcont">
+								<div class="ico">
+									<img src="../../../images/goods/insur_card/logo-xinhua.png" />
+								</div>
+								<div class="contact">
+									<a>
+										<p class="o-title">中国新华保险公司</p>
+										<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
+									</a>
+								</div>
+								<div id="state">
+									<div class="state-cont">
+										<p class="h">卖家已发货</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-list o-t-item">
+							<div class="item-img">
+								<p>
+									<img src="../../../images/goods/insur_card/app_img1.jpg" />
+								</p>
+							</div>
+							<div class="item-info">
+								<h3 class="o-title">中国新华企业财产险 线上投保 电子保单 全程人性化服务</h3>
+							</div>
+							<div class="item-pay">
+								<p class="price">￥39.98</p>
+								<p class="nums"> x1</p>
+							</div>
+						</div>
+					</div>
+					<div class="pay">
+						<div class="o-total-price">
+							<div class="cont">
+								<span>共 <b> 1</b> 件商品</span>
+								<span>合计 ￥<b>39.98</b></span>
+							</div>
+						</div>
+					</div>
+					<div class="orderop">
+						<div class="o-tab-btn">
+							<ul>
+								<li class="h pay myOrder_pay" style="margin-left: 10px;">支付订单</li>
+								<li class="applicationForm" id="2">取消订单</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				
+			</div>
+		</div>
+
+		<script src="../../../js/mui.min.js"></script>
+		<script>
+			mui.init();
+			mui.plusReady(function() {
+				mui(".order-list").on('tap', '.applicationForm', function() {
+					mui.openWindow('applicationForm.html', 'applicationForm');
+				});
+				mui(".order-list").on('tap', '.documentUpload', function() {
+					mui.openWindow('documentUpload.html', 'documentUpload');
+				});
+				mui(".order-list").on('tap', '.myOrder_pay', function() {
+					mui.openWindow('myOrder_pay.html', 'myOrder_pay');
+				});
+				mui(".order-list").on('tap', '.myOrder_info', function() {
+					mui.openWindow('myOrder_info.html', 'myOrder_info');
+				});
+			});
+		</script>
+	</body>
+
+</html>

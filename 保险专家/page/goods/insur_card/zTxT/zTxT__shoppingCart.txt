@@ -45,3 +45,19 @@
 	{"reqJsonStr":str}
 
 	```
+
+
+
+##提交订单
+var jsObj = {
+            "memberId":"1",
+            "jsonBussinessCommitList":[
+					{"productId":1, "customerId":1, "receiveAddrId":1},
+					{"productId":1, "customerId":1, "receiveAddrId":1},
+					{"productId":1, "customerId":1, "receiveAddrId":1}
+				]
+        	};
+
+var str = JSON.stringify(jsObj);
+
+{"reqJsonStr":str}
