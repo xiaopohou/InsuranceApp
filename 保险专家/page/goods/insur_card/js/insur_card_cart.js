@@ -6,6 +6,13 @@ mui.plusReady(function() {
 	getCartList();
 });
 
+//结算付款按钮-----------------for test
+var buyingButton = document.getElementById("buying");
+buyingButton.addEventListener('tap', function(event) {
+	mui.openWindow('insur_card_buying.html','insur_card_buying');
+});
+
+
 //获取购物车列表
 function getCartList() {
 	//获取用户 uid

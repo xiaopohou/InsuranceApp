@@ -59,6 +59,7 @@ function getallArea(val,val1,val2){
 	$("#shengshi").attr({"SS":province[val].NAME,"SQ":city[val1].NAME,"XS":area[val2].NAME});
 	$("#shengshi").val(allarea);
 //	$("body .dqld_div").remove();
+	
 	mui.openWindow({
 		url: 'insur_card_address_add.html',
 		id: 'insur_card_address_add',
