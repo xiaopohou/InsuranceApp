@@ -412,6 +412,8 @@
 				"code": subInfo.code,
 				"mobile": subInfo.mobile
 			}
+			
+			str = JSON.stringify(jsObj);
 
 			mui.ajax(webServiceUrl+'app/member/retrieve',
 			{				
@@ -543,7 +545,6 @@
 	};
 	
 	
-	
 //--------------------------------------------------设置登录信息-----------------------------------------------------
 //--------------------------------------------------       -----------------------------------------------------
 	owner.setState = function(state) {
@@ -573,6 +574,64 @@
 	owner.getSettings = function() {
 		var settingsText = localStorage.getItem('$settings') || "{}";
 		return JSON.parse(settingsText);
+	};
+	
+	//id
+	//{\"province\":\"北京市\",\"city\":\"北京市\",\"area\":\"东城区\",\"allarea\":\"北京市北京市东城区\",
+	//\"street\":\"123\",\"address\":\"456\",\"receiver\":\"蒋鹏\",\"phone\":\"15751776629\"}",
+	owner.setAddress = function(address){
+		address = address || {};
+		localStorage.setItem('$address',JSON.stringify(address));
+	}
+	
+	owner.getAddress = function() {
+		var addressText = localStorage.getItem('$address') || "{}";
+		return JSON.parse(addressText);
+	};
+	
+	
+	
+	//获取收货地址列表
+	owner.getAddressList = function(callback) {
+		//获取用户 uid
+		var state = app.getState();
+		uid = state.uid;
+		
+		//获取图片url地址
+		var settings = app.getSettings();
+		var webServiceUrl = settings.webServiceUrl;
+		var imgUrl = settings.imgUrl;
+		
+		//定义请求url
+		var listUrl = "";
+		
+	//	plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
+	//	url: webServiceUrl + "app/receaddr/list?id=" + uid,
+	
+		var test = plus.storage.getItem("test") || false;
+		console.log("test = " + test);
+		if(test){
+			listUrl = "json/address.json";
+		}else{
+			listUrl = webServiceUrl + "app/receaddr/list?id=" + uid;
+		}
+	
+		mui.ajax({
+			url: listUrl,
+			type: "post",
+			async: true,
+			data: {},
+			dataType: "json",
+			timeout: 1000,
+			success: function(data) {
+				return callback(data);
+			},
+			error:function(xhr,type,errorThrown){
+				//异常处理
+				plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
+				console.log(type);
+			}
+		});
 	};
 		
 }(mui, window.app = {}));

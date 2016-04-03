@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>添加新地址</title>
-		<link href="../../../css/mui.min.css" rel="stylesheet" />
-		<link href="../../../css/common.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="../../../css/base.css"/>
+		<title>修改地址/2</title>
+		<link href="../../../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../../../css/common.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../../css/base.css"/>
 		<style>
 			.mui-table-view-cell {position: relative;width: 100%;}
 			.mui-col-xs-10 {width: 100px;}
@@ -26,7 +25,7 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-icon mui-icon-left-nav mui-action-back mui-pull-left"></a>
-			<h1 class="mui-title textsize-fontcolor">添加新地址</h1>
+			<h1 class="mui-title textsize-fontcolor">修改地址</h1>
 		</header>
 		<div class="mui-content">
 			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
@@ -43,6 +42,7 @@
 						</div>
 					</div>
 				</li>
+				
 				<li class="mui-table-view-cell" id="streetLi">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-10">
@@ -71,6 +71,7 @@
 						</div>
 					</div>
 				</li>
+				
 				<li class="mui-table-view-cell" id="nameLi">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-10">
@@ -84,6 +85,7 @@
 						</div>
 					</div>
 				</li>
+				
 				<li class="mui-table-view-cell" id="phoneLi">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-10">
@@ -106,45 +108,12 @@
 		</div>
 	</body>
 
-	<script type="text/javascript" src="../../../js/mui.min.js"></script>
-	<script src="../../../js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../../../js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../../../js/mui.min.js"></script>
+	<script src="../../../../js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../js/app.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		mui.init();
-		
-//		window.addEventListener('show', function() {
-//
-//		}, false);
-		document.getElementById("saveBt").addEventListener('tap',function(){
-			
-//			console.log(province + city + area + allarea);
-//			console.log($("#streetSpan").text() + $("#addressSpan").text());
-			var addresslist = {
-				"province" : province,
-				"city"     : city,
-				"area"	   : area,
-				"allarea"  : allarea,
-				"street"   : $("#streetSpan").text(),
-				"address"  : $("#addressSpan").text(),
-				"receiver" : $("#nameSpan").text(),
-				"phone"    : $("#phoneNum").text()
-			};
-//			"province" : "江苏省",
-//			"city"     : "镇江市",
-//			"area"	   : "京口区",
-//			"allarea"  : "江苏省镇江市京口区",
-//			"street"   : "正东路街道",
-//			"address"  : "梦溪路2号江苏科技大学东校区",
-//			"receiver" : "蒋鹏",
-//			"phone"    : "15751776629"
-
-			addAddressData(addresslist);
-		});
-		
-		document.getElementById("areaSelect").addEventListener('tap',function(){
-			mui.openWindow('areaSelect.html','areaSelect');
-		});
-		
+		var addressId = 0;
 		mui.plusReady(function(){
 			var self = plus.webview.currentWebview();
 			province = self.province || '';
@@ -152,8 +121,15 @@
 			area = self.area || '';
 			allarea = self.allarea || '';
 			
-			plus.webview.close("insur_card_address","none");
-			plus.webview.close("areaSelect","none");
+			addressID = plus.storage.getItem('modifyAdrId');
+			console.log("要修改的地址 id: " + addressID);
+			
+			setTimeout(function(){
+				plus.webview.close("areaSelect2","none");
+			},500);
+			
+//			plus.webview.close("insur_card_address","none");
+//			plus.webview.close("areaSelect","none");
 			
 //			console.log(allarea);
 //			console.log(province);
@@ -163,8 +139,50 @@
 			}else{
 				$("#areaSpan").text(allarea);
 			}
-			
 		});
+		
+		
+		document.getElementById("saveBt").addEventListener('tap',function(){
+			
+			console.log(addressID);
+			
+			//获取用户id
+			var state = app.getState();
+			var uid = state.uid;
+			//获取收件人姓名
+			var receiver = $("#nameSpan").text();
+			//获取收件人手机号
+			var phone = $("#phoneNum").text();
+			
+			var addresslist = {
+				"province" : province,
+				"city"     : city,
+				"area"	   : area,
+				"allarea"  : allarea,
+				"street"   : $("#streetSpan").text(),
+				"address"  : $("#addressSpan").text(),
+				"receiver" : receiver,
+				"phone"    : phone
+			};
+			
+			addresslist = JSON.stringify(addresslist);
+			
+		    var jsObj = {
+                "isdefault": "1",
+                "addressID": addressID,
+                "member_id": uid,
+                "address": addresslist,
+                "contactor": receiver,
+                "tel": phone
+            	};
+			addAddressData(jsObj);
+		});
+		
+		document.getElementById("areaSelect").addEventListener('tap',function(){
+			mui.openWindow('areaSelect2.html','areaSelect2');
+		});
+		
+
 		
 		document.getElementById("phoneLi").addEventListener('tap',function(){
 			var btnArray = ["取消","确定"];
@@ -219,41 +237,88 @@
 		});
 		
 		
-		function addAddressData(addresslist){
-			//获取用户 uid
-			var state = app.getState();
-			uid = state.uid;
+		function addAddressData(addressData){
+			var skip = false;
+			var count = 0;
 			
 			var settings = app.getSettings();
 			var webServiceUrl = settings.webServiceUrl;
 			var imgUrl = settings.imgUrl;
-//			plus.nativeUI.toast("当前服务器地址为："+ webServiceUrl);
 			
-			mui.ajax({
-				url: "../../../json/goods/insur_card/area_return.json",
-				type: "post",
-				async: true,
-				data: {
-					"member_id": uid,
-					"addresslist":addresslist
-				},
-				dataType: "json",
-				timeout: 1000,
-				success: function(data) {
-					if(data.status == 1){
-						console.log(data.message);
-						plus.nativeUI.toast(data.message);
-						mui.openWindow('insur_card_address.html',"insur_card_address");
-					}else{
-						plus.nativeUI.toast(data.message);
+			
+			///app/receaddr/add
+			//../../../json/goods/insur_card/area_return.json
+			
+			if(skip){
+				
+				plus.webview.close("insur_card_address_modify","none");
+				console.log("添加新地址已被关闭");
+				
+				var btnArray = ['否', '是'];
+				mui.confirm('是否将该地址设为默认地址？', '保存信息', btnArray, function(e) {
+					if (e.index == 1) {
+						mui.openWindow('insur_card_address_modify.html',"insur_card_address_modify");
+						setTimeout(function(){
+							plus.webview.close("insur_card_address_modify_2","none");
+						},500);
+						console.log("跳转到新页面");
+					} else {
+						return;
 					}
-				},
-				error:function(xhr,type,errorThrown){
-					//异常处理
-					plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
-					console.log(type);
-				}
-			});
+				})
+			}else{
+				
+				plus.webview.close("insur_card_address","none");
+				console.log("添加新地址已被关闭");
+				
+				var btnArray = ['否', '是'];
+				mui.confirm('是否将该地址设为默认地址？', '保存信息', btnArray, function(e) {
+					if (e.index == 1) {
+						addressData.isdefault = 1;
+					} else {
+						addressData.isdefault = 0;
+					}
+					
+					var str = JSON.stringify(addressData);
+			        console.log(str);
+					data = {"reqJsonStr":str};
+					
+					
+					mui.ajax({
+						url: webServiceUrl + "app/receaddr/profile",
+						type: "post",
+						async: true,
+						data: data,
+						dataType: "json",
+						timeout: 1000,
+						success: function(data) {
+							if(data.status == 1){
+								console.log(data.message);
+								plus.nativeUI.toast(data.message);
+								mui.openWindow('insur_card_address_modify.html',"insur_card_address_modify");
+								
+								//保存地址后关闭此页面
+								setTimeout(function(){
+									plus.webview.close("insur_card_address_modify_2","none");
+								},500);
+								
+								console.log("跳转到新页面");
+							}else{
+								plus.nativeUI.toast(data.message);
+							}
+						},
+						error:function(xhr,type,errorThrown){
+							//异常处理
+							plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
+							console.log(type);
+						}
+					});
+				});
+			};
+			
+			
+//----------------------------------------------------------------------------------------------------
+
 		}
 	</script>
 </html>

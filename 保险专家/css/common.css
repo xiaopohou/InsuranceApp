@@ -7,7 +7,7 @@
 
 /*-----------------------字体配置----------------------------*/
 /*此项为全项目标准字体配置*/
-.textsize-fontcolor {font-size: 19px;}
+.textsize-fontcolor{font-size: 18px;}
 .textsize-fontcolor-small {font-size: 18px;}
 .text-17-color-grew {font-size: 17px;color: #6b6f74;}
 .mui-title {font-size: 19px;}
@@ -16,10 +16,9 @@
 .mui-input-group .mui-input-row {height: 50px;padding-top: 6px;padding-bottom: 4px;}
 /*此项为附加属性添加到label上*/
 
-.input-label {margin-top: 4px;margin-bottom: 4px;}
 .mui-input-row .mui-input-clear ~ .mui-icon-clear,
 .mui-input-row .mui-input-speech ~ .mui-icon-speech,
-.mui-input-row .mui-input-password ~ .mui-icon-eye {padding: 3px;font-size: 23px;margin-right: 5px;}
+.mui-input-row .mui-input-password ~ .mui-icon-eye {padding: 5px;font-size: 23px;margin-right: 5px;}
 
 
 /*-----------------------以上五项为输入框配置，字体大小调整时，输入框大小要对应调整----------------------------*/
@@ -41,16 +40,7 @@
 /*input*/
 .mui-input-group {margin-top: 10px;}
 .mui-input-group:first-child {margin-top: 20px;}
-.mui-input-group label {position: absolute;top: 0;left: 0;width: 100px;}
-.mui-input-row {padding: 0 0 0 100px;}
-.mui-input-row label~input,
-.mui-input-row label~select,
-.mui-input-row label~textarea {width: 100%;}
-.mui-col-xs-10 {width: 70%;}
-.mui-col-xs-2 {width: 30%;}
-
 /*------------------------------*/
-
 
 /*商店-------------------------------*/
 .order-list {margin-top: .213rem;margin-bottom: .213rem;}

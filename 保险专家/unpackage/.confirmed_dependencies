@@ -339,10 +339,15 @@
 			"js/template.js",
 			"json/goods/insur_card/card_cart.json",
 			"js/app.js",
-			"json/goods/insur_card/area_return.json"
+			"json/goods/insur_card/area_return.json",
+			"page/goods/insur_card/js/insur_card_buying.js",
+			"page/goods/insur_card/address/json/address.json",
+			"page/goods/insur_card/json/address.json"
 		],
 		"refer": [
-			"page/goods/insur_card/insur_card_address.html"
+			"page/goods/insur_card/insur_card_address.html",
+			"page/myOrder/insur_card/insur_card_order.html",
+			"page/goods/insur_card/address/insur_card_address.html"
 		]
 	},
 	"page/passport/forget.html": {
@@ -363,7 +368,8 @@
 			"js/mui.min.js",
 			"css/common.css",
 			"fonts/mui.ttf",
-			"css/mui.css"
+			"css/mui.css",
+			"js/md5.js"
 		],
 		"refer": [
 			"page/ucenter/index.html"
@@ -396,7 +402,8 @@
 			"json/goods/insur_card/card_cart.json",
 			"js/app.js",
 			"js/goods/insur_card/insur_card_cart.js",
-			"json/goods/insur_card/product_change_return.json"
+			"json/goods/insur_card/product_change_return.json",
+			"page/goods/insur_card/js/insur_card_cart.js"
 		],
 		"refer": [
 			"page/goods/insur_card/insur_card_buying.html"
@@ -412,11 +419,16 @@
 			"js/template.js",
 			"js/app.js",
 			"json/goods/insur_card/area.json",
-			"images/goods/insur_card/area.png"
+			"images/goods/insur_card/area.png",
+			"json/goods/insur_card/area_return.json",
+			"page/goods/insur_card/js/insur_card_address.js",
+			"page/goods/insur_card/json/address.json",
+			"js/jquery-2.1.3.min.js"
 		],
 		"refer": [
 			"page/goods/insur_card/areaSelect.html",
-			"page/goods/insur_card/insur_card_address_add.html"
+			"page/goods/insur_card/insur_card_address_add.html",
+			"page/goods/insur_card/insur_card_address_setDefault.html"
 		]
 	},
 	"page/goods/company/companyIndex.html": {
@@ -459,7 +471,9 @@
 			"images/goods/car/kache.png",
 			"images/goods/car/gengduo.png"
 		],
-		"refer": []
+		"refer": [
+			"page/goods/car/private_car.html"
+		]
 	},
 	"page/goods/online_card/online_card_show.html": {
 		"resources": [
@@ -478,7 +492,8 @@
 			"css/mui.min.css"
 		],
 		"refer": [
-			"page/goods/insur_card/insur_card_auto_active.html"
+			"page/goods/insur_card/insur_card_auto_active.html",
+			"page/goods/online_card/online_card_details.html"
 		]
 	},
 	"page/goods/insur_card/insur_card_auto_active.html": {
@@ -766,5 +781,143 @@
 			"js/jquery-2.1.3.min.js"
 		],
 		"refer": []
+	},
+	"page/goods/car/private_car.html": {
+		"resources": [
+			"js/jquery-2.1.3.min.js",
+			"images/goods/car/car_title.jpg",
+			"css/common.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"page/goods/online_card/online_card_details.html": {
+		"resources": [
+			"css/base.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"page/myOrder/insur_card/insur_card_order.html": {
+		"resources": [
+			"images/goods/insur_card/app_img1.jpg",
+			"images/goods/insur_card/logo-xinhua.png",
+			"css/base.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"page/goods/insur_card/insur_card_address_setDefault.html": {
+		"resources": [
+			"css/base.css",
+			"json/goods/insur_card/area.json",
+			"page/goods/insur_card/js/insur_card_address.js",
+			"js/app.js",
+			"js/jquery-2.1.3.min.js",
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/template.js",
+			"page/goods/insur_card/js/setDefault.js",
+			"page/goods/insur_card/json/address.json"
+		],
+		"refer": [
+			"page/goods/insur_card/insur_card_address_add.html"
+		]
+	},
+	"page/goods/insur_card/address/insur_card_address.html": {
+		"resources": [
+			"page/goods/insur_card/address/js/insur_card_address.js",
+			"js/app.js",
+			"js/jquery-2.1.3.min.js",
+			"js/mui.min.js",
+			"css/common.css",
+			"page/goods/insur_card/address/json/address.json",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/template.js"
+		],
+		"refer": [
+			"page/goods/insur_card/address/insur_card_address_modify.html",
+			"page/goods/insur_card/address/insur_card_address_add.html"
+		]
+	},
+	"page/goods/insur_card/address/insur_card_address_modify.html": {
+		"resources": [
+			"page/goods/insur_card/address/js/modify.js",
+			"js/app.js",
+			"js/mui.min.js",
+			"css/common.css",
+			"page/goods/insur_card/address/json/address.json",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/template.js",
+			"js/jquery-2.1.3.min.js"
+		],
+		"refer": [
+			"page/goods/insur_card/address/insur_card_address_modify_2.html"
+		]
+	},
+	"page/goods/insur_card/address/areaSelect.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/common.css",
+			"js/jquery-1.9.1.area.js",
+			"css/area.css",
+			"css/mui.min.css",
+			"page/goods/insur_card/address/js/area.js"
+		],
+		"refer": [
+			"page/goods/insur_card/address/insur_card_address_add.html"
+		]
+	},
+	"page/goods/insur_card/address/insur_card_address_add.html": {
+		"resources": [
+			"js/app.js",
+			"css/base.css",
+			"js/jquery-2.1.3.min.js",
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"page/goods/insur_card/address/areaSelect.html"
+		]
+	},
+	"page/goods/insur_card/address/insur_card_address_modify_2.html": {
+		"resources": [
+			"js/app.js",
+			"css/base.css",
+			"js/jquery-2.1.3.min.js",
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"page/goods/insur_card/address/areaSelect.html",
+			"page/goods/insur_card/address/areaSelect2.html",
+			"page/goods/insur_card/address/insur_card_address_modify.html"
+		]
+	},
+	"page/goods/insur_card/address/areaSelect2.html": {
+		"resources": [
+			"page/goods/insur_card/address/js/area2.js",
+			"js/jquery-1.9.1.area.js",
+			"css/area.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"page/goods/insur_card/address/insur_card_address_modify_2.html"
+		]
 	}
 }
