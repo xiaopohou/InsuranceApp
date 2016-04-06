@@ -29,7 +29,7 @@
 			    <a class="mui-control-item" id="info_bt" data="info" href="#history_order">历史订单</a>
 			</div>
 
-			<div id="front_paying" class="order-list mui-control-content" style="margin-top: 0px;">
+			<div id="front_paying" class="order-list mui-control-content mui-active" style="margin-top: 0px;">
 				<li>
 					<div  class="seller ">
 						<div class="o-t-title-shop">
@@ -197,7 +197,7 @@
 					</div>
 				</li>
 		</div>
-		<div id="front_sign" class="mui-control-content">
+			<div id="front_sign" class="mui-control-content">
 						<li>
 					<div  class="seller ">
 						<div class="o-t-title-shop">
@@ -253,7 +253,7 @@
 					</div>
 				</li>
 		</div>
-		<div id="history_order" class="mui-control-content">
+			<div id="history_order" class="mui-control-content">
 						<li>
 					<div  class="seller ">
 						<div class="o-t-title-shop">
@@ -309,12 +309,23 @@
 					</div>
 				</li>
 		</div>
-
+		</div>
 		<script src="../../../js/mui.min.js"></script>
 		<script>
 			mui.init();
 			mui.plusReady(function() {
-				
+				mui(".order-list").on('tap', '.applicationForm', function() {
+//					mui.openWindow('applicationForm.html', 'applicationForm');
+				});
+				mui(".order-list").on('tap', '.documentUpload', function() {
+//					mui.openWindow('documentUpload.html', 'documentUpload');
+				});
+				mui(".order-list").on('tap', '.myOrder_pay', function() {
+//					mui.openWindow('myOrder_pay.html', 'myOrder_pay');
+				});
+				mui(".order-list").on('tap', '.myOrder_info', function() {
+//					mui.openWindow('myOrder_info.html', 'myOrder_info');
+				});
 			});
 		</script>
 	</body>

@@ -301,103 +301,6 @@
 				interval: 5000
 			});
 			$.plusReady(function() {
-				//保险卡单跳转方法
-				var toInsurCardPage = function() {
-					//保险卡单
-					var insurCardPage = $.preload({
-						"id": 'insur_card_index',
-						"url": '../goods/insur_card/insur_card_index.html'
-					});
-					$.fire(insurCardPage, 'show', null);
-					setTimeout(function() {
-						$.openWindow({
-							id: 'insur_card_show',
-							show: {
-								aniShow: aniShow
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					}, 100);
-				};
-				//企业保险跳转方法
-				var toCompanyPage = function() {
-					var companyPage = $.preload({
-						"id": 'companyIndex',
-						"url": '../goods/company/companyIndex.html'
-					});
-					$.fire(companyPage, 'show', null);
-					setTimeout(function() {
-						$.openWindow({
-							id: 'companyIndex',
-							show: {
-								aniShow: aniShow
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					}, 100);
-				};
-				//车辆保险跳转方法
-				var toCarPage = function() {
-					var carPage = $.preload({
-						"id": 'carIndex',
-						"url": '../goods/car/car_index.html'
-					});
-					$.fire(carPage, 'show', null);
-					setTimeout(function() {
-						mui.openWindow({
-							id: 'carIndex',
-							show: {
-								aniShow: aniShow
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					}, 100);
-				};
-				//我的订单跳转
-				var toMyOrderPage = function() {
-					var myOrderPage = $.preload({
-						"id": 'myOrderIndex',
-						"url": '../myOrder/myOrderIndex.html'
-					});
-					$.fire(myOrderPage, 'show', null);
-					setTimeout(function() {
-						mui.openWindow({
-							id: 'myOrderIndex',
-							show: {
-								aniShow: aniShow
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					}, 100);
-				};
-				//个人简历跳转方法
-				var toUserInfoPage = function() {
-					var userInfoPage = $.preload({
-						"id": 'userInfo',
-						"url": 'userInfo.html'
-					});
-					$.fire(userInfoPage, 'show', null);
-					setTimeout(function() {
-						mui.openWindow({
-							id: 'userInfo',
-							show: {
-								aniShow: aniShow
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					}, 100);
-				};
-				//获取id
 				//保险卡单按钮
 				var insurCardButton = document.getElementById("insur_card");
 				//企业保险按钮
@@ -442,7 +345,6 @@
 				});
 				//个人简历
 				userInfoButton.addEventListener('tap', function() {
-//					toUserInfoPage();
 					$.openWindow({
 						id: 'userInfo',
 						url: 'userInfo.html'
