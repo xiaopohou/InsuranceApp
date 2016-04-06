@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>线上卡单</title>
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+		<style>
+			/*底部选项卡*/.mui-tab-item:first-child{border-right: 1px solid grey;}
+			.left{padding: 5px;}
+			#auto_active{color: white;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" id="mui-bar-title" style="padding-right: 15px;">
+			<a class="mui-action-back mui-icon mui-icon-back"></a>
+			<h1 class="mui-title">线上卡单</h1>
+			<button class="mui-pull-right mui-btn-link" id="auto_active">自主激活</button>
+		</header>
+		<div class="mui-content">
+			<div class="content" id="card_body">
+				<section class="all on">
+					<form action="" class="mui-card-table" >
+						<a id="1" class="mui-card-show" data="金运人生">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img14.jpg" alt="">
+								<div class="right">
+									<h3>金运人生</h3>
+									<p>男性健康特别呵护</p>
+									<div class="money">
+										<span><i>￥84</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+						<a id="2" class="mui-card-show" data="安益人生">
+							<div class="details">
+								<img class="left" src="../../../images/goods/insur_card/app_img3.jpg" alt="">
+								<div class="right">
+									<h3>安益人生</h3>
+									<p>保障期长&nbsp;|&nbsp;无需体检</p>
+									<div class="money">
+										<span><i>￥103</i></span>起
+									</div>
+								</div>
+							</div>
+						</a>
+
+					</form>
+				</section>
+			</div>
+
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script>
+			mui.init();
+			window.addEventListener('show', function() {
+				//				alert("main");
+			}, false);
+			mui.plusReady(function() {
+				//产品详情
+				mui(".mui-card-table").on('tap',".mui-card-show",function(){
+					//获取id
+					var id = this.getAttribute("id");
+					var data = this.getAttribute("data");
+					
+					//添加点击跳转事件
+					mui.openWindow("online_card_details.html","online_card_details");
+					
+//					createLocalPushMsg(id,data);
+				});
+				//自主激活
+				var auto_activeButton = document.getElementById("auto_active");
+				auto_activeButton.addEventListener('tap',function(){
+					toAuto_activePage();
+				});
+			});
+			
+			function createLocalPushMsg(id,data){
+				var options = {cover:false};
+				//获取时间字符串
+				var str = new Date();
+				str = str.toLocaleDateString();
+				str += ",测试：你点击的是"+data+",id:"+id;
+				plus.push.createMessage(str,"LocalMSG",options);
+			}
+	</script>
+
+</html>

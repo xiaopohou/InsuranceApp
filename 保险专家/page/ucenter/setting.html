@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	</head>
+
+	<style type="text/css">
+		#ERcodeImg {
+			margin-right: 20px;
+			padding: 5px;
+		}
+	</style>
+
+	<body>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="userInfo">
+				<li class="mui-table-view-cell">
+					<a id="privacy" class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" src="../../images/homePage/logo.png">
+						<img class="mui-media-object mui-pull-right" id="ERcodeImg" src="../../images/person_code.png">
+						<div class="mui-media-body ">
+							田园
+							<p class='mui-ellipsis'>VIP1</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="mui-table-view" style="margin-top: 10px;">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="mui-icon iconfont mui-icon-star"></span> 积分中心
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="mui-icon mui-icon-compose"></span> 我的订单
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view" style="margin-top: 10px;">
+				<li class="mui-table-view-cell">
+					<a id="luckymoney" class="mui-navigate-right">
+						<span class="mui-icon iconfont mui-icon-personadd"></span> 助力红包
+					</a>
+				</li>
+				<li class="mui-table-view-cell" id="moreSetting">
+					<a class="mui-navigate-right">
+						<span class="mui-icon iconfont icon-dizhi mui-icon-gear"></span> 更多设置
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/app.js"></script>
+		<script type="text/javascript">
+			(function($, doc) {
+				$.init();
+				$.plusReady(function() {
+					//定义方法toMoreSettingPage
+					var toMoreSettingPage = function() {
+						//预加载更多设置页面,调高用户体验
+						var MoreSettingPage = $.preload({
+							"id": 'moreSetting',
+							"url": 'moreSetting.html'
+						});
+						$.fire(MoreSettingPage, 'show', null);
+						setTimeout(function() {
+							$.openWindow({
+								id: 'moreSetting',
+								waiting: {
+									autoShow: true //自动显示等待框
+								}
+							});
+						}, 100);
+					};
+					//定义方法toUserInfoPage
+					var toUserInfoPage = function() {
+						//预加载个人简历界面
+						var UserInfoPage = $.preload({
+							"id": 'userInfo',
+							"url": 'userInfo.html'
+						});
+						$.fire(UserInfoPage, 'show', null);
+						setTimeout(function() {
+							$.openWindow({
+								id: 'userInfo',
+								waiting: {
+									autoShow: true //自动显示等待框
+								}
+							});
+						}, 100);
+					};
+					//获取更多设置按键，添加点击事件
+					doc.getElementById('moreSetting').addEventListener('tap', function(event) {
+						toMoreSettingPage();
+					});
+					//获取个人简历按键，添加点击事件
+					doc.getElementById('userInfo').addEventListener('tap', function(event) {
+						toUserInfoPage();
+					});
+				});
+			}(mui, document));
+		</script>
+	</body>
+</html>

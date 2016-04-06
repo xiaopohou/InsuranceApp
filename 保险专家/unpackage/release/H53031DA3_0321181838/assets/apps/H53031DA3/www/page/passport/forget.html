@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>保险专家</title>
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<style>
+			.mui-content-padded{margin-top: 25px;}
+			.mui-input-row{padding-left: 110px;}
+			.mui-input-row label{width: auto;}
+			.mui-input-row input{width: auto;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title textsize-fontcolor">找回密码(1/2)</h1>
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group" id="form">
+				<div class="mui-input-row">
+					<label class="input-label textsize-fontcolor">手机账号</label>
+					<input id="phoneNum" type="tel" class="mui-input-clear mui-input textsize-fontcolor" placeholder="请输入手机号">
+				</div>
+			</form>
+			<div class="mui-content-padded">
+				<button id='send' class="mui-btn mui-btn-block mui-btn-primary mui-btn-red textsize-fontcolor" disabled="disabled">提交</button>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/app.js"></script>
+		<script>
+			(function($, doc) {
+				$.init();
+				$.plusReady(function() {
+					//预加载找回密码二界面
+					var forgetValidatePage = $.preload({
+						id: 'forget-validate',
+						url: 'forget-validate.html'
+					});
+					var sendButton = doc.getElementById('send');
+					var phoneNumBox = doc.getElementById('phoneNum');
+					sendButton.addEventListener('tap', function() {
+						if (phoneNumBox.value.replace(/\s+/g, '') == '') {
+							plus.nativeUI.toast('请输入手机号码');
+						} else if (!/^((13[0-9]{9})|(14[0-9]{9})|(15[0-9]{9})|(17[0-9]{9})|(18[0-9]{9}))$/.test(phoneNumBox.value)) {
+							plus.nativeUI.toast('请输入有效的手机号码');
+						} else {
+							app.sendMsg(phoneNumBox.value, function(err) {
+								if (err) {
+									plus.nativeUI.toast(err);
+									return;
+								} else {
+									var state = app.getState();
+									state.forgetMobile = phoneNumBox.value;
+									app.setState(state);
+//									plus.nativeUI.toast("1");
+									$.fire(forgetValidatePage, 'show', null);
+									setTimeout(function() {
+										$.openWindow({
+											id: 'forget-validate',
+											show: {
+												aniShow: aniShow
+											},
+											waiting: {
+												autoShow: false
+											}
+										});
+									}, 0);
+								}
+							});
+						}
+					}, false);
+					//监听输入情况，输入以后按钮生效
+					document.getElementById('form').addEventListener('input', function() {
+						if (phoneNumBox.value) {
+							sendButton.disabled = false;
+						} else {
+							sendButton.disabled = true;
+						}
+					});
+				});
+			}(mui, document));
+		</script>
+	</body>
+
+</html>
