@@ -6,8 +6,8 @@
 //		var webServiceUrl = "http://115.28.72.167/";
 //		var imgUrl = "http://www.annpeter.cn:8080/";
 		
-		var webServiceUrl = "http://192.168.1.247:8080/";
-		var imgUrl = "http://192.168.1.247:8080/";
+		var webServiceUrl = "http://192.168.1.101:8080/";
+		var imgUrl = "http://192.168.1.101:8080/";
 
 		//定义 urlInfo数组存放 url信息
 		var urlInfoArray = [];

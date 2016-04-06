@@ -142,8 +142,7 @@
 		<script type="text/javascript">
 			(function($, doc) {
 				mui.init();
-				window.addEventListener('show', function() {
-					//					alert("userInfo");
+				mui.plusReady(function() {
 					//获取id
 					var realname = document.getElementById("realname");
 					var city = document.getElementById("city");
@@ -153,9 +152,6 @@
 					realname.textContent = state.realname;
 					city.textContent = state.city;
 					mobile.textContent = state.mobile;
-				}, false);
-				mui.plusReady(function() {
-					
 					
 					document.getElementById("nameLi").addEventListener('tap', function(e) {
 						e.detail.gesture.preventDefault(); 

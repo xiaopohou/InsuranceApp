@@ -14,7 +14,6 @@ mui.plusReady(function() {
 		mui.openWindow('address/insur_card_address.html','insur_card_address');
 	});
 	
-	
 	//收货地址div，跳转至地址管理界面
 	var addressDiv = document.getElementById("addressDiv");
 	addressDiv.addEventListener('tap',function(){
@@ -77,7 +76,6 @@ mui.plusReady(function() {
 	//获取收件人地址
 	getDefaultAddr();
 });
-
 
 
 
