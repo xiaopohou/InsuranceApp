@@ -97,17 +97,17 @@
 			</div>
 			<div style="clear:both;"></div>
 			<script type="text/html" id="cartListTmpl">
-				{{each jsonShoppingCarts as value i}}
-					<li class="list" data-id="{{value.id}}">
+				{{each result as value i}}
+					<li class="list" data-id="{{value.productId}}">
 						<div class="seller">
 							<div class="o-t-title-shop">
 								<div class="tcont">
 									<div class="ico">
-										<img src="{{value.supplier_logo}}" />
+										<img src="{{value.supplierLogo}}" />
 									</div>
 									<div class="contact">
 										<a>
-											<p class="o-title" >{{value.supplier_title}}</p>
+											<p class="o-title" >{{value.supplierTitle}}</p>
 											<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
 										</a>
 									</div>
@@ -119,29 +119,29 @@
 								</div>
 							</div>
 						</div>
-						<div class="item" data-id="{{value.id}}">
+						<div class="item" data-id="{{value.productId}}">
 							<div class="item-list o-t-item">
 								<div class="item-img">
 									<p>
-										<img src="{{value.product_smallimg}}" />
+										<img src="{{value.kadanImgSmall}}" />
 									</p>
 								</div>
 								<div class="item-num" style="display: none;">
 									<div class="mui-numbox" data-numbox-step="1" data-numbox-min="1" data-numbox-max="10">
-										<button class="mui-btn mui-btn-numbox-minus bt-minus" type="button" data-id="{{value.id}}">-</button>
-										<input class="mui-input-numbox" data-id="{{value.id}}" value="0" readonly="readonly" type="number">
-										<button class="mui-btn mui-btn-numbox-plus bt-plus" type="button" data-id="{{value.id}}">+</button>
+										<button class="mui-btn mui-btn-numbox-minus bt-minus" type="button" data-id="{{value.productId}}">-</button>
+										<input class="mui-input-numbox" data-id="{{value.productId}}" value="0" readonly="readonly" type="number">
+										<button class="mui-btn mui-btn-numbox-plus bt-plus" type="button" data-id="{{value.productId}}">+</button>
 									</div>
 								</div>
 								<div class="item-info">
-									<h3 class="o-title">{{value.kadan_name}}</h3>
+									<h3 class="o-title">{{value.productTittle}}</h3>
 								</div>
-								<div class="item-delete" style="display: none;" data-id="{{value.id}}" >
+								<div class="item-delete" style="display: none;" data-id="{{value.productId}}" >
 									<p class="item-delete-font" >删除</p>
 								</div>
 								<div class="item-pay">
-									<p class="price h">￥<span class="price-p">{{value.kadan_price}}<span></p>
-									<p class="nums"> x<span class="nums-p" data-id="{{value.id}}">{{value.card_num}}<span></p>
+									<p class="price h">￥<span class="price-p">{{value.kadanPrice}}<span></p>
+									<p class="nums"> x<span class="nums-p" data-id="{{value.productId}}">{{value.cardNum}}<span></p>
 								</div>
 							</div>
 						</div>

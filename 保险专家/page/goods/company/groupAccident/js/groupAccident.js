@@ -83,8 +83,19 @@ addButton.addEventListener('tap', function(event) {
 
 		ulStr.push("<li class=\"mui-table-view-cell\"> <div class=\"mui-table\">");
 		ulStr.push("<div class=\"mui-table-cell mui-col-xs-10\"> <span class=\"\">" + "意外身故及伤残保险金" + "</span> </div>");
+		ulStr.push("<div class=\"mui-table-cell mui-col-xs-4 mui-text-right \"> <span class=\"\">" + "5万元" + "</span> </div>");
+		ulStr.push("<div class=\"mui-table-cell mui-col-xs-1 mui-text-right\">  <a class=\"mui-navigate-right\"></a> </div> </div> </li>");
+		
+		ulStr.push("<li class=\"mui-table-view-cell\"> <div class=\"mui-table\">");
+		ulStr.push("<div class=\"mui-table-cell mui-col-xs-10\"> <span class=\"\">" + "意外医疗保险金" + "</span> </div>");
+		ulStr.push("<div class=\"mui-table-cell mui-col-xs-4 mui-text-right \"> <span class=\"\">" + "2万元" + "</span> </div>");
+		ulStr.push("<div class=\"mui-table-cell mui-col-xs-1 mui-text-right\">  <a class=\"mui-navigate-right\"></a> </div> </div> </li>");
+		
+		ulStr.push("<li class=\"mui-table-view-cell\"> <div class=\"mui-table\">");
+		ulStr.push("<div class=\"mui-table-cell mui-col-xs-10\"> <span class=\"\">" + "意外住院津贴保险金" + "</span> </div>");
 		ulStr.push("<div class=\"mui-table-cell mui-col-xs-4 mui-text-right \"> <span class=\"\">" + "1万元" + "</span> </div>");
 		ulStr.push("<div class=\"mui-table-cell mui-col-xs-1 mui-text-right\">  <a class=\"mui-navigate-right\"></a> </div> </div> </li>");
+		
 		
 		//结尾ul
 		ulStr.push("</ul>");

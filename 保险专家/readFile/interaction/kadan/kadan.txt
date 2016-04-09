@@ -1,0 +1,136 @@
+ ----------------------请求卡单产品列表-------------------
+Java后台地址
+  webServiceUrl = http://192.168.1.247:8080/
+  请求地址  app/kadan/list
+
+PHP后台地址
+
+
+请求 访问地址 返回卡单产品列表
+
+返回 json 示例
+{
+  "result": [
+    {
+      "id": 17,
+      "title": "1239",
+      "description": "desc19",
+      "img_small": "http://192.168.1.247:8080/static/admin/upload/2016/APR/07/47961397_3UL28.png",
+      "price": 12319
+    },
+    {
+      "id": 14,
+      "title": "产品名称",
+      "description": "产品描述",
+      "img_small": "http://192.168.1.247:8080/static/admin/upload/2016/APR/07/47961397_3UL28.png",
+      "price": 12319
+    }
+  ],
+  "message": "请求卡单列表成功",
+  "status": 1
+}
+
+2016/4/8
+
+参数：
+// id   : 产品id  jt_product/jt_p_kadan 中的 product_id
+// title  : 产品名称  jt_product    中的 title
+
+// description  : 卡单描述  jt_p_kadan    中的 description
+// img_small  ：卡单展示小图 jt_p_kadan    中的 img_small   此处数据库存放图片全路径
+// price  : 卡单价格  jt_p_kadan    中的 price
+
+
+
+
+ ----------------------查看某条具体的卡单-------------------
+Java后台地址
+  webServiceUrl = http://192.168.1.247:8080/
+  请求地址  app/kadan/profile?id=productID      这里传参访问带上 产品id 
+
+PHP后台地址
+
+
+请求  地址中 带上了 productID   ?id=productID 
+
+返回 json 示例
+{
+  "result": [
+    {
+      "productTitle": "产品名称",
+      "productId": 1,
+      "productSummary": "产品综述",
+      "kadanConditions": "出生28日以上、6周岁（不含）以下、身体健康的儿童",
+      "kadanHtmlInfo": "<p>sadfaf</p>",
+      "kadanDescription": "平安鸿运随行系列",
+      "kadanPrice": 123,
+      "kadanImgBig": "http://192.168.1.247:8080/static/admin/upload/2016/APR/07/47961397_3UL28.png",
+      "supplierTitle": "新华保险",
+      "productCateName": "产品类别"
+    }
+  ],
+  "message": "请求卡单成功",
+  "status": 1
+}
+
+2016/4/8
+
+参数： 由于 App端 解析 json 为通用模块，故 尽管此时只返回一条数据， 返回 result 仍为数组形式，方便解析
+  
+// productTitle   :  产品名称     jt_product  中的 title  
+// productId    ： 产品id      jt_product  中的 productId
+// productSummary :  产品 summary     jt_product  中的 summary
+
+// kadanConditions  ： 卡单投保条件conditions  jt_p_kadan  中的 conditions
+// kadanHtmlInfo  ： 卡单具体说明信息，为html  jt_p_kadan  中的 info
+// kadanDescription :  卡单简要描述     jt_p_kadan  中的 description
+// kadanPrice   :  卡单价格     jt_p_kadan  中的 price 
+// kadanImgBig    :  卡单展示大图片    jt_p_kadan  中的 img_big 此处保存的 图片全路径
+
+// supplierTitle  :  供应商名称      jt_supplier 中的 title
+// productCateName  :  产品类别     jt_productCate  中的 title
+  
+
+
+
+
+
+ ----------------------提交订单-------------------
+Java后台地址
+	webServiceUrl = http://192.168.1.247:8080/
+	请求地址  app/business/commit      
+
+PHP后台地址
+
+
+请求json：
+
+	var jsObj = {
+		    "memberId":"1",
+		    "jsonBussinessCommitList":[
+						{"productId":1, "customerId":1, "receiveAddrId":1},
+						{"productId":1, "customerId":1, "receiveAddrId":1},
+						{"productId":1, "customerId":1, "receiveAddrId":1}
+					]
+		};
+
+	var str = JSON.stringify(jsObj);
+
+	{"reqJsonStr":str}
+
+
+参数： 
+	memberId	：用户id	jt_member	中的 id		/	jt_shoppingcart 中的 member_id
+	productId	: 产品id	jt_shoppingcart 中的 product_id
+	customerId	：客户id	由于卡单部分特殊，这里客户 id 暂时先为 用户 memberid  
+	receiveAddrId	：收货地址id	jt_address	中的 id
+
+
+
+
+* 返回json样例
+
+{
+  "message": "订单提交成功",
+  "status": 1
+}

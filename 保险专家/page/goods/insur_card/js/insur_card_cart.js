@@ -41,20 +41,20 @@ function getCartList() {
 				
 				console.log(imgUrl);
 				
-				//循环遍历result数组，给数组中 img_big 添加 url 头属性
-				for(var i = 0; i < data.result[0].jsonShoppingCarts.length; i++){
-					data.result[0].jsonShoppingCarts[i].supplier_logo = imgUrl + data.result[0].jsonShoppingCarts[i].supplier_logo;
-					data.result[0].jsonShoppingCarts[i].product_smallimg = imgUrl + data.result[0].jsonShoppingCarts[i].product_smallimg;
-					
-					console.log(data.result[0].jsonShoppingCarts[i].supplier_logo);
-					console.log(data.result[0].jsonShoppingCarts[i].product_smallimg);
-					
-//							console.log(data.result[i].img_big);
-				}
+//				//循环遍历result数组，给数组中 img_big 添加 url 头属性
+//				for(var i = 0; i < data.result.length; i++){
+//					data.result[i].supplier_logo = imgUrl + data.result[i].supplier_logo;
+//					data.result[i].product_smallimg = imgUrl + data.result[i].product_smallimg;
+//					
+//					console.log(data.result.supplier_logo);
+//					console.log(data.result.product_smallimg);
+////							console.log(data.result[i].img_big);
+//				}
 				
-//						console.log(data.result[0].jsonShoppingCarts);
+				console.log(data.result[0].supplierLogo);
+//						console.log(data.result[0]);
 				
-				var content = template("cartListTmpl", data.result[0]);
+				var content = template("cartListTmpl", data);
 				order_list.innerHTML = content;
 				
 				// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
@@ -166,7 +166,12 @@ function initFunc(){
 		$('.list[data-id=' + id + ']').hide();
 		$('.mui-input-numbox[data-id=' + id + ']').val(0);
 		$('.nums-p[data-id=' + id + ']').text(0);
+		
+		//结算设置总价
 		setTotalNumPrice();
+		
+		//把修改的购物车列表json更新给服务器
+		updataCartNum();
 	}
 
 	//清空购物车
@@ -177,9 +182,12 @@ function initFunc(){
 		$('.nums-p').each(function(){
 			$(this).text(0);
 		});
+		
+		//结算设置总价
 		setTotalNumPrice();
 		$('.list').hide();
 		
+		//把修改的购物车列表json更新给服务器
 		updataCartNum();
 	}
 	

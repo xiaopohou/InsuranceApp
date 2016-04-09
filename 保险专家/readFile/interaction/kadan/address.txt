@@ -1,0 +1,151 @@
+ ----------------------获取收货地址列表-------------------
+ Java后台地址
+	webServiceUrl = http://192.168.1.247:8080/
+	请求地址  app/receaddr/list?id=memberid 
+	   
+ PHP后台地址
+ 
+ 
+ //返回json实例
+ {
+  "result":[
+        {
+               "id":"1",
+               "member_id":"1",
+               "isdefault":"1",
+               "address": "{\"province\":\"北京市\",\"city\":\"北京市\",\"area\":\"东城区\",\"allarea\":\"北京市北京市东城区\",\"street\":\"123\",\"address\":\"456\",\"receiver\":\"蒋鹏\",\"phone\":\"15751776629\"}",
+               "contactor":"annpeter",
+               "tel":"1231231"
+           },
+        {
+            "id":"2",
+               "member_id":"1",
+               "isdefault":"0",
+               "address": "{\"province\":\"北京市\",\"city\":\"北京市\",\"area\":\"东城区\",\"allarea\":\"北京市北京市东城区\",\"street\":\"123\",\"address\":\"456\",\"receiver\":\"蒋鹏\",\"phone\":\"15751776629\"}",
+               "contactor":"annpeter",
+               "tel":"1231231"
+           }
+      ],
+    	"message": "获取收货地址成功",
+	  	"status": 1
+}
+// id        地址id							jt_address 中的 id
+// member_id 用户id							jt_address 中的 member_id
+// isdefault 是否为默认地址					jt_address 中的 isdefault
+// address   详细地址 （stringify过的字符串）	jt_address 中的 address
+// contactor 收件人							jt_address 中的 contactor
+// tel       收件人电话						jt_address 中的 tel 
+ 
+ 
+ ----------------------添加收货地址-------------------
+Java后台地址
+	webServiceUrl = http://192.168.1.247:8080/
+	请求地址  app/receaddr/add      
+
+PHP后台地址
+
+###添加收货地址
+* 申请json样例
+
+    ```
+    var jsObj =  {
+	    "member_id": "1",
+	    "isdefault": "0",
+	    "address": "{\"province\":\"北京市\",\"city\":\"北京市\",\"area\":\"西城区\",\"allarea\":\"北京市北京市西城区\",\"street\":\"123\",\"address\":\"1\",\"receiver\":\"1\",\"phone\":\"1\"}",
+	    "contactor": "1",
+	    "tel": "1"
+	};
+        var str = JSON.stringify(jsObj);
+    	{"reqJsonStr":str}
+    ```
+
+// member_id 用户id							jt_address 中的 member_id
+// isdefault 是否为默认地址					jt_address 中的 isdefault
+// address   详细地址 （stringify过的字符串）	jt_address 中的 address
+// contactor 收件人							jt_address 中的 contactor
+// tel       收件人电话						jt_address 中的 tel
+
+
+* 返回json样例
+
+{
+  "message": "收货地址添加成功",
+  "status": 1
+}
+
+
+
+
+ ----------------------收货地址-------------------
+Java后台地址
+  webServiceUrl = http://192.168.1.247:8080/
+  请求地址  /app/receaddr/profile     
+
+PHP后台地址
+
+
+发送 json 示例
+#修改地址 
+  var jsObj = {
+                "member_id":"1",
+                "isdefault":"1",
+                "id" : "1"
+                "address": "{\"province\":\"北京市\",\"city\":\"北京市\",\"area\":\"东城区\",\"allarea\":\"北京市北京市东城区\",\"street\":\"123\",\"address\":\"456\",\"receiver\":\"蒋鹏\",\"phone\":\"15751776629\"}",
+                "contactor":"annpeter",
+                "tel":"1231231"
+              };
+
+  var str = JSON.stringify(jsObj);
+
+  {"reqJsonStr":str}    封装成json字符串提交到后台
+
+参数：
+//member_id  用户 id      			jt_address 中的 member_id
+//isdefault  是否为默认地址   		 	jt_address 中的 isdefault
+//id         地址id     				jt_address 中的 id
+//address    json字符串，地址详细信息	jt_address 中的 address
+//contactor  收件人      				jt_address 中的 contactor
+//tel        收件人手机号  		 	jt_address 中的 tel
+
+
+//返回 json
+{
+  "message": "地址修改成功",
+  "status": 1
+}
+
+
+
+ ----------------------删除收货地址-------------------
+Java后台地址
+    webServiceUrl = http://192.168.1.247:8080/
+    请求地址  app/receaddr/delete      
+
+PHP后台地址
+
+###删除收货地址
+* 申请json样例
+
+    ```
+    var jsObj =  {
+                "id" : "1",
+                "member_id":"1",
+                "isdefault":"1",
+
+        };
+        var str = JSON.stringify(jsObj);
+        {"reqJsonStr":str}      封装成json字符串提交到后台
+    ```
+
+//    id:     地址id      jt_address 中的 id
+//    member_id:  用户id      jt_address 中的 member_id
+//    isdefault:  地址是否为默认   jt_address 中的 isdefault
+2016/4/8
+
+
+* 返回json样例
+
+{
+  "message": "收货地址删除成功",
+  "status": 1
+}

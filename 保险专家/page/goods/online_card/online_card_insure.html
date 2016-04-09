@@ -6,75 +6,77 @@
     <title></title>
     <link href="../../../css/mui.min.css" rel="stylesheet"/>
     <link href="../../../css/common.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../../../css/base.css"/>
     <style>
+    	#buyingBt{
+    		padding: 8px;
+    	}
     
-    .mui-table-view{
-    	margin-top: 14px;
-    }
-	.mui-input-group{
-		margin-top: 10px;
-	}
-    .mui-input-row label {
-		width: auto;
-	}
-
-	.mui-input-row input {
-		width: auto;
-	}
-	label{
-		margin-top: 6px;
-	}
-		
+		.mui-input-row label{
+			width: 40%;
+		}
+		.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
+			width: 60%;
+		}
     </style>
 </head>
 <body>
 	<div class="mui-bar mui-bar-nav" id="mui-bar-title" >
-	<a class="mui-action-back mui-icon mui-icon-back"></a>
-	<h1 class="mui-title textsize-fontcolor">线上卡单——投保</h1>
+		<a class="mui-action-back mui-icon mui-icon-back"></a>
+		<h1 class="mui-title textsize-fontcolor">线上卡单 - 投保</h1>
 	</div>
 	<div class="mui-content">
-		<div class="mui-content-padded">
-			<p class="textsize-fontcolor">投保人:</p>
-		</div>
-		<div class="mui-input-group">
-			<div class="mui-input-row">
-				<label class="textsize-fontcolor">姓名:</label>
-				<input type="text" id="truename" class="mui-input mui-input-clear" placeholder="请输入姓名" />
-			</div>
-			<div class="mui-input-row">
-				<label class="textsize-fontcolor">身份证号:</label>
-				<input type="text" id="truename" class="mui-input mui-input-clear" placeholder="请输入身份证号" />
-			</div>
-			
-			<div class="mui-input-row">
-				<label class="textsize-fontcolor">手机号:</label>
-				<input type="text" id="truename" class="mui-input mui-input-clear" placeholder="请输入手机号" />
-			</div>
-			<div class="mui-input-row">
-				<label class="textsize-fontcolor">电子邮箱:</label>
-				<input type="text" id="truename" class="mui-input mui-input-clear" placeholder="请输入电子邮箱" />
-			</div>
-		</div>
+	    
+	    <div class="mui-input-group">
+	    	<div class="mui-input-row">
+	    	    <label>投保人姓名</label>
+	    	    <input type="text" class="mui-input-clear" placeholder="请输入投保人姓名">
+	    	</div>
+	    	
+	    	<div class="mui-input-row">
+	    	    <label>身份证号</label>
+	    	    <input type="text" class="mui-input-clear" placeholder="请输入身份证号">
+	    	</div>
+	    	
+	    	<div class="mui-input-row">
+	    	    <label>被保人姓名</label>
+	    	    <input type="text" class="mui-input-clear" placeholder="请输入被保人姓名">
+	    	</div>
+	    	
+	    	<div class="mui-input-row">
+	    	    <label>投保人手机号</label>
+	    	    <input type="text" class="mui-input-clear" placeholder="请输入投保人手机号">
+	    	</div>
+	    	<div class="mui-input-row">
+	    	    <label>投保人邮箱</label>
+	    	    <input type="text" class="mui-input-clear" placeholder="邮箱格式  xxx@xx.xx">
+	    	</div>
+	    </div>
+	    
+	    <div class="mui-content-padded"></div>
+	    
+	    <div class="mui-content-padded">
+	    	<button id="buyingBt" type="button" class="mui-btn mui-btn-block">确认购买</button>
+	    </div>
+	</div>
 	
-		<div class="mui-content-padded">
-			<p class="textsize-fontcolor">被投保人:</p>
-		</div>
-		<div class="mui-input-group" >
-			<div class="mui-input-row">
-				<label class="textsize-fontcolor">姓名:</label>
-				<input type="text" id="truename" class="mui-input mui-input-clear" placeholder="请输入姓名" />
-			</div>
-			<div class="mui-input-row">
-				<label class="textsize-fontcolor">身份证号:</label>
-				<input type="text" id="truename" class="mui-input mui-input-clear" placeholder="请输入身份证号" />
-			</div>
-			</div>
-			<div class="mui-content-padded">
-				<button type="button" class="mui-btn mui-pull-right textsize-fontcolor">确认购买</button>
-			</div>
-		</div>
-	</div>
-	</div>
+	<script src="../../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	    //mui 框架初始化
+		mui.init();
+		
+		//原生 plus 初始化完毕
+		mui.plusReady(function(){
+			
+			//获取 buyingBt 控件,添加点击事件
+			$('#buyingBt')[0].addEventListener('tap',function(){
+				//进行跳转动作
+				mui.openWindow({
+					url : 'online_card_purchase.html',
+					id : 'online_card_purchase'
+				});
+			});
+		});
+	</script>
 </body>
 </html>

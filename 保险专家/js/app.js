@@ -7,7 +7,7 @@
 //		var imgUrl = "http://www.annpeter.cn:8080/";
 		
 		var webServiceUrl = "http://192.168.1.101:8080/";
-		var imgUrl = "http://192.168.1.101:8080/";
+		var imgUrl = "http://192.168.1.101:8080";
 
 		//定义 urlInfo数组存放 url信息
 		var urlInfoArray = [];
@@ -29,6 +29,7 @@
 //		console.log(settings.urlInfoArray[0].webServiceUrl);
 		owner.setSettings(settings);
 		console.log("服务器初始化成功");
+		console.log(webServiceUrl);
 	}
 	
 	//动态更改服务器地址
@@ -41,38 +42,8 @@
 		owner.setSettings(settings);
 	}
 	
-////服务器地址
-//	webServiceUrl="http://115.28.72.167/";
-//	ptServerUrl = "http://www.annpeter.cn:8080";
-	
-//	console.log("app.js");
 //---------------------------------------------------------新用户注册-----------------------------------------------------
 //---------------------------------------------------------       -----------------------------------------------------
-
-// 发送的json格式
-//{
-//  "realname": "test1",
-//	"userpwd": "test1",
-//	"mobile": "100",
-//	"city": "无锡",
-//	"code": "2121"
-//}
-//{"reqJsonStr":str}
-//
-//  返回json格式
-//	{
-//	  "result": [
-//	    {
-//	      "uid": "5",
-//	      "city": "无锡",
-//	      "mobile": "500",
-//	      "username": "test1",
-//	      "realname": "test1"
-//	    }
-//	  ],
-//	  "message": "注册成功",
-//	  "status": 1
-//	}
 
 	owner.reg = function(regInfo, callback)
 	{
@@ -155,8 +126,8 @@
 				{
 					if(data.status == 1)
 					{
-						owner.createState(data.result[0]);
-						var state = owner.getState();
+//						owner.createState(data.result[0]);
+//						var state = owner.getState();
 						return callback();
 					}
 					else
@@ -175,25 +146,6 @@
 //---------------------------------------------------------用户登录-----------------------------------------------------
 //---------------------------------------------------------       -----------------------------------------------------
 
-// 发送的json格式
-//{
-//  "mobile": "1571776629",
-//  "password": "123456",
-//}
-//  返回json格式
-//{
-//  "status": "1",
-//  "message": "回馈信息",
-//  "info": 
-//	    {
-//	        "username": "Jepson",
-//	        "realname": "Jepson",
-//	        "mobile": "1571776629",
-//	        "city": "镇江",
-//	        "id": "id"
-//	    }
-//  
-//}
 	owner.login = function(loginInfo, callback)
 	{
 		callback = callback || $.noop;
@@ -223,14 +175,13 @@
 //jt/index.php/User/mobileLogin
 ///app/member/login
 
-
 			//加密密码
 			loginInfo.password = hex_md5(loginInfo.password);
 			console.log(loginInfo.password);
 
 
 			var jsObj={
-			  "mobile": loginInfo.account,
+			  "account": loginInfo.account,
 			  "userpwd": loginInfo.password
 			}
 			
@@ -238,7 +189,8 @@
 
 			mui.ajax(webServiceUrl+'app/member/login',{
 				data:{
-					"reqJsonStr": str,
+					"account": loginInfo.account,
+			  		"userpwd": loginInfo.password
 				},
 				dataType:'json',
 				type:'post',
@@ -276,14 +228,6 @@
 //--------------------------------------------------发送验证码-----------------------------------------------------
 //--------------------------------------------------       -----------------------------------------------------
 
-// 发送的json格式
-//{
-//	"reqJsonStr":{
-//		"mobile": "1571776629"
-//	}
-//}
-//  返回json格式
-
 //{"result":[],"message":"发送成功","status":1}
 	owner.sendMsg = function(mobile, callback)
 	{
@@ -312,11 +256,11 @@
 			
 			//php服务器端  jt/index.php/User/mobileVsms
 			//java 服务器端 /app/member/identifyphone
-			mui.ajax(webServiceUrl+'/app/member/identifyphone',
+			//    app/member/checkphone
+			mui.ajax(webServiceUrl+'app/member/checkphone',
 			{
-	
 				data:{
-					"reqJsonStr" : reqJsonStr
+					"mobile" : mobile
 				},
 				dataType:'json',
 				type:'post',
@@ -609,6 +553,7 @@
 	//	url: webServiceUrl + "app/receaddr/list?id=" + uid,
 	
 		var test = plus.storage.getItem("test") || false;
+		test = true;
 		console.log("test = " + test);
 		if(test){
 			listUrl = "json/address.json";

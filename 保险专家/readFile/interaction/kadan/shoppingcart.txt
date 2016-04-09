@@ -1,0 +1,93 @@
+ ----------------------请求购物车列表-------------------
+Java后台地址
+  webServiceUrl = http://192.168.1.247:8080/
+  请求地址  app/shoppingcart/list?id=memberID  传 用户 id
+
+PHP后台地址
+
+请求地址中   id = memberID
+
+返回 json 示例
+{
+  "result": [
+     {
+      "productId": 1,
+      "cardNum": 3,
+      "productTittle": "如E少儿意外保险计划",
+      "kadanImgSmall": "http://localhost:8080/static/admin/upload/2016/APR/06/52651756_00Lj3.png",
+      "kadanPrice": 123，
+      "supplierId": 6,  
+      "supplierLogo": "http://localhost:8080/static/admin/upload/2016/APR/06/52651756_00Lj3.png",        
+      "supplierTitle": "新华保险"
+    }，
+     {
+      "productId": 1,
+      "cardNum": 3,
+      "productTittle": "如E少儿意外保险计划",
+      "kadanImgSmall": "http://localhost:8080/static/admin/upload/2016/APR/06/52651756_00Lj3.png",
+      "kadanPrice": 123，
+      "supplierId": 6,  
+      "supplierLogo": "http://localhost:8080/static/admin/upload/2016/APR/06/52651756_00Lj3.png",        
+      "supplierTitle": "新华保险"
+    }
+  ],
+  "message": "获取购物车成功",
+  "status": 1
+}
+2016/4/8
+// productId            产品 id         jt_shoppingcart 中的 productId
+// cardNum    卡单数量  jt_shoppingcart  中的 num
+
+// productTittle  卡单名称  jt_product  中的 tittle
+
+// kadanImgSmall  卡单展示小图片 jt_p_kadan  中的 img_small  存放图片完整地址
+// kadanPrice   卡单价格        jt_p_kadan  中的 price
+
+// supplierId           供应商 id       jt_supplier 中的 id
+// supplierLogo   供应商logo jt_supplier 中的 logo
+// supplierTitle        供应商名称      jt_supplier 中的 tittle
+
+
+
+ ----------------------添加修改购物车中的内容-------------------
+Java后台地址
+	webServiceUrl = http://192.168.1.247:8080/
+	请求地址  app/shoppingcart/modify
+
+PHP后台地址
+
+
+###添加，修改，删除购物车中的内容
+
+* 请求json样例
+	本请求中含有list，所以要求客户端将json封装在一个String对象中
+	然后发起json请求{"reqJsonStr": 请求的JSON实际内容}。
+	当发送到后台的数据中  num = 0 时，为用户在App端进行了删除操作，后台将购物车中对应数据删除
+
+	```
+	var jsObj = {
+                "member_id":"1",
+                "jsonShoppingCartModifies":[
+						{"id":1, "num":1},
+						{"id":2, "num":2},
+						{"id":3, "num":3}
+					]
+            	};
+
+	var str = JSON.stringify(jsObj);
+
+	{"reqJsonStr":str}	封装成json字符串提交到后台
+
+	```
+
+// member_id: 用户名 id		jt_shoppingcart 中的 member_id
+// id：       product_id	jt_shoppingcart 中的 product_id
+// num:       产品数量		jt_shoppingcart 中的 num
+
+
+
+//返回 json
+{
+  "message": "操作成功",
+  "status": 1
+}

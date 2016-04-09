@@ -1,0 +1,35 @@
+-------------------------------找回密码-------------------------------------
+Java后台地址
+	webServiceUrl = http://192.168.1.247:8080/
+	请求地址  app/kadan/retrieve
+	
+PHP后台地址
+
+###找回密码
+* 请求json样例
+
+	```
+	var jsObj={
+	"userpwd": "12345"
+	"code": "12345",
+	"mobile": "123456"
+	}
+	var str=JSON.stringify(jsObj);
+	{"reqJsonStr":str}      (最终发送的数据)
+	```
+
+参数：	userpwd 业务员登录密码				
+	code	业务员找回密码时的短信验证码
+	mobile	业务员手机号
+
+
+	
+* 返回json样例
+
+	```
+	{
+	  "result": [],
+	  "message": "重设密码成功",
+	  "status": 1
+	}
+	```

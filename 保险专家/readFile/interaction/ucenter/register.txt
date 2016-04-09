@@ -1,0 +1,49 @@
+ ----------------------新用户注册-------------------
+ Java后台地址
+	webServiceUrl = http://192.168.1.247:8080/
+	请求地址   app/member/register
+
+ PHP后台地址
+
+
+发送的json内容
+{
+    "realname": "test1",
+    "userpwd": "test1",
+    "mobile": "100",
+    "city": "无锡",
+    "code": "2121"
+}
+reqJsonStr = JSON.stringify(reqJsonStr);
+
+最终发送的  json 格式 
+{
+ "reqJsonStr":str
+}
+
+// realname	业务员姓名			jt_member 中的 realname
+// userpwd	用户密码(发送请求时已加密)	jt_member 中的 userpwd
+// mobile	手机号				jt_member 中的 mobile
+// city		用户所在城市			jt_member 中的 city
+// code		二维码信息			
+
+返回json格式
+{
+  "result": [
+    {
+      "id": "5",
+      "city": "无锡",
+      "mobile": "500",
+      "username": "test1",
+      "realname": "test1"
+    }
+  ],
+  "message": "注册成功",
+  "status": 1
+}
+
+// id		业务员id	jt_member 中的 id
+// city		业务员区域	jt_member 中的 city
+// mobile	手机号		jt_member 中的 mobile
+// username	用户名  （用户名与姓名暂时相同）, realname 为 预留字段		jt_member 中的 username
+// realname	姓名		jt_member 中的 realname

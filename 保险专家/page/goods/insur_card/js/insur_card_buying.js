@@ -45,11 +45,13 @@ mui.plusReady(function() {
 			var card_id = $(this).attr("data-id");
 			var str = $(this).text();
 			
+			console.log("productId:" + card_id);
+			
 			str = str.replace(/[^0-9]*/g,"");
 			num = parseInt(str);
 			
 			var numJson = {
-				id : card_id,
+				productId : card_id,
 				num : num,
 				customerId : customerId,
 				receiveAddrId : addressId
@@ -85,6 +87,7 @@ function getCartList() {
 	//获取用户 uid
 	var ajaxUrl = '';
 	var test = plus.storage.getItem('test');
+	console.log(test);
 	var state = app.getState();
 	var uid = state.uid;
 	//获取服务器地址和图片服务器地址
@@ -101,6 +104,7 @@ function getCartList() {
 	}else{
 		ajaxUrl = webServiceUrl + "app/shoppingcart/list?id=" + uid;
 	}
+	ajaxUrl = webServiceUrl + "app/shoppingcart/list?id=" + uid;
 	
 	//向服务器发送ajax请求获取   商品列表
 	mui.ajax({
@@ -115,21 +119,8 @@ function getCartList() {
 				console.log(data.message);
 				var order_list = document.getElementById("order_list");
 				console.log(imgUrl);
-//						console.log(data.result[0].jsonShoppingCarts);
 				
-				//循环遍历result数组，给数组中 img_big 添加 url 头属性
-				for(var i = 0; i < data.result[0].jsonShoppingCarts.length; i++){
-					data.result[0].jsonShoppingCarts[i].supplier_logo = imgUrl + data.result[0].jsonShoppingCarts[i].supplier_logo;
-					data.result[0].jsonShoppingCarts[i].product_smallimg = imgUrl + data.result[0].jsonShoppingCarts[i].product_smallimg;
-					
-					console.log(data.result[0].jsonShoppingCarts[i].supplier_logo);
-					console.log(data.result[0].jsonShoppingCarts[i].product_smallimg);
-					
-//							console.log(data.result[i].img_big);
-				}
-				
-				
-				var content = template("cartListTmpl", data.result[0]);
+				var content = template("cartListTmpl", data);
 				order_list.innerHTML = content;
 				
 				// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；
@@ -162,25 +153,46 @@ function getDefaultAddr(){
 				$("#addressDiv").hide();
 			}
 			
-			//处理返回来的json地址数据
-			for(var i = 0; i< addressArray.length ; i++){
-				//如果是 isdefault 将其存进本地
-				if(addressArray[i].isdefault == 1){
-					var addressId = addressArray[i].id;
-					console.log("当前默认地址id是: "+ addressId);
-					addressArray[i].address = JSON.parse(data.result[i].address);
-					console.log(addressArray[i].address.city);
-					
-					//将 ID 也一起保存进 本地
-					addressArray[i].address.id = addressId;
-					
-					//保存本地
-					app.setAddress(addressArray[i].address);
-					
-					setBuyingAddress();
+			//获取选择 地址 id
+			var selectAddrId = plus.storage.getItem("selectAddrId");
+			if(selectAddrId.trim() != ""){
+				//处理返回来的json地址数据,将默认地址显示在页面中
+				for(var i = 0; i< addressArray.length ; i++){
+					//如果是 isdefault 将其存进本地
+					if(addressArray[i].id == selectAddrId){
+						console.log("当前选择的地址id是: "+ selectAddrId);
+						addressArray[i].address = JSON.parse(data.result[i].address);
+						console.log(addressArray[i].address.city);
+						
+						//将 ID 也一起保存进 本地
+						addressArray[i].address.id = addressId;
+						
+						//保存本地
+						app.setAddress(addressArray[i].address);
+						
+						setBuyingAddress();
+					}
+				}
+			}else{
+				//处理返回来的json地址数据,将默认地址显示在页面中
+				for(var i = 0; i< addressArray.length ; i++){
+					//如果是 isdefault 将其存进本地
+					if(addressArray[i].isdefault == 1){
+						var addressId = addressArray[i].id;
+						console.log("当前默认地址id是: "+ addressId);
+						addressArray[i].address = JSON.parse(data.result[i].address);
+						console.log(addressArray[i].address.city);
+						
+						//将 ID 也一起保存进 本地
+						addressArray[i].address.id = addressId;
+						
+						//保存本地
+						app.setAddress(addressArray[i].address);
+						
+						setBuyingAddress();
+					}
 				}
 			}
-			
 		}else{
 			plus.nativeUI.toast(data.message);
 		}
@@ -251,15 +263,23 @@ function initFunc(){
 
 //提交订单
 function submitOrderFuc(Alldata){
+	strTest = JSON.stringify(Alldata);
+	console.log(strTest);
+	
 	var test = plus.storage.getItem("test");
 	
 	console.log(plus.storage.getItem("test"));
+	
+	var settings = app.getSettings();
+	var webServiceUrl = settings.webServiceUrl;
+	
+	test = false;
 	
 	if(test){
 		mui.openWindow("../../myOrder/insur_card/insur_card_order.html","insur_card_order");
 	}else{
 		mui.ajax({
-			url: webServiceUrl + "app/shoppingcart/list?id=" + uid,
+			url: webServiceUrl + "app/business/commit?id=" + uid,
 			type: "post",
 			async: true,
 			data: Alldata,
@@ -268,6 +288,7 @@ function submitOrderFuc(Alldata){
 			success: function(data) {
 				if(data.status == 1){
 					console.log(data.message);
+					mui.openWindow("../../myOrder/insur_card/insur_card_order.html","insur_card_order");
 				}else{
 					plus.nativeUI.toast(data.message);
 				}
