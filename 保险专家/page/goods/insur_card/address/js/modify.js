@@ -2,6 +2,8 @@ mui.init();
 
 mui.plusReady(function(){
 	getAddressList();
+	
+	console.log("执行刷新操作");
 });
 
 //获取收货地址列表
@@ -78,6 +80,23 @@ function initFunc(data){
 		//地址 id 
 		addressId = this.getAttribute("addressId");
 		plus.storage.setItem('modifyAdrId',addressId);
+		
+		var receiver = 	$("[name=receiver][addressId=" + addressId + "]").text().trim();
+		var phone = 	$("[name=phone][addressId=" + addressId + "]").text().trim();
+		var province= 	$("[name=province][addressId=" + addressId + "]").text().trim();
+		var city=		$("[name=city][addressId=" + addressId + "]").text().trim();
+		var area= 		$("[name=area][addressId=" + addressId + "]").text().trim();
+		var street= 	$("[name=street][addressId=" + addressId + "]").text().trim();
+		var address= 	$("[name=address][addressId=" + addressId + "]").text().trim();
+		
+		plus.storage.setItem("mod_receiver",receiver);
+		plus.storage.setItem("mod_phone",phone);
+		plus.storage.setItem("mod_province",province);
+		plus.storage.setItem("mod_city",city);
+		plus.storage.setItem("mod_area",area);
+		plus.storage.setItem("mod_street",street);
+		plus.storage.setItem("mod_address",address);
+		
 		
 //		mui.openWindow('insur_card_address_modify_2.html','insur_card_address_modify_2');
 		mui.openWindow({

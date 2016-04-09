@@ -63,7 +63,9 @@
 		mui.init();
 		mui.plusReady(function(){
 			
-			plus.storage.setItem("test","true");
+			plus.storage.setItem("test","false");
+			var test = plus.storage.getItem("test");
+			console.log("当前卡单模块为" + test);
 			
 			document.getElementById("card_show").addEventListener('tap',function(){
 //				console.log("11");

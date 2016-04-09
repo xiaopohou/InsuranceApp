@@ -89,8 +89,6 @@
 					$("#version2").text("appid:"+ plus.runtime.appid);
 					$("#version3").text("5+运行环境版本号:"+ plus.runtime.innerVersion);
 					
-					plus.nativeUI.toast("服务器初始化成功\n地址: http://115.28.72.167/")
-					
 //					plus.nativeUI.toast("当前apk推荐人:" + prePersonName + "\n推荐人id:"+ prePersonId);
 					
 					plus.screen.lockOrientation("portrait-primary");
@@ -104,9 +102,6 @@
 						setTimeout(function() {
 							mui.openWindow({
 								id: 'ucenter',
-								show: {
-									aniShow: aniShow
-								},
 								waiting: {
 									autoShow: false
 								}
@@ -123,9 +118,6 @@
 						setTimeout(function() {
 							mui.openWindow({
 								id: 'reg',
-								show: {
-									aniShow: aniShow
-								},
 								waiting: {
 									autoShow: false
 								}
@@ -142,9 +134,6 @@
 						setTimeout(function() {
 							mui.openWindow({
 								id: 'forget',
-								show: {
-									aniShow: aniShow
-								},
 								waiting: {
 									autoShow: false
 								}

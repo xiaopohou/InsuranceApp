@@ -60,12 +60,12 @@
 		<!------------------------------------------------------------------------------------------------------>
 		<script type="text/html" id="cardInfoTmpl">
 			{{each result as value i}}
-				<img src="{{value.img_big}}" width="100%" />
-				<div class="xmain" data-id="{{value.id}}" id="idInfo">
-					<h2>{{value.name}}</h2>
-					<h3>{{value.description}}</h3>
+				<img src="{{value.kadanImgBig}}" width="100%" />
+				<div class="xmain" data-id="{{value.productId}}" id="idInfo">
+					<h2>{{value.productTitle}}</h2>
+					<h3>{{value.kadanDescription}}</h3>
 					<div class="bt">
-						<div class="bt-left">参考价：<strong>￥{{value.price}}</strong></div>
+						<div class="bt-left">参考价：<strong>￥{{value.kadanPrice}}</strong></div>
 						<div style="clear:both;"></div>
 					</div>
 					<div class="yf">
@@ -88,7 +88,7 @@
 				<div class="xmain">
 					<div class="xuanz-fl" style="display: none;">
 						<strong>卡单保障</strong>
-						<p>{{value.summary}}</p>
+						<p>{{value.productSummary}}</p>
 					</div>
 					<div class="xuanz-sl">
 						<strong>数量:</strong>
@@ -99,11 +99,11 @@
 				<div class="xmain">
 					<div class="xuanz-cp">
 						<strong>卡单简介</strong>
-						<p><strong>提供商</strong>{{value.product__supplier__title}}</p>
-						<p><strong>保险分类</strong>{{value.card_cate}}</p>
+						<p><strong>提供商</strong>{{value.supplierTitle}}</p>
+						<p><strong>保险分类</strong>{{value.productCateName}}</p>
 						<p><strong>种类</strong>保险卡单</p>
 						<p><strong>激活</strong>自主激活，线上激活</p>
-						<p><strong>投保要求</strong>{{value.conditions}}</p>
+						<p><strong>投保要求</strong>{{value.kadanConditions}}</p>
 						<div id="textinfo">
 							
 						</div>
@@ -195,8 +195,9 @@
 							var content = template("cardInfoTmpl", data);
 							cardInfoList.innerHTML = content;
 							
+							//填充  介绍信息
 							var textinfo = document.getElementById("textinfo");
-							var textinfoContent = data.result[0].textinfo;
+							var textinfoContent = data.result[0].kadanHtmlInfo;
 							textinfo.innerHTML = textinfoContent;
 							
 							// 由于我们是异步执行，所以在html部分拼接完成之后，才能对其进行添加点击事件的操作；

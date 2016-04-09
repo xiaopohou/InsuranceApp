@@ -22,7 +22,7 @@
 .order-address .content .ext{font-size: 12px;line-height: 1.3;color: #ffa800;}
 .order-address .content .tel{float: right;}
 .mui-flex>.cell.align-center{align-self: center;}
-.nav{float:left; width: 6.5px;height: 12px;background: url(../../../images/goods/insur_card/right.png) 50% 50% no-repeat;background-size:100%;}
+.nav{float:left; width: 6.5px;height: 12px;background: url( ../../../images/goods/insur_card/right.png) 50% 50% no-repeat;background-size:100%;}
 
 .mui-col-xs-10 {width: 70%;}
 .mui-col-xs-4 {width: 20%;}
@@ -213,36 +213,36 @@
 	</div>
 	
 	<script type="text/html" id="cartListTmpl">
-		{{each jsonShoppingCarts as value i}}
-			<li class="list" data-id="{{value.id}}">
+		{{each result as value i}}
+			<li class="list" data-id="{{value.productId}}">
 				<div class="seller">
 					<div class="o-t-title-shop">
 						<div class="tcont">
 							<div class="ico">
-								<img src="{{value.supplier_logo}}" />
+								<img src="{{value.supplierLogo}}" />
 							</div>
 							<div class="contact">
 								<a>
-									<p class="o-title" >{{value.supplier_title}}</p>
+									<p class="o-title" >{{value.supplierTitle}}</p>
 									<p class="arrow"><span class="icon-right mui-icon mui-icon-arrowright"></span></p>
 								</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="item" data-id="{{value.id}}">
+				<div class="item" data-id="{{value.productId}}">
 					<div class="item-list o-t-item">
 						<div class="item-img">
 							<p>
-								<img src="{{value.product_smallimg}}" />
+								<img src="{{value.kadanImgSmall}}" />
 							</p>
 						</div>
 						<div class="item-info">
-							<h3 class="o-title">{{value.kadan_name}}</h3>
+							<h3 class="o-title">{{value.kadanName}}</h3>
 						</div>
 						<div class="item-pay">
-							<p class="price h">￥<span class="price-p">{{value.kadan_price}}<span></p>
-							<p class="nums"> x<span class="nums-p" data-id="{{value.id}}">{{value.card_num}}<span></p>
+							<p class="price h">￥<span class="price-p">{{value.kadanPrice}}<span></p>
+							<p class="nums"> x<span class="nums-p" data-id="{{value.productId}}">{{value.cardNum}}<span></p>
 						</div>
 					</div>
 				</div>

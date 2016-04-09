@@ -243,7 +243,7 @@
 		
 		
 		function addAddressData(addressData){
-			var skip = false;
+			var skip = true;
 			var count = 0;
 			
 			var settings = app.getSettings();
@@ -263,6 +263,7 @@
 				mui.confirm('确认信息无误并保存？', '保存信息', btnArray, function(e) {
 					if (e.index == 1) {
 						mui.openWindow('insur_card_address.html',"insur_card_address");
+						
 						setTimeout(function(){
 							plus.webview.close("insur_card_address_add","none");
 						},500);

@@ -72,13 +72,14 @@
 					</div>
 				</li>
 				
+				
 				<li class="mui-table-view-cell" id="nameLi">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-10">
 							<span >收件人姓名</span>
 						</div>
 						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
-							<span id="nameSpan">请填写</span>
+							<span id="nameSpan" >请填写</span>
 						</div>
 						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
 							<a class="mui-navigate-right"></a>
@@ -115,11 +116,29 @@
 		mui.init();
 		var addressId = 0;
 		mui.plusReady(function(){
+			var mod_receiver 	= plus.storage.getItem("mod_receiver");
+			var mod_phone 		= plus.storage.getItem("mod_phone");
+			var mod_province	= plus.storage.getItem("mod_province");
+			var mod_city 		= plus.storage.getItem("mod_city");
+			var mod_area 		= plus.storage.getItem("mod_area");
+			var mod_street 		= plus.storage.getItem("mod_street");
+			var mod_address 	= plus.storage.getItem("mod_address");
+			var mod_allarea		= mod_province + mod_city + mod_area;  //省市区
+			
+			if(mod_receiver != null){
+				$("#areaSpan").text(mod_allarea);
+				$("#streetSpan").text(mod_street);
+				$("#addressSpan").text(mod_address);
+				$("#nameSpan").text(mod_receiver);
+				$("#phoneNum").text(mod_phone);
+			}
+			
+			
 			var self = plus.webview.currentWebview();
-			province = self.province || '';
-			city = self.city || '';
-			area = self.area || '';
-			allarea = self.allarea || '';
+			province = self.province || mod_province;
+			city = self.city || mod_city;
+			area = self.area || mod_area;
+			allarea = self.allarea || mod_allarea;
 			
 			addressID = plus.storage.getItem('modifyAdrId');
 			console.log("要修改的地址 id: " + addressID);
@@ -165,22 +184,35 @@
 				"phone"    : phone
 			};
 			
-			addresslist = JSON.stringify(addresslist);
 			
-		    var jsObj = {
-                "isdefault": "1",
-                "addressID": addressID,
-                "member_id": uid,
-                "address": addresslist,
-                "contactor": receiver,
-                "tel": phone
-            	};
-			addAddressData(jsObj);
+			verifyAddress(addresslist,function(data){
+				
+				//如果验证成功  封装数据，进行传参，调用请求，修改收货地址
+				if(data.status == 1){
+					addresslist = JSON.stringify(addresslist);
+				    var jsObj = {
+		                "isdefault": "1",
+		                "id": addressID,
+		                "member_id": uid,
+		                "address": addresslist,
+		                "contactor": receiver,
+		                "tel": phone
+		            	};
+					saveAddressData(jsObj);
+				}else{
+					//验证失败，输出失败的原因
+					var retMessage = data.message;
+					console.log(retMessage);
+					plus.nativeUI.toast(retMessage);
+				}
+			});
+			
 		});
 		
 		document.getElementById("areaSelect").addEventListener('tap',function(){
 			mui.openWindow('areaSelect2.html','areaSelect2');
 		});
+		
 		
 
 		
@@ -190,7 +222,13 @@
 //				console.log(e.index);
 //				console.log(e.value);
 				if(e.index == 1){
-					$("#phoneNum").text(e.value);
+					
+					if (!/^((13[0-9]{9})|(14[0-9]{9})|(15[0-9]{9})|(17[0-9]{9})|(18[0-9]{9}))$/.test(e.value)) {
+							plus.nativeUI.toast('请输入有效的手机号码');
+					} else {
+						$("#phoneNum").text(e.value);
+					}
+					
 				}else{
 					plus.nativeUI.toast("已取消");
 				}
@@ -203,7 +241,11 @@
 //				console.log(e.index);
 //				console.log(e.value);
 				if(e.index == 1){
-					$("#nameSpan").text(e.value);
+					if(e.value.trim() == ""){
+						plus.nativeUI.toast("收件人姓名不能为空");
+					}else{
+						$("#nameSpan").text(e.value);
+					}
 				}else{
 					plus.nativeUI.toast("已取消");
 				}
@@ -216,7 +258,11 @@
 //				console.log(e.index);
 //				console.log(e.value);
 				if(e.index == 1){
-					$("#addressSpan").text(e.value);
+					if(e.value.trim() == ""){
+						plus.nativeUI.toast("收货地址不能为空");
+					}else{
+						$("#addressSpan").text(e.value);
+					}
 				}else{
 					plus.nativeUI.toast("已取消");
 				}
@@ -229,7 +275,11 @@
 //				console.log(e.index);
 //				console.log(e.value);
 				if(e.index == 1){
-					$("#streetSpan").text(e.value);
+					if(e.value.trim() == ""){
+						plus.nativeUI.toast("街道地址不能为空");
+					}else{
+						$("#streetSpan").text(e.value);
+					}
 				}else{
 					plus.nativeUI.toast("已取消");
 				}
@@ -237,8 +287,8 @@
 		});
 		
 		
-		function addAddressData(addressData){
-			var skip = false;
+		function saveAddressData(addressData){
+			var skip = true;
 			var count = 0;
 			
 			var settings = app.getSettings();
@@ -253,11 +303,13 @@
 				
 				plus.webview.close("insur_card_address_modify","none");
 				console.log("添加新地址已被关闭");
+				plus.webview.close("insur_card_address","none");
+				console.log("添加新地址已被关闭");
 				
 				var btnArray = ['否', '是'];
 				mui.confirm('是否将该地址设为默认地址？', '保存信息', btnArray, function(e) {
 					if (e.index == 1) {
-						mui.openWindow('insur_card_address_modify.html',"insur_card_address_modify");
+						mui.openWindow('insur_card_address.html',"insur_card_address");
 						setTimeout(function(){
 							plus.webview.close("insur_card_address_modify_2","none");
 						},500);
@@ -295,7 +347,7 @@
 							if(data.status == 1){
 								console.log(data.message);
 								plus.nativeUI.toast(data.message);
-								mui.openWindow('insur_card_address_modify.html',"insur_card_address_modify");
+								mui.openWindow('insur_card_address.html',"insur_card_address");
 								
 								//保存地址后关闭此页面
 								setTimeout(function(){
@@ -316,6 +368,43 @@
 				});
 			};
 			
+			
+		function verifyAddress(addresslist,callback){
+			//状态码
+			var status = 1;
+			//验证返还消息
+			var message = "";
+			
+			
+			var province = addresslist.province.trim() 	|| "";
+			var city 	 = addresslist.city.trim()		|| "";
+			var area	 = addresslist.city.trim() 		|| "";
+			var allarea  = addresslist.allarea.trim() 	|| "";
+			var street   = addresslist.street.trim()  	|| "";
+			var address  = addresslist.address.trim()   || "";
+			var receiver = addresslist.receiver.trim()  || "";
+			var phone    = addresslist.phone.trim()     || "";
+			
+			
+			var data = {
+				"status"  : 1,
+				"message" : "返回信息"
+			};
+			
+			
+			if(allarea == "请先在此选择省市区" || street == "街道地址" || address == "请填写详细地址" || name == "姓名" || phone == "收件人手机号" ){
+				status = 0;
+				message = "请将信息填写完整";
+				data = {
+					"status" : status,
+					"message" : message
+				}
+				
+				return callback(data);
+			}
+			
+			return callback(data);
+		}
 			
 //----------------------------------------------------------------------------------------------------
 

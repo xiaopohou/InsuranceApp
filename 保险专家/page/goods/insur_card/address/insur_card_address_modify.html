@@ -72,22 +72,22 @@
 		
 		<script type="text/html" id="addressListTmpl">
 			{{each result as value i}}
-				<div class="order-address mui-flex align-center listDiv" addressId = "{{value.id}}">
+				<div class="order-address mui-flex align-center listDiv" addressId = "{{value.id}}" isdefault = "{{value.isdefault}}" >
 					<div class="cell content">
 						<div class="info">
 							<span>收货人： </span>
-							<span>{{value.address.receiver}}</span>
+							<span name="receiver" addressId = "{{value.id}}">{{value.address.receiver}}</span>
 							<span name="default" addressId = "{{value.id}}" ></span>
-							<span class="tel">{{value.address.phone}}</span>
+							<span name="phone" class="tel" addressId = "{{value.id}}">{{value.address.phone}}</span>
 						</div>
 						<div class="detail">
 							<span>收货地址：</span>
 							<span></span>
-							<span>{{value.address.province}} </span>
-							<span>{{value.address.city}} </span>
-							<span>{{value.address.area}} </span>
-							<span>{{value.address.street}} </span>
-							<span>{{value.address.address}} </span>
+							<span name="province" addressId = "{{value.id}}">{{value.address.province}} </span>
+							<span name="city" addressId = "{{value.id}}">{{value.address.city}} </span>
+							<span name="area" addressId = "{{value.id}}">{{value.address.area}} </span>
+							<span name="street" addressId = "{{value.id}}">{{value.address.street}} </span>
+							<span name="address" addressId = "{{value.id}}">{{value.address.address}} </span>
 						</div>
 					</div>
 				</div>

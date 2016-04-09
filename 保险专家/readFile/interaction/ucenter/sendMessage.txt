@@ -1,0 +1,23 @@
+ ----------------------发送短信-------------------
+Java后台地址
+	webServiceUrl = http://192.168.1.247:8080/
+	请求地址  app/member/checkphone
+
+PHP后台地址
+	
+
+发送json
+{
+  "mobile": "1571776629"	
+}
+
+//返回 json
+{
+  "message": "短信发送成功",
+  "status": 1
+}
+
+//message : 短信发送状态提示语，显示给用户看的 toast 短消息
+//status : 状态码为 1 则为成功，
+	非 1 则 toast 出 message 的 内容提示用户
+	如："短信发送次数超过当日限制"
