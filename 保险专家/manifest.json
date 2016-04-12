@@ -14,7 +14,7 @@
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "page/ucenter/index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "Jepson",/*开发者名称*/
 		"email": "547212806@qq.com",/*开发者邮箱地址*/
@@ -532,7 +532,8 @@
 					"page/goods/online_card/online_card_show.html",
 					"page/myOrder/myOrderIndex.html",
 					"page/goods/insur_card/insur_card_index.html",
-					"page/goods/life/lifeIndex.html"
+					"page/goods/life/lifeIndex.html",
+					"page/ucenter/userScore.html"
 				],
 				"priority": 0
 			},
@@ -963,7 +964,9 @@
 					"css/mui.picker.min.css",
 					"css/mui.poppicker.css",
 					"css/mui.picker.css",
-					"page/goods/company/groupAccident/js/groupAccident.js"
+					"page/goods/company/groupAccident/js/groupAccident.js",
+					"js/app.js",
+					"page/goods/company/groupAccident/json/groupAccident.json"
 				],
 				"refer": [
 					"page/goods/company/groupAccident/groupAccidentInfo.html",
@@ -1436,6 +1439,19 @@
 			},
 			"page/goods/online_card/online_card_purchase.html": {
 				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/ucenter/userScore.html": {
+				"resources": [
+					"css/app.css",
+					"libs/echarts-all.js",
+					"css/base.css",
 					"js/mui.min.js",
 					"css/common.css",
 					"fonts/mui.ttf",

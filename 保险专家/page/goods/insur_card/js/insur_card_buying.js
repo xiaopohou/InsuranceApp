@@ -86,10 +86,12 @@ function getCartList() {
 	
 	//获取用户 uid
 	var ajaxUrl = '';
-	var test = plus.storage.getItem('test');
+	var test = false;
+	
 	console.log(test);
 	var state = app.getState();
 	var uid = state.uid;
+	console.log("用户id" + uid);
 	//获取服务器地址和图片服务器地址
 	var settings = app.getSettings();
 	var webServiceUrl = settings.webServiceUrl;
@@ -141,12 +143,14 @@ function getCartList() {
 
 //获取收货地址
 function getDefaultAddr(){
+	console.log("--------------------------------------获取收货地址--------------------------------------------------");
 	app.getAddressList(function(data){
 		if(data.status == 1){
 			var addressArray = data.result;
 			
 			console.log(data.message);
 			console.log(addressArray.length);
+			console.log(JSON.stringify(data));
 			
 			if(addressArray.length == 0){
 				$("#noneDiv").show();
@@ -154,7 +158,9 @@ function getDefaultAddr(){
 			}
 			
 			//获取选择 地址 id
-			var selectAddrId = plus.storage.getItem("selectAddrId");
+			var selectAddrId = plus.storage.getItem("selectAddrId") || "";
+			console.log(selectAddrId);
+			
 			if(selectAddrId.trim() != ""){
 				//处理返回来的json地址数据,将默认地址显示在页面中
 				for(var i = 0; i< addressArray.length ; i++){
@@ -171,6 +177,8 @@ function getDefaultAddr(){
 						app.setAddress(addressArray[i].address);
 						
 						setBuyingAddress();
+						
+						plus.storage.removeItem("selectAddrId");
 					}
 				}
 			}else{
@@ -272,6 +280,9 @@ function submitOrderFuc(Alldata){
 	
 	var settings = app.getSettings();
 	var webServiceUrl = settings.webServiceUrl;
+	
+	var state = app.getState();
+	var uid = state.uid;
 	
 	test = false;
 	

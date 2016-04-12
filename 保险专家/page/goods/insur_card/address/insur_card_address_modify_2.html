@@ -288,7 +288,7 @@
 		
 		
 		function saveAddressData(addressData){
-			var skip = true;
+			var skip = false;
 			var count = 0;
 			
 			var settings = app.getSettings();
@@ -367,9 +367,10 @@
 					});
 				});
 			};
-			
-			
-		function verifyAddress(addresslist,callback){
+
+		}
+		
+	function verifyAddress(addresslist,callback){
 			//状态码
 			var status = 1;
 			//验证返还消息
@@ -404,10 +405,6 @@
 			}
 			
 			return callback(data);
-		}
-			
-//----------------------------------------------------------------------------------------------------
-
 		}
 	</script>
 </html>

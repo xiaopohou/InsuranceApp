@@ -51,7 +51,8 @@ function getCartList() {
 ////							console.log(data.result[i].img_big);
 //				}
 				
-				console.log(data.result[0].supplierLogo);
+//				console.log(data.result[0].supplierLogo);
+
 //						console.log(data.result[0]);
 				
 				var content = template("cartListTmpl", data);

@@ -68,7 +68,7 @@
 							<span class="textsize-fontcolor">姓名</span>
 						</div>
 						<div class="mui-table-cell mui-col-xs-4 mui-text-right">
-							<span class="textsize-fontcolor" id="realname"></span>
+							<span class="textsize-fontcolor" id="username"></span>
 						</div>
 						<div class="mui-table-cell mui-col-xs-1 mui-text-right">
 							<a class="mui-navigate-right"></a>
@@ -145,12 +145,12 @@
 				mui.init();
 				mui.plusReady(function() {
 					//获取id
-					var realname = document.getElementById("realname");
+					var username = document.getElementById("username");
 					var city = document.getElementById("city");
 					var mobile = document.getElementById("mobile");
 					//获取state
 					var state = app.getState();
-					realname.textContent = state.realname;
+					username.textContent = state.username;
 					city.textContent = state.city;
 					mobile.textContent = state.mobile;
 					
@@ -159,10 +159,10 @@
 						var btnArray = ['取消', '确定']; 
 						mui.prompt('输入姓名', '请输入真实姓名', "修改姓名", btnArray, function(e) { 
 							if (e.index == 1) { 
-								realname.innerText = e.value; 
+								username.innerText = e.value; 
 								
 								var state = app.getState();
-								state.realname = e.value;
+								state.username = e.value;
 								app.setState(state);
 								
 								plus.nativeUI.toast("修改成功");

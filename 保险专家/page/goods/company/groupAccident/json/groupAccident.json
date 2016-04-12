@@ -1,0 +1,50 @@
+{
+  "result": [
+    {
+      "productTitle": "中国平安团体意外险",
+      "productId": 34,
+      "supplierTitle": "中国平安",
+      "priceFormula": "jifeng规则",
+      "productSummary": "描述",
+      "tuanyiHtmlInfo": "html信息",
+      "attaches": [
+        {
+          "productTitle": "附加险1",
+          "productSummary": "附加描述",
+          "productId": 38,
+          "tuanyiHtmlInfo": "附加html信息1"
+        },
+        {
+          "productTitle": "附加2",
+          "productSummary": "附加描述2",
+          "productId": 39,
+          "tuanyiHtmlInfo": "html的附加"
+        }
+      ]
+    },
+    {
+      "productTitle": "新华保险团体意外险",
+      "productId": 40,
+      "supplierTitle": "新华保险",
+      "priceFormula": "新华积分规则",
+      "productSummary": "新华团体描述",
+      "tuanyiHtmlInfo": "新华html信息",
+      "attaches": [
+        {
+          "productTitle": "新华附加1",
+          "productSummary": "新华描述附加",
+          "productId": 41,
+          "tuanyiHtmlInfo": "html附加"
+        },
+        {
+          "productTitle": "新华附加1",
+          "productSummary": "新华描述附加",
+          "productId": 42,
+          "tuanyiHtmlInfo": "html附加"
+        }
+      ]
+    }
+  ],
+  "message": "获取团体意外险列表成功",
+  "status": 1
+}

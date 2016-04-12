@@ -96,6 +96,7 @@ function initFunc(data){
 							//进行删除操作
 							deleteAddr(id,member_id,isdefault,function(err){
 								plus.nativeUI.toast(err);
+								location.reload();
 							});
 						}
 					});
@@ -191,9 +192,9 @@ function initFunc(data){
 	function deleteAddr(id,member_id,isdefault,callback){
 		var settings = app.getSettings();
 		var webServiceUrl = settings.webServiceUrl;
-		var ajaxUrl = webServiceUrl + "app/receaddr/delete";
+		var ajaxUrl = webServiceUrl + "app/receaddr/delete?id=" + id;
 		
-		console.log("当前进行删除收货地址操作，地址是")+ ajaxUrl;
+		console.log("当前进行删除收货地址操作，地址是" + ajaxUrl);
 		
 	    var jsObj =  {
             "id" : id,
@@ -203,7 +204,9 @@ function initFunc(data){
         
         var str = JSON.stringify(jsObj);
         // 封装成json字符串提交到后台
-        var data = {"reqJsonStr":str};
+//      var data = {"reqJsonStr":str};
+		
+		data = {};
         
 		mui.ajax(ajaxUrl,{
 			data : data,

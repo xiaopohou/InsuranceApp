@@ -136,7 +136,7 @@
 					</div>
 
 					<div class="app_f">
-						<a id="online_card">
+						<a id="myScore">
 							<div class="appa">
 								<img src="../../images/homePage/main_my_money.png" alt="">
 								<p>我的积分</p>
@@ -185,57 +185,60 @@
 						</a>
 					</div>
 
-					<ul class="mui-table-view mui-grid-view">
-						<li class="mui-table-view-cell mui-media mui-col-xs-6">
-							<a href="#">
-								<img class="mui-media-object" src="../../images/homePage/a1.png">
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media mui-col-xs-6">
-							<a href="#">
-								<img class="mui-media-object" src="../../images/homePage/a2.png">
-							</a>
-						</li>
-					</ul>
-
-					<ul class="mui-table-view mui-grid-view">
-						<li class="mui-table-view-cell mui-media mui-col-xs-6">
-							<a href="#">
-								<img class="mui-media-object" src="../../images/homePage/a3.png">
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media mui-col-xs-6">
-							<a href="#">
-								<img class="mui-media-object" src="../../images/homePage/a4.png">
-							</a>
-						</li>
-					</ul>
-
-					<ul class="mui-table-view mui-grid-view">
-						<li class="mui-table-view-cell mui-media mui-col-xs-6">
-							<a href="#">
-								<img class="mui-media-object" src="../../images/homePage/b1.png">
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media mui-col-xs-6">
-							<a href="#">
-								<img class="mui-media-object" src="../../images/homePage/b2.png">
-							</a>
-						</li>
-					</ul>
-
-					<ul class="mui-table-view mui-grid-view">
-						<li class="mui-table-view-cell mui-media mui-col-xs-6">
-							<a href="#">
-								<img class="mui-media-object" src="../../images/homePage/b3.png">
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media mui-col-xs-6">
-							<a href="#">
-								<img class="mui-media-object" src="../../images/homePage/b4.png">
-							</a>
-						</li>
-					</ul>
+					<div id="picShow">
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="../../images/homePage/a1.png">
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="../../images/homePage/a2.png">
+								</a>
+							</li>
+						</ul>
+	
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="../../images/homePage/a3.png">
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="../../images/homePage/a4.png">
+								</a>
+							</li>
+						</ul>
+	
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="../../images/homePage/b1.png">
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="../../images/homePage/b2.png">
+								</a>
+							</li>
+						</ul>
+	
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="../../images/homePage/b3.png">
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="../../images/homePage/b4.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -265,6 +268,7 @@
 			 */
 			function pulldownRefresh() {
 				setTimeout(function() {
+					var showDiv = document.getElementById("picShow");
 					//					var table = document.body.querySelector('.mui-table-view');
 					//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
 					//					for (var i = cells.length, len = i + 3; i < len; i++) {
@@ -283,15 +287,26 @@
 			 */
 			function pullupRefresh() {
 				setTimeout(function() {
+					var showDiv = document.getElementById("picShow");
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
-					//					var table = document.body.querySelector('.mui-table-view');
-					//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					//					for (var i = cells.length, len = i + 20; i < len; i++) {
-					//						var li = document.createElement('li');
-					//						li.className = 'mui-table-view-cell';
-					//						li.innerHTML = '<a class="mui-navigate-right">系统通知 ' + (i + 1) + '</a>';
-					//						table.appendChild(li);
-					//					}
+//						var table = document.body.querySelector('.mui-table-view');
+//						var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//						for (var i = cells.length, len = i + 20; i < len; i++) {
+//							var array = [];
+////							<ul class="mui-table-view mui-grid-view">
+////								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+////									<a href="#">
+////										<img class="mui-media-object" src="../../images/homePage/b3.png">
+////									</a>
+////								</li>
+////								<li class="mui-table-view-cell mui-media mui-col-xs-6">
+////									<a href="#">
+////										<img class="mui-media-object" src="../../images/homePage/b4.png">
+////									</a>
+////								</li>
+////							</ul>
+//							
+//						}
 				}, 1000);
 			}
 			//mui广告位配置，interval为广告切换时间间隔
@@ -311,6 +326,8 @@
 				var myOrderButton = document.getElementById("myOrder");
 				//个人简历按钮
 				var userInfoButton = document.getElementById("userInfo");
+				//我的积分按钮
+				var myScoreButton = document.getElementById("myScore");
 				//保险卡单
 				insurCardButton.addEventListener('tap', function(event) {
 					//					toInsurCardPage();
@@ -335,6 +352,14 @@
 						url: '../goods/car/car_index.html'
 					});
 				});
+				
+				myScoreButton.addEventListener('tap',function(){
+					$.openWindow({
+						id: 'userScore',
+						url: 'userScore.html'
+					});
+				});
+				
 				//我的业务
 				myOrderButton.addEventListener('tap', function() {
 //					toMyOrderPage();
@@ -347,7 +372,7 @@
 				userInfoButton.addEventListener('tap', function() {
 					$.openWindow({
 						id: 'userInfo',
-						url: 'userInfo.html'
+						url: './userInfo.html'
 					});
 				});
 				document.getElementById("life").addEventListener('tap',function(){

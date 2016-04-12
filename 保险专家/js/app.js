@@ -5,9 +5,10 @@
 		
 //		var webServiceUrl = "http://115.28.72.167/";
 //		var imgUrl = "http://www.annpeter.cn:8080/";
-		
-		var webServiceUrl = "http://192.168.1.101:8080/";
-		var imgUrl = "http://192.168.1.101:8080";
+//		var webServiceUrl = "http://192.168.56.1:8080/";		
+
+		var webServiceUrl = "http://www.annpeter.cn:8080/";
+		var imgUrl = "http://www.annpeter.cn:8080/";
 
 		//定义 urlInfo数组存放 url信息
 		var urlInfoArray = [];
@@ -205,6 +206,7 @@
 				{
 					if(data.status == 1)
 					{
+						console.log(JSON.stringify(data));
 						owner.createState(data.result[0]);
 						console.log(data.result[0].id);
 						var state = owner.getState();
@@ -553,7 +555,7 @@
 	//	url: webServiceUrl + "app/receaddr/list?id=" + uid,
 	
 		var test = plus.storage.getItem("test") || false;
-		test = true;
+		test = false;
 		console.log("test = " + test);
 		if(test){
 			listUrl = "json/address.json";

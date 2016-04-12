@@ -243,7 +243,8 @@
 		
 		
 		function addAddressData(addressData){
-			var skip = true;
+			var skip = false;
+
 			var count = 0;
 			
 			var settings = app.getSettings();
@@ -255,7 +256,7 @@
 			//../../../json/goods/insur_card/area_return.json
 			
 			if(skip){
-				
+				console.log("正在测试本地数据");
 				plus.webview.close("insur_card_address","none");
 				console.log("添加新地址已被关闭");
 				
@@ -275,7 +276,7 @@
 			}else{
 				
 				plus.webview.close("insur_card_address","none");
-				console.log("添加新地址已被关闭");
+				console.log("地址列表已被关闭");
 				
 				var btnArray = ['否', '是'];
 				mui.confirm('确认信息无误并保存？', '保存信息', btnArray, function(e) {
@@ -292,7 +293,6 @@
 									console.log(data.message);
 									plus.nativeUI.toast(data.message);
 									mui.openWindow('insur_card_address.html',"insur_card_address");
-									plus.webview.close("insur_card_address_add","insur_card_address_add");
 									console.log("添加新地址已被关闭");
 									
 									//保存地址后关闭此页面
