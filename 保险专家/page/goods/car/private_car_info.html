@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>私家车</title>
+		<script src="../../../js/mui.min.js"></script>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../../css/common.css" rel="stylesheet" />
+		<script src="../../../js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style>
+		p {
+			color: black;
+			display: inline;
+			margin-left: 10px;
+		}
+		
+		label {
+			margin-top: 6px;
+			margin-left: 10px;
+		}
+		
+		img {
+			max-height: 150px;
+			width: 100%;
+		}
+		ul .mui-input-group::before{
+			display: none;
+		}
+		.mui-input-group::after{
+			display: none;
+		}
+		.Date::before{
+			display: none;
+		}
+		.H1 {
+			color: deepskyblue;
+			margin-left: 14px;
+			font-size: 17px;
+			font-family: "微软雅黑";
+			padding-top: 25px;
+			margin-bottom: -px;
+			line-height: 5px;
+		}
+		
+		.Button {
+			margin-top: -9px;
+			margin-left:10px;
+			width: 35%;
+		}
+		
+		.mui-content-padded {
+			margin-top: 20px;
+		}
+		
+		.mui-input-row label {
+			width: auto;
+		}
+		
+		.mui-input-row input {
+			width: auto;
+		}
+		
+		.mui-input-row label~input{
+			padding-left: 15px;
+		}
+		.Content {
+			margin-top: 0px;
+			margin-bottom: -7px;
+		}
+		.mui-switch.mui-active {
+			border-color: rgb(221, 221, 221);
+			background-color: rgb(12, 151, 104);
+		}
+		label.textsize-fontcolor,.textsize-fontcolor{
+			font-family:"微软雅黑";
+			font-size: 16px;
+		}
+		.mui-col-xs-1{
+			width:102px;
+		}
+		.Warning{
+			background:orangered;
+			text-align: center;
+			color: white;
+			height: 30px;
+			line-height: 30px;
+		}
+		#date{
+			color: rgb(169,169,169);
+		}
+		#Money{
+			color: rgb(169,169,169);
+		}
+	</style>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">私家车</h1>
+		</header>
+
+		<div class="mui-content">
+			<div class="Warning textsize-fontcolor">请如实填写已获得精准报价</div>
+			<ul class="mui-table-view" style="margin-top: -4px;">
+				<h1 class="H1">车主信息:</h1>
+				
+				<div class="mui-input-group" style="margin-top: px;">
+					<div class="mui-input-row">
+						<label class="textsize-fontcolor">姓名：</label>
+						<input type="text" id="name" class="mui-input mui-input-clear textsize-fontcolor" placeholder="请输入姓名" />
+					</div>
+					
+				</div>
+
+				<li class="mui-table-view-cell textsize-fontcolor">
+					<p class="textsize-fontcolor">投、被保险同一人</p>
+					<div class="mui-switch mui-active">
+						<div class="mui-switch-handle"></div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell textsize-fontcolor">
+					<div class="mui-content-padded Content">
+						<span class="textsize-fontcolor">身份证:</span>
+						<button id="chose" class="mui-btn Button" >选择</button>
+						<button id="takePicture" class="mui-btn Button">拍照</button>
+					</div>
+				</li>
+
+			</ul>
+
+			<div class="mui-input-group">
+				<h1 class="H1">车辆信息:</h1>
+				<div class="mui-input-row">
+					<label class="textsize-fontcolor">品牌型号：</label>
+					<input type="text" id="truename" class="mui-input mui-input-clear textsize-fontcolor" placeholder="只需输入英文和数字" />
+				</div>
+				<div class="mui-input-row">
+					<label class="textsize-fontcolor">车牌号：</label>
+					<input type="text" id="number" class="mui-input mui-input-clear textsize-fontcolor" placeholder="请输入车牌号" />
+				</div>
+				<div class="mui-input-row">
+					<label class="textsize-fontcolor">车架号：</label>
+					<input type="text" id="number" class="mui-input mui-input-clear textsize-fontcolor" placeholder="请输入车辆识别代号" />
+				</div>
+				<div class="mui-input-row">
+					<label class="textsize-fontcolor">车牌号：</label>
+					<input type="text" id="number" class="mui-input mui-input-clear textsize-fontcolor" placeholder="请输入车牌号" />
+				</div>
+			</div>
+			<ul class="mui-table-view textsize-fontcolor Date" style="margin-top: 0px;">
+						<li class="mui-table-view-cell">
+							<div class="mui-table">
+								<div class="mui-table-cell mui-col-xs-1">
+									<span style="padding-left: 12px;">购车日期:</span>
+								</div>
+								<div class="mui-table-cell mui-col-xs-4" >
+									<span id="date">请选择日期</span>
+								</div>
+								<div class="mui-table-cell mui-text-right">
+									<a class="mui-navigate-right"></a>
+								</div>
+							</div>
+						</li>
+			</ul>
+			<ul class="mui-table-view">
+				<h1 class="H1">投保信息:</h1>
+				<li class="mui-table-view-cell textsize-fontcolor">
+					<div class="mui-content-padded Content">
+						<span class="textsize-fontcolor">险种：</span>
+						<button class="mui-btn  Button" id="add" >添加</button>
+					</div>
+				</li>
+				<li class="mui-table-view-cell" style="height: 50px;">
+					<div class="mui-content-padded Content">
+						<p class="textsize-fontcolor" style="margin-left: 0px;">车投险：</p>
+						<span class="textsize-fontcolor" id="Money">自动添加</span>&nbsp;
+						<p class="textsize-fontcolor">(万)</p>
+					</div>
+				</li>
+			</ul>
+
+			<!--
+            	作者：934273746@qq.com
+            	时间：2016-03-29
+            	描述：不用ul
+            <div class="mui-content-padded">
+				<span class="textsize-fontcolor">身份证:</span>
+				<button class="mui-btn Button">选择</button>
+				<button class="mui-btn Button">拍照</button>
+			</div>
+
+			<div class="mui-content-padded">
+				<span class="textsize-fontcolor">险种:</span>
+				<button class="mui-btn Button" id="Btn">添加</button>
+			</div>
+
+			<div class="mui-content-padded">
+				<p class="textsize-fontcolor">车投险(万)：</p>
+				<div class="mui-input-group" id="Ipt">
+					<input type="input" class="mui-input mui-input-clear" />
+				</div>
+			</div>
+			-->
+			<div class="mui-content-padded">
+				<button id="calculate" type="button" class="mui-btn mui-btn-block ">计算报价</button>
+			</div>
+
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		mui.init();
+		//基本按钮获取
+		var btn_chose = document.getElementById("chose");
+		var btn_takePic = document.getElementById("takePicture");
+		var btn_add = document.getElementById("add");
+		var btn_calcu = document.getElementById("calculate");
+		var btn_switch = mui(".mui-switch-handle")[0];
+		//按钮事件预定义
+		//选择身份证
+		btn_chose.addEventListener('tap', function() {
+			mui.openWindow({
+				url: "example.html",
+				id: "example",
+				extras: {
+				},
+			})
+		});
+		//投被保险同一人
+		var switchValue;
+		btn_switch.addEventListener('tap', function(event) {
+			switchValue = event.detail.isActive ? 'true' : 'false';
+			//console.log(switchValue);
+		});
+		//拍照
+		btn_takePic.addEventListener('tap', function() {
+		});
+		//添加险种
+		btn_add.addEventListener('tap', function() {
+		});
+		//计算报价
+		btn_calcu.addEventListener('tap', function() {
+			var name = $("#truename").val();
+			var number = $("#number").val();
+			var money = $("#money").val();
+			//		console.log(name);
+			//		console.log(number);
+			//		console.log(money);
+			mui.ajax({
+				url: "example.json",
+				type: "post",
+				data: {
+					user_name: name,
+					car_number: number,
+					total_money: money
+				},
+				dataType: "json",
+				timeOut: 1000,
+				success: function(data) {
+					if (data.status == 1) {
+					} else {
+					}
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理
+					//暂不解决
+					plus.nativeUI.toast("网络好像暂时不通畅哦，请重新加载页面");
+					console.log(type);
+				}
+			});
+		});
+	</script>
+
+</html>
