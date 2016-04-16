@@ -7,11 +7,84 @@
     <script src="../../js/mui.min.js"></script>
     <script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
     <link href="../../css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="UTF-8">
-      	mui.init();
-    </script>
+    <link href="../../css/common.css" rel="stylesheet"/>
+    <style>
+    	img{
+			height: 75px;
+		}
+		.mui-btn{
+			width: 49%;
+			height:150px ;
+			font-size: 20px;
+			margin-top: 5px;
+		}
+		.Btn1{
+			background: rgb(7,125,186);
+		}
+		.Btn2{
+			background: rgb(23,160,125);
+		}
+		.Btn3{
+			background: rgb(171,105,255);
+		}
+		.dec{
+			width: 100%;
+			position: absolute;
+			bottom: 18px;
+		}
+		/*.dec span{
+			display: block;
+			text-align: center;
+		}
+		div >span:first-child{
+			color:red;
+		}
+		div >span:last-child{
+			color:#17a07d;
+		}*/
+		.banner{
+			width:100%;
+			height:100px;
+			background: #00BFFF;
+		}
+    </style>
 </head>
 <body>
-	
+	<body>
+			<div class="mui-content-padded">
+				<button class="mui-btn Btn1" id="private_car">
+					<img src="img/car_amend.png"/>
+					<br />
+					车辆理赔
+				</button>
+				<button class="mui-btn Btn2">
+					<img src="img/enterprise_amend.png"/>
+					<br />
+					企业理赔
+				</button>
+				<button class="mui-btn Btn3">
+					<img src="img/life_amend.png"/>
+					<br />
+					人寿理赔
+				</button>
+				<button class="mui-btn Btn1">
+					<img src="../../images/goods/car/gengduo.png"/>
+					<br />
+					其他				</button>
+			</div>
+		<!--	<div class="dec">
+			<span class="textsize-fontcolor">7X24小时在线服务支持</span>
+			<span class="textsize-fontcolor">服务热线95559</span>
+		</div>-->
+		</div>
+	</body>	
 </body>
+<script src="../../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init();
+		document.getElementById("private_car").addEventListener("tap",function(){
+			mui.openWindow("private_car.html","private_car");
+		});
+		
+</script>
 </html>
