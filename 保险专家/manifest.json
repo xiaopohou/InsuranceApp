@@ -707,7 +707,8 @@
 					"js/jquery-2.1.3.min.js"
 				],
 				"refer": [
-					"page/passport/login.html"
+					"page/passport/login.html",
+					"page/ucenter/QRCodeDetail.html"
 				],
 				"priority": 0
 			},
@@ -715,7 +716,12 @@
 				"resources": [
 					"css/mui.min.css",
 					"js/mui.min.js",
-					"js/config.js"
+					"js/config.js",
+					"page/ucenter/img/life_amend.png",
+					"css/common.css",
+					"page/ucenter/img/car_amend.png",
+					"page/ucenter/img/enterprise_amend.png",
+					"images/goods/car/gengduo.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -1372,6 +1378,13 @@
 				"refer": [
 					"page/goods/insur_card/address/insur_card_address_modify_2.html"
 				],
+				"priority": 0
+			},
+			"page/ucenter/QRCodeDetail.html": {
+				"resources": [
+					"page/ucenter/img/qrcode.jpg"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},
