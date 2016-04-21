@@ -284,7 +284,7 @@ function submitOrderFuc(Alldata){
 	var state = app.getState();
 	var uid = state.uid;
 	
-	test = false;
+	test = true;
 	
 	if(test){
 		mui.openWindow("../../myOrder/insur_card/insur_card_order.html","insur_card_order");

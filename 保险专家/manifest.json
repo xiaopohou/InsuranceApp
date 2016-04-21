@@ -1418,9 +1418,18 @@
 			"page/ucenter/liPei.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/liPei/enterprise_amend.png",
+					"images/goods/insur_card/jihuo.png",
+					"css/base.css",
+					"images/liPei/life_amend.png",
+					"images/liPei/car_amend.png",
+					"js/jquery-2.1.3.min.js",
+					"css/common.css"
 				],
-				"refer": [],
+				"refer": [
+					"page/liPei/cheXianLiPei.html"
+				],
 				"priority": 0
 			},
 			"page/goods/online_card/online_card_insure.html": {
@@ -1455,6 +1464,25 @@
 					"js/mui.min.js",
 					"css/common.css",
 					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/liPei/cheXianLiPei.html": {
+				"resources": [
+					"page/liPei/GooFlow/codebase/GooFlow2.css",
+					"page/liPei/js/GooFunc.js",
+					"page/liPei/GooFlow/codebase/GooFlow.js",
+					"page/liPei/GooFlow/codebase/img/gooflow_blank2.gif",
+					"page/liPei/default.css",
+					"page/liPei/GooFlow/codebase/img/gooflow_icon.png",
+					"page/liPei/js/json2.js",
+					"page/liPei/GooFlow/data.js",
+					"css/base.css",
+					"fonts/mui.ttf",
+					"css/common.css",
+					"js/mui.min.js",
 					"css/mui.min.css"
 				],
 				"refer": [],
